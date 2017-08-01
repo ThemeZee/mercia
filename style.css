@@ -1259,27 +1259,30 @@ article,
 	font-size: 1rem;
 }
 
-.entry-meta .meta-date:after,
-.entry-meta .meta-author:after {
-	display: inline-block;
-	margin: 0 1em 0 1em;
-	color: rgba(0,0,0,0.15);
-	content: "\007c";
+.entry-meta .meta-date,
+.entry-meta .meta-author {
+	margin-right: 1em;
+}
+
+.entry-meta span .icon {
+	margin: 0.3em 0.3em 0 0;
+	width: 19px;
+	height: 19px;
+	vertical-align: top;
+	fill: rgba(0,0,0,0.3);
 }
 
 /* Hide post meta if they are deactivated in settings */
 body.date-hidden .entry-meta .meta-date,
 body.author-hidden .entry-meta .meta-author,
 body.categories-hidden .entry-meta .meta-category {
-	 position: absolute;
-	  overflow: hidden;
-	 clip: rect(1px, 1px, 1px, 1px);
-	  width: 1px;
-	  height: 1px
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
 }
 
-body.categories-hidden .content-area .entry-meta .meta-author:after,
-body.author-hidden.categories-hidden .content-area .entry-meta .meta-date:after,
 body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	display: none;
 }
@@ -1345,9 +1348,9 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	padding: 0 0.5em;
 	text-align: center;
 	text-decoration: none;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-weight: bold;
 }
 
 /* Infinite Scroll Pagination */
@@ -1692,18 +1695,12 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 /*--------------------------------------------------------------
 # 12.0 - Footer
 --------------------------------------------------------------*/
-.footer-wrap {
-	padding: 0 0 2.5em;
-}
-
 .site-footer {
-	border-top: 1px solid rgba(0,0,0,0.075);
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid #303030;
 }
 
 .site-footer .site-info {
 	padding: 1em 0;
-	text-align: center;
 }
 
 /*--------------------------------------------------------------

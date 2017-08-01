@@ -204,7 +204,7 @@ if ( ! function_exists( 'mercia_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		$posted_on = sprintf( esc_html_x( 'On %s', 'post date', 'mercia' ), $time_string );
+		$posted_on = mercia_get_svg( 'edit' ) . $time_string;
 
 		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
@@ -223,7 +223,7 @@ if ( ! function_exists( 'mercia_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		$posted_by = sprintf( esc_html_x( 'By %s', 'post author', 'mercia' ), $author_string );
+		$posted_by = mercia_get_svg( 'user' ) . $author_string;
 
 		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
@@ -240,7 +240,7 @@ if ( ! function_exists( 'mercia_meta_category' ) ) :
 			return;
 		}
 
-		$posted_in = sprintf( esc_html_x( 'In %s', 'post category', 'mercia' ), get_the_category_list( ', ' ) );
+		$posted_in = mercia_get_svg( 'category' ) . get_the_category_list( ', ' );
 
 		return '<span class="meta-category"> ' . $posted_in . '</span>';
 	}
