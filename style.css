@@ -288,7 +288,7 @@ textarea {
 	color: #353535;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: 'Raleway', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.75;
 }
 
@@ -768,6 +768,8 @@ textarea {
 
 .site-description {
 	margin: 0;
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 /* Custom Header Image */
