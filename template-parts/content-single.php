@@ -9,16 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php mercia_post_image_single(); ?>
-
-	<header class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<?php mercia_entry_meta(); ?>
-
-	</header><!-- .entry-header -->
-
 	<div class="entry-content clearfix">
 
 		<?php the_content(); ?>

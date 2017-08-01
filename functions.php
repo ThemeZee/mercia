@@ -183,7 +183,9 @@ function mercia_google_fonts_url() {
  */
 function mercia_add_image_sizes() {
 
-	// Add different thumbnail sizes for Magazine Posts widgets.
+	add_image_size( 'mercia-single-post', 1100, 440, true );
+
+	// Add different thumbnail sizes for Magazine widgets.
 	add_image_size( 'mercia-thumbnail-small', 120, 80, true );
 	add_image_size( 'mercia-thumbnail-medium', 280, 175, true );
 	add_image_size( 'mercia-thumbnail-large', 600, 375, true );

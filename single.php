@@ -5,24 +5,28 @@
  * @package Mercia
  */
 
-get_header(); ?>
+get_header();
+
+while ( have_posts() ) : the_post(); ?>
+
+	<?php get_template_part( 'template-parts/header/header', 'single' ); ?>
 
 	<section id="primary" class="content-single content-area">
 		<main id="main" class="site-main" role="main">
-				
-		<?php while ( have_posts() ) : the_post();
 
+			<?php
 			get_template_part( 'template-parts/content', 'single' );
 
 			mercia_related_posts();
 
 			comments_template();
+			?>
 
-		endwhile; ?>
-		
 		</main><!-- #main -->
 	</section><!-- #primary -->
-	
-	<?php get_sidebar(); ?>
-	
-<?php get_footer(); ?>
+
+<?php
+endwhile;
+
+get_sidebar();
+get_footer();

@@ -151,7 +151,7 @@ if ( ! function_exists( 'mercia_post_image_archives' ) ) :
 		if ( true === mercia_get_option( 'post_image_archives' ) && has_post_thumbnail() ) : ?>
 
 			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
-				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+				<?php the_post_thumbnail(); ?>
 			</a>
 
 		<?php
@@ -169,7 +169,7 @@ if ( ! function_exists( 'mercia_post_image_single' ) ) :
 		// Display Post Thumbnail if activated.
 		if ( true === mercia_get_option( 'post_image_single' ) ) :
 
-			the_post_thumbnail();
+			the_post_thumbnail( 'mercia-single-post' );
 
 		endif;
 	}

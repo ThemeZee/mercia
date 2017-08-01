@@ -657,10 +657,11 @@ textarea {
 --------------------------------------------------------------*/
 .site {
 	margin: 0 auto;
-	padding: 0 2.5em;
-	max-width: 1300px;
+	padding: 0 40px;
+	max-width: 1180px;
 	width: 100%;
 	background: #fff;
+	box-sizing: border-box;
 }
 
 .site-content {
@@ -676,14 +677,14 @@ textarea {
 
 .content-area {
 	box-sizing: border-box;
-	padding-right: 2em;
-	width: 70%;
+	padding-right: 1em;
+	width: 68%;
 }
 
 .sidebar {
 	box-sizing: border-box;
-	padding-left: 2em;
-	width: 30%;
+	padding-left: 1em;
+	width: 32%;
 }
 
 /* No Sidebar & Centered Layout Template */
@@ -950,7 +951,7 @@ textarea {
 }
 
 .widget ul li + li {
-
+	border-top: none;
 }
 
 .widget ul .children,
@@ -1188,6 +1189,26 @@ article,
 	padding-bottom: 2em;
 	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
+
+/* Single Post */
+.single-post .entry-header {
+	margin: 0 0 1em;
+	width: 100%;
+}
+
+.single-post .entry-title {
+	font-size: 48px;
+	font-size: 3rem;
+}
+
+.single-post .wp-post-image {
+	margin: 0 0 2em;
+}
+
+.single-post .entry-content p:first-child {
+	margin-top: 0;
+}
+
 
 /* Read more Link */
 .more-link {
