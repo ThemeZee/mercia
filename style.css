@@ -285,7 +285,7 @@ button,
 input,
 select,
 textarea {
-	color: #303030;
+	color: #353535;
 	font-size: 17px;
 	font-size: 1.0625rem;
 	font-family: 'Raleway', Tahoma, Arial;
@@ -408,7 +408,7 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 4px solid #303030;
+	border-left: 4px solid #353535;
 	color: #777;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -418,7 +418,7 @@ blockquote cite,
 blockquote small {
 	display: block;
 	margin-top: 1em;
-	color: #303030;
+	color: #353535;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -493,19 +493,19 @@ td {
 }
 
 a {
-	color: #cc5555;
+	color: #33aacc;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #303030;
+	color: #353535;
 }
 
 a:focus {
@@ -528,7 +528,7 @@ input[type="submit"] {
 	padding: 0.6em 1em;
 	border: 1px solid rgba(0,0,0,0.075);
 	background: none;
-	color: #cc5555;
+	color: #33aacc;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -547,7 +547,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	color: #303030;
+	color: #353535;
 }
 
 input[type="text"],
@@ -570,7 +570,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	border: 1px solid rgba(0,0,0,0.2);
-	color: #303030;
+	color: #353535;
 }
 
 textarea {
@@ -738,7 +738,7 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	color: #353535;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 40px;
@@ -749,12 +749,12 @@ textarea {
 
 .site-title a:link,
 .site-title a:visited {
-	color: #303030;
+	color: #353535;
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 .site-branding .custom-logo {
@@ -789,8 +789,8 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	border-top: 6px solid #303030;
-	border-bottom: 1px solid #303030;
+	border-top: 6px solid #353535;
+	border-bottom: 1px solid #353535;
 }
 
 .main-navigation-toggle {
@@ -814,7 +814,7 @@ textarea {
 	flex-flow: row wrap;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	color: #353535;
 	list-style-position: outside;
 	list-style-type: none;
 	font-size: 18px;
@@ -833,13 +833,13 @@ textarea {
 
 .main-navigation-menu a:link,
 .main-navigation-menu a:visited {
-	color: #303030;
+	color: #353535;
 	text-decoration: none;
 }
 
 .main-navigation-menu a:hover,
 .main-navigation-menu a:active {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 .main-navigation-menu > .menu-item-has-children a .icon {
@@ -847,12 +847,12 @@ textarea {
 	width: 14px;
 	height: 14px;
 	vertical-align: top;
-	fill: #303030;
+	fill: #353535;
 }
 
 .main-navigation-menu > .menu-item-has-children a:hover .icon,
 .main-navigation-menu > .menu-item-has-children a:active .icon  {
-	fill: #cc5555;
+	fill: #33aacc;
 }
 
 .main-navigation-menu ul {
@@ -862,7 +862,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	background: #fff;
-	border: 1px solid #303030;
+	border: 1px solid #353535;
 	border-bottom: none;
 	list-style-position: outside;
 	list-style-type: none;
@@ -879,7 +879,7 @@ textarea {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	border-bottom: 1px solid #303030;
+	border-bottom: 1px solid #353535;
 }
 
 .main-navigation-menu ul .menu-item-has-children > a .icon {
@@ -929,13 +929,13 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 0.75em;
-	color: #303030;
+	color: #353535;
 	font-weight: normal;
 	font-size: 18px;
 	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	border-top: 4px solid #303030;
-	border-bottom: 1px solid #303030;
+	border-top: 4px solid #353535;
+	border-bottom: 1px solid #353535;
 }
 
 .widget ul {
@@ -967,12 +967,12 @@ textarea {
 
 .widget-title a:link,
 .widget-title a:visited  {
-	color: #303030;
+	color: #353535;
 }
 
 .widget-title a:hover,
 .widget-title a:active  {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 /*--------------------------------------------------------------
@@ -1017,12 +1017,12 @@ textarea {
 	margin: 4px 0 0;
 	width: 20px;
 	height: 20px;
-	fill: #cc5555;
+	fill: #33aacc;
 }
 
 .search-form .search-submit:hover .icon-search,
 .search-form .search-submit:active .icon-search  {
-	fill: #303030;
+	fill: #353535;
 }
 
 /*--------------------------------------------------------------
@@ -1160,7 +1160,7 @@ article,
 .entry-title {
 	margin: 0.15em 0 0.2em;
 	padding: 0;
-	color: #303030;
+	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 36px;
@@ -1171,13 +1171,13 @@ article,
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #303030;
+	color: #353535;
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 .wp-post-image {
@@ -1350,7 +1350,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	padding: 0.6em 1em;
 	border: 1px solid rgba(0,0,0,0.075);
 	background: none;
-	color: #cc5555;
+	color: #33aacc;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -1358,7 +1358,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	color: #303030;
+	color: #353535;
 }
 
 /* Archives and Search Heading */
@@ -1370,7 +1370,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 .archive-title {
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: normal;
@@ -1542,7 +1542,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: normal;
@@ -1956,7 +1956,7 @@ object {
 		padding: 0.75em 1em;
 		border: none;
 		background: none;
-		color: #303030;
+		color: #353535;
 		text-decoration: none;
 		font-weight: normal;
 		font-size: 20px;
@@ -1972,7 +1972,7 @@ object {
 
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:active {
-		color: #cc5555;
+		color: #33aacc;
 		cursor: pointer;
 	}
 
@@ -1981,12 +1981,12 @@ object {
 		width: 25px;
 		height: 25px;
 		vertical-align: top;
-		fill: #303030;
+		fill: #353535;
 	}
 
 	.main-navigation-toggle:hover .icon,
 	.main-navigation-toggle:active .icon  {
-		fill: #cc5555;
+		fill: #33aacc;
 	}
 
 	/* Main Navigation Menu */
@@ -2039,12 +2039,12 @@ object {
 		width: 19px;
 		height: 19px;
 		vertical-align: top;
-		fill: #303030;
+		fill: #353535;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover .icon,
 	.main-navigation-menu .submenu-dropdown-toggle:active .icon  {
-		fill: #cc5555;
+		fill: #33aacc;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle.active .icon {

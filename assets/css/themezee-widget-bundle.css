@@ -129,7 +129,7 @@
 	margin: 0;
 	padding: 0.5em 0.8em;
 	border: 1px solid rgba(0,0,0,0.075);
-	color: #cc5555;
+	color: #33aacc;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px;
@@ -138,12 +138,12 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
-	color: #cc5555;
+	color: #33aacc;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	color: #303030;
+	color: #353535;
 	text-decoration: none;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	color: #303030;
+	color: #353535;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -190,11 +190,11 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: middle;
-	fill: #cc5555;
+	fill: #33aacc;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover .icon {
-	fill: #303030;
+	fill: #353535;
 }
 
 /*--------------------------------------------------------------
