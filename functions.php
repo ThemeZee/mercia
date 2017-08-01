@@ -41,7 +41,8 @@ if ( ! function_exists( 'mercia_setup' ) ) :
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
-			'primary'   => esc_html__( 'Main Navigation', 'mercia' ),
+			'primary' => esc_html__( 'Main Navigation', 'mercia' ),
+			'social'  => esc_html__( 'Social Icons', 'mercia' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.

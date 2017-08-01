@@ -716,6 +716,10 @@ textarea {
 }
 
 .header-main {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	padding: 1.5em 0;
 }
 
@@ -909,6 +913,54 @@ textarea {
 
 .main-navigation-menu li.current-menu-item > a:after {
 	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+## 10.2 - Social Icons Menu
+--------------------------------------------------------------*/
+.header-social-menu {
+	margin-left: auto;
+	margin-top: 0.25em;
+}
+
+.header-social-menu .social-icons-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+}
+
+.header-social-menu .social-icons-menu li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.header-social-menu .social-icons-menu li a {
+	display: block;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.header-social-menu .social-icons-menu li a .icon {
+	margin: 0;
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	fill: #303030;
+}
+
+.header-social-menu .social-icons-menu li a:hover .icon {
+	fill: #33aacc;
 }
 
 /*--------------------------------------------------------------
