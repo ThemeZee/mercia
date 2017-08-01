@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the slideshow loop
  *
- * @package Chronus
+ * @package Mercia
  */
 
 ?>
@@ -11,13 +11,13 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php chronus_featured_post_image( 'post-thumbnail', array( 'class' => 'featured-image' ) ); ?>
+		<?php mercia_featured_post_image( 'post-thumbnail', array( 'class' => 'featured-image' ) ); ?>
 
 		<header class="entry-header">
 
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<?php chronus_featured_entry_meta(); ?>
+			<?php mercia_featured_entry_meta(); ?>
 
 		</header><!-- .entry-header -->
 

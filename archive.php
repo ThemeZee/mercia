@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Chronus
+ * @package Mercia
  */
 
 get_header(); ?>
@@ -26,14 +26,14 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', esc_attr( chronus_get_option( 'blog_layout' ) ) );
+				get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
 
 			endwhile; ?>
 
 			</div>
 
 			<?php
-			chronus_pagination();
+			mercia_pagination();
 
 		else :
 

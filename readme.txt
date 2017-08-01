@@ -1,6 +1,6 @@
-=== Chronus ===
+=== Mercia ===
 Author URI: https://themezee.com
-Theme URI: https://themezee.com/themes/chronus/
+Theme URI: https://themezee.com/themes/mercia/
 Contributors: themezee
 Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
@@ -8,44 +8,31 @@ Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Chronus is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
+Mercia is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
 
 == Description ==
 
-Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
+Mercia is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
 
-For more information about Chronus please go to https://themezee.com/themes/chronus/
+For more information about Mercia please go to https://themezee.com/themes/mercia/
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Chronus in the search form and press the 'Enter' key on your keyboard.
+2. Type in Mercia in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://themezee.com/docs/chronus-documentation/ for a guide on how to customize this theme.
+4. Go to https://themezee.com/docs/mercia-documentation/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
-
-= 1.2.1 =
-* added new setting to deactivate Magazine widgets on blog index
-* fixed styling of site title
-
-= 1.2 =
-* added selective refresh to all theme settings
-* added function to return single theme option
-* improved structure of theme options
-
-= 1.1 =
-* added SVG Icons instead of Genericons font
-* added custom Magazine Widget Control in Customizer
 
 = 1.0 =
 Initial Release
 
 == Copyright ==
 
-Chronus WordPress Theme, Copyright 2017 ThemeZee.com
-Chronus is distributed under the terms of the GNU GPL
+Mercia WordPress Theme, Copyright 2017 ThemeZee.com
+Mercia is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -59,7 +46,7 @@ GNU General Public License for more details.
 
 == Ressources ==
 
-Chronus bundles the following third-party resources:
+Mercia bundles the following third-party resources:
 
 1. Genericons Neue - https://github.com/Automattic/genericons-neue
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)

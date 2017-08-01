@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Chronus
+ * @package Mercia
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 
 				endwhile;
 
-				chronus_pagination();
+				mercia_pagination();
 
 			else :
 

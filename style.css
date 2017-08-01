@@ -1,19 +1,19 @@
 /*
-Theme Name: Chronus
-Theme URI: https://themezee.com/themes/chronus/
+Theme Name: Mercia
+Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
-Version: 1.2.1
+Description: Mercia is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: chronus
+Text Domain: mercia
 Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Chronus is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Mercia is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -2580,12 +2580,12 @@ object {
 	left: 15px;
 }
 
-.customize-partial-edit-shortcut-chronus_theme_options-blog_description,
-.customize-partial-edit-shortcut-chronus_blog_layout_partial {
+.customize-partial-edit-shortcut-mercia_theme_options-blog_description,
+.customize-partial-edit-shortcut-mercia_blog_layout_partial {
 	left: -9999px;
 }
 
-.customize-partial-edit-shortcut-chronus_featured_content_partial button {
+.customize-partial-edit-shortcut-mercia_featured_content_partial button {
 	top: -40px;
 }
 

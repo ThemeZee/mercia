@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Chronus
+ * @package Mercia
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			chronus_related_posts();
+			mercia_related_posts();
 
 			comments_template();
 

@@ -2,20 +2,20 @@
 /**
  * The template for displaying single posts
  *
- * @package Chronus
+ * @package Mercia
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php chronus_post_image_single(); ?>
+	<?php mercia_post_image_single(); ?>
 
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php chronus_entry_meta(); ?>
+		<?php mercia_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 
@@ -24,7 +24,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mercia' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -32,9 +32,9 @@
 
 	<footer class="entry-footer">
 
-		<?php chronus_entry_tags(); ?>
+		<?php mercia_entry_tags(); ?>
 
-		<?php chronus_post_navigation(); ?>
+		<?php mercia_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
 

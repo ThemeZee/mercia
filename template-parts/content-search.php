@@ -2,14 +2,14 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Chronus
+ * @package Mercia
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php chronus_post_image_archives(); ?>
+	<?php mercia_post_image_archives(); ?>
 
 	<header class="entry-header">
 
@@ -19,7 +19,7 @@
 
 	<div class="entry-content entry-excerpt clearfix">
 		<?php the_excerpt(); ?>
-		<?php chronus_more_link(); ?>
+		<?php mercia_more_link(); ?>
 	</div><!-- .entry-content -->
 
 </article>

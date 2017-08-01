@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Chronus
+ * @package Mercia
  */
 
 ?><!DOCTYPE html>
@@ -20,11 +20,11 @@
 
 <body <?php body_class(); ?>>
 
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mercia' ); ?></a>
 
-	<?php do_action( 'chronus_header_bar' ); ?>
+	<?php do_action( 'mercia_header_bar' ); ?>
 
-	<?php chronus_header_image(); ?>
+	<?php mercia_header_image(); ?>
 
 	<div id="page" class="hfeed site">
 
@@ -34,9 +34,9 @@
 
 				<div id="logo" class="site-branding clearfix">
 
-					<?php chronus_site_logo(); ?>
-					<?php chronus_site_title(); ?>
-					<?php chronus_site_description(); ?>
+					<?php mercia_site_logo(); ?>
+					<?php mercia_site_title(); ?>
+					<?php mercia_site_description(); ?>
 
 				</div><!-- .site-branding -->
 
@@ -46,8 +46,8 @@
 
 		</header><!-- #masthead -->
 
-		<?php chronus_featured_content(); ?>
+		<?php mercia_featured_content(); ?>
 
-		<?php chronus_breadcrumbs(); ?>
+		<?php mercia_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">

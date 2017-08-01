@@ -5,13 +5,13 @@
  * Display the latest posts from two categories in a two column layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Chronus
+ * @package Mercia
  */
 
 /**
  * Magazine Widget Class
  */
-class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
+class Mercia_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'chronus-magazine-posts-columns', // ID.
-			esc_html__( 'Magazine (Columns)', 'chronus' ), // Name.
+			'mercia-magazine-posts-columns', // ID.
+			esc_html__( 'Magazine (Columns)', 'mercia' ), // Name.
 			array(
-				'classname' => 'chronus-magazine-columns-widget',
-				'description' => esc_html__( 'Displays your posts from two selected categories.', 'chronus' ),
+				'classname' => 'mercia-magazine-columns-widget',
+				'description' => esc_html__( 'Displays your posts from two selected categories.', 'mercia' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -38,8 +38,8 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$defaults = array(
 			'category_one'       => 0,
 			'category_two'       => 0,
-			'category_one_title' => esc_html__( 'Left Category', 'chronus' ),
-			'category_two_title' => esc_html__( 'Right Category', 'chronus' ),
+			'category_one_title' => esc_html__( 'Left Category', 'mercia' ),
+			'category_two_title' => esc_html__( 'Right Category', 'mercia' ),
 			'number'             => 4,
 			'highlight_post'     => true,
 		);
@@ -98,8 +98,8 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 	function render( $args, $settings ) {
 
 		// Get cached post ids.
-		$post_ids_category_one = chronus_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
-		$post_ids_category_two = chronus_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
+		$post_ids_category_one = mercia_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
+		$post_ids_category_two = mercia_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
 		?>
 
 		<div class="magazine-posts-column-left magazine-posts-columns clearfix">
@@ -158,7 +158,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'mercia_magazine_posts_excerpt_length' );
 
 			// Display Posts.
 			while ( $posts_query->have_posts() ) :
@@ -179,7 +179,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endwhile;
 
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'mercia_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -203,7 +203,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		if ( ! empty( $widget_title ) ) :
 
 			// Link Widget Title to category archive when possible.
-			$widget_title = chronus_magazine_widget_title( $widget_title, $category_id );
+			$widget_title = mercia_magazine_widget_title( $widget_title, $category_id );
 
 			// Display Widget Title.
 			echo $args['before_title'] . $widget_title . $args['after_title'];
@@ -228,7 +228,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
 
-		chronus_flush_magazine_post_ids();
+		mercia_flush_magazine_post_ids();
 
 		return $instance;
 	}
@@ -245,16 +245,16 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category_one_title' ); ?>"><?php esc_html_e( 'Left Category Title:', 'chronus' ); ?>
+			<label for="<?php echo $this->get_field_id( 'category_one_title' ); ?>"><?php esc_html_e( 'Left Category Title:', 'mercia' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'category_one_title' ); ?>" name="<?php echo $this->get_field_name( 'category_one_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_one_title'] ); ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category_one' ); ?>"><?php esc_html_e( 'Left Category:', 'chronus' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category_one' ); ?>"><?php esc_html_e( 'Left Category:', 'mercia' ); ?></label><br/>
 			<?php // Display Category One Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'chronus' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'mercia' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category_one'],
@@ -266,16 +266,16 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		</p>
 
 				<p>
-			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'chronus' ); ?>
+			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'mercia' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_two_title'] ); ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category_two' ); ?>"><?php esc_html_e( 'Right Category:', 'chronus' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category_two' ); ?>"><?php esc_html_e( 'Right Category:', 'mercia' ); ?></label><br/>
 			<?php // Display Category One Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'chronus' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'mercia' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category_two'],
@@ -287,7 +287,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'chronus' ); ?>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'mercia' ); ?>
 				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
 			</label>
 		</p>
@@ -295,7 +295,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'highlight_post' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['highlight_post'] ); ?> id="<?php echo $this->get_field_id( 'highlight_post' ); ?>" name="<?php echo $this->get_field_name( 'highlight_post' ); ?>" />
-				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'chronus' ); ?>
+				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'mercia' ); ?>
 			</label>
 		</p>
 
@@ -306,9 +306,9 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function chronus_register_magazine_posts_columns_widget() {
+function mercia_register_magazine_posts_columns_widget() {
 
-	register_widget( 'Chronus_Magazine_Posts_Columns_Widget' );
+	register_widget( 'Mercia_Magazine_Posts_Columns_Widget' );
 
 }
-add_action( 'widgets_init', 'chronus_register_magazine_posts_columns_widget' );
+add_action( 'widgets_init', 'mercia_register_magazine_posts_columns_widget' );
