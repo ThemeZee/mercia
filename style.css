@@ -1033,6 +1033,27 @@ textarea {
 	margin-bottom: -2em;
 }
 
+.widget-magazine-posts .widget-header {
+	margin: 0 0 2em;
+	padding: 0 0 0.5em;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.widget-magazine-posts .widget-title {
+	margin: 0.15em 0 0.2em;
+	padding: 0;
+	color: #353535;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: 'Rambla', Tahoma, Arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.4;
+	border: none;
+}
+
 .widget-magazine-posts .type-post {
 	margin: 0 0 2em 0;
 	padding: 0;
@@ -1193,8 +1214,9 @@ article,
 
 /* Single Post */
 .single-post .entry-header {
-	margin: 0 0 1.5em;
-	width: 100%;
+	margin: 0 0 2em;
+	padding: 0 0 1em;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .single-post .entry-title {
@@ -1203,7 +1225,7 @@ article,
 }
 
 .single-post .wp-post-image {
-	margin: 0 0 2em;
+	margin: -2em 0 2em;
 }
 
 .single-post .entry-content p:first-child {
@@ -1365,10 +1387,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 2em;
-	padding: 0.75em 1em;
-	width: 100%;
-	border-top: 1px dotted rgba(0,0,0,0.2);
-	border-bottom: 1px dotted rgba(0,0,0,0.2);
+	padding: 0 0 0.5em;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .archive-title {
@@ -1377,10 +1397,13 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	font-weight: bold;
+	text-transform: uppercase;
 	line-height: 1.4;
+	border: none;
 }
 
 .blog-description,
