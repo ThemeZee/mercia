@@ -228,9 +228,6 @@ require get_template_directory() . '/inc/template-tags.php';
 // Include support functions for Theme Addons.
 require get_template_directory() . '/inc/addons.php';
 
-// Include Featured Content Setup.
-require get_template_directory() . '/inc/featured-content.php';
-
 // Include Magazine Functions.
 require get_template_directory() . '/inc/magazine.php';
 

@@ -48,6 +48,4 @@
 
 		</header><!-- #masthead -->
 
-		<?php mercia_featured_content(); ?>
-
 		<?php mercia_breadcrumbs(); ?>

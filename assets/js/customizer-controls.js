@@ -25,20 +25,4 @@
 		wp.customize.control( 'mercia_theme_options[excerpt_length]', setupControl );
 	} );
 
-	wp.customize( 'mercia_theme_options[featured_posts]', function( setting ) {
-		var setupControl = function( control ) {
-			var setActiveState, isDisplayed;
-			isDisplayed = function() {
-				return true === setting.get();
-			};
-			setActiveState = function() {
-				control.active.set( isDisplayed() );
-			};
-			setActiveState();
-			setting.bind( setActiveState );
-			control.active.validate = isDisplayed;
-		};
-		wp.customize.control( 'mercia_theme_options[featured_category]', setupControl );
-	} );
-
 })( this.wp, jQuery );

@@ -64,8 +64,6 @@ function mercia_default_options() {
 		'post_navigation'       => true,
 		'post_image_archives'   => true,
 		'post_image_single'     => true,
-		'featured_posts'        => false,
-		'featured_category'     => 0,
 	);
 
 	return $default_options;
