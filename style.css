@@ -671,6 +671,7 @@ textarea {
 	flex-flow: row wrap;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
+	padding: 2em 0 0;
 }
 
 .content-area {
@@ -711,13 +712,11 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	margin: 0 0 2.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	margin: 0;
 }
 
 .header-main {
-	padding: 2.5em 0;
-	text-align: center;
+	padding: 1.5em 0;
 }
 
 .site-branding {
@@ -736,13 +735,13 @@ textarea {
 
 .site-title {
 	display: block;
-	margin: 0.15em 0;
+	margin: 0;
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 40px;
+	font-size: 2.5rem;
 	font-family: 'Rambla', Tahoma, Arial;
 	line-height: 1.4;
 }
@@ -789,7 +788,8 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	border-top: 1px solid rgba(0,0,0,0.075);
+	border-top: 6px solid #303030;
+	border-bottom: 1px solid #303030;
 }
 
 .main-navigation-toggle {
@@ -802,11 +802,6 @@ textarea {
 	display: flex;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	        justify-content: center;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
 }
 
 .main-navigation-menu {
@@ -821,8 +816,8 @@ textarea {
 	color: #303030;
 	list-style-position: outside;
 	list-style-type: none;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -831,21 +826,8 @@ textarea {
 .main-navigation-menu a {
 	display: block;
 	margin: 0;
-	padding: 0.75em 1em;
+	padding: 1em;
 	text-decoration: none;
-}
-
-.main-navigation-menu > .menu-item-has-children > a .icon {
-	margin: 0.6em 0 0 0.4em;
-	width: 14px;
-	height: 14px;
-	vertical-align: top;
-	fill: #303030;
-}
-
-.main-navigation-menu > .menu-item-has-children > a:hover .icon,
-.main-navigation-menu > .menu-item-has-children > a:active .icon  {
-	fill: #cc5555;
 }
 
 .main-navigation-menu a:link,
@@ -859,14 +841,28 @@ textarea {
 	color: #cc5555;
 }
 
+.main-navigation-menu > .menu-item-has-children a .icon {
+	margin: 0.5em 0 0 0.4em;
+	width: 14px;
+	height: 14px;
+	vertical-align: top;
+	fill: #303030;
+}
+
+.main-navigation-menu > .menu-item-has-children a:hover .icon,
+.main-navigation-menu > .menu-item-has-children a:active .icon  {
+	fill: #cc5555;
+}
+
 .main-navigation-menu ul {
 	position: absolute;
 	z-index: 99;
 	display: none;
 	margin: 0;
 	padding: 0;
-	background: #cc5555;
-	color: #fff;
+	background: #fff;
+	border: 1px solid #303030;
+	border-bottom: none;
 	list-style-position: outside;
 	list-style-type: none;
 	font-size: 16px;
@@ -882,17 +878,7 @@ textarea {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.main-navigation-menu ul a:link,
-.main-navigation-menu ul a:visited {
-	color: #fff;
-}
-
-.main-navigation-menu ul a:hover,
-.main-navigation-menu ul a:active {
-	color: rgba(255,255,255,0.5);
+	border-bottom: 1px solid #303030;
 }
 
 .main-navigation-menu ul .menu-item-has-children > a .icon {
@@ -902,16 +888,10 @@ textarea {
 	vertical-align: top;
 	-webkit-transform: rotate(270deg);
 	transform: rotate(270deg);
-	fill: #fff;
-}
-
-.main-navigation-menu ul .menu-item-has-children > a:hover .icon,
-.main-navigation-menu ul .menu-item-has-children > a:active .icon  {
-	fill: rgba(255,255,255,0.5);
 }
 
 .main-navigation-menu li ul ul {
-	top: 0;
+	top: -1px;
 	left: 100%;
 }
 
@@ -947,12 +927,14 @@ textarea {
 .widget-title {
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0.75em;
 	color: #303030;
 	font-weight: normal;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	border-top: 4px solid #303030;
+	border-bottom: 1px solid #303030;
 }
 
 .widget ul {
@@ -964,12 +946,11 @@ textarea {
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
 	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .widget ul li + li {
-	border-top: none;
+
 }
 
 .widget ul .children,
