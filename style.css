@@ -1365,20 +1365,20 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 /* Archives and Search Heading */
 .page-header {
-	margin: 0 0 1.5em;
-	padding: 0;
+	margin: 0 0 2em;
+	width: 100%;
 }
 
 .archive-title {
-	margin: 0;
+	margin: 0.15em 0 0.2em;
 	padding: 0;
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	line-height: 1.4;
 }
 
 .blog-description,
