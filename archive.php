@@ -20,34 +20,38 @@ if ( have_posts() ) : ?>
 
 <?php endif; ?>
 
-	<section id="primary" class="content-archive content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="site-content container clearfix">
 
-		<?php
-		if ( have_posts() ) : ?>
-
-			<div class="post-wrapper">
-
-			<?php while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
-
-			endwhile; ?>
-
-			</div>
+		<section id="primary" class="content-archive content-area">
+			<main id="main" class="site-main" role="main">
 
 			<?php
-			mercia_pagination();
+			if ( have_posts() ) : ?>
 
-		else :
+				<div class="post-wrapper">
 
-			get_template_part( 'template-parts/content', 'none' );
+				<?php while ( have_posts() ) : the_post();
 
-		endif; ?>
+					get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				endwhile; ?>
 
-	<?php get_sidebar(); ?>
+				</div>
+
+				<?php
+				mercia_pagination();
+
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif; ?>
+
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

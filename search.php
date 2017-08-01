@@ -9,49 +9,53 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-archive content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="site-content container clearfix">
 
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'mercia' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				<?php get_search_form(); ?>
-
-			</header><!-- .page-header -->
-
-			<div class="post-wrapper">
-
-			<?php while ( have_posts() ) : the_post();
-
-				if ( 'post' === get_post_type() ) :
-
-					get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
-
-				else :
-
-					get_template_part( 'template-parts/content', 'search' );
-
-				endif;
-
-			endwhile; ?>
-
-			</div>
+		<section id="primary" class="content-archive content-area">
+			<main id="main" class="site-main" role="main">
 
 			<?php
-			mercia_pagination();
+			if ( have_posts() ) : ?>
 
-		else :
+				<header class="page-header">
 
-			get_template_part( 'template-parts/content', 'none' );
+					<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'mercia' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<?php get_search_form(); ?>
 
-		endif; ?>
+				</header><!-- .page-header -->
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				<div class="post-wrapper">
 
-	<?php get_sidebar(); ?>
+				<?php while ( have_posts() ) : the_post();
+
+					if ( 'post' === get_post_type() ) :
+
+						get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
+
+					else :
+
+						get_template_part( 'template-parts/content', 'search' );
+
+					endif;
+
+				endwhile; ?>
+
+				</div>
+
+				<?php
+				mercia_pagination();
+
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif; ?>
+
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

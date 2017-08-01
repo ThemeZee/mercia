@@ -672,7 +672,6 @@ textarea {
 	flex-flow: row wrap;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	padding: 2em 0 0;
 }
 
 .content-area {
@@ -713,7 +712,7 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	margin: 0;
+	margin: 0 0 2em;
 }
 
 .header-main {
@@ -1194,7 +1193,7 @@ article,
 
 /* Single Post */
 .single-post .entry-header {
-	margin: 0 0 1em;
+	margin: 0 0 1.5em;
 	width: 100%;
 }
 
@@ -1366,7 +1365,10 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 2em;
+	padding: 0.75em 1em;
 	width: 100%;
+	border-top: 1px dotted rgba(0,0,0,0.2);
+	border-bottom: 1px dotted rgba(0,0,0,0.2);
 }
 
 .archive-title {
@@ -1375,8 +1377,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
 	line-height: 1.4;
 }

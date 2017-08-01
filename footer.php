@@ -9,8 +9,6 @@
 
 ?>
 
-	</div><!-- #content -->
-
 	<?php do_action( 'mercia_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">

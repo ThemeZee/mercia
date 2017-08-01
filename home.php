@@ -7,40 +7,47 @@
  * @package Mercia
  */
 
-get_header(); ?>
+get_header();
 
-	<section id="primary" class="content-archive content-area">
-		<main id="main" class="site-main" role="main">
+// Display Magazine Homepage Widgets.
+mercia_magazine_widgets();
 
-		<?php
-		// Display Magazine Homepage Widgets.
-		mercia_magazine_widgets();
+if ( have_posts() ) :
+	mercia_blog_title();
+endif;
+?>
 
-		if ( have_posts() ) :
+	<div id="content" class="site-content container clearfix">
 
-			mercia_blog_title();
+		<section id="primary" class="content-archive content-area">
+			<main id="main" class="site-main" role="main">
 
-			echo '<div class="post-wrapper">';
+			<?php
+			if ( have_posts() ) :
 
-			while ( have_posts() ) : the_post();
+				echo '<div class="post-wrapper">';
 
-				get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
+				while ( have_posts() ) : the_post();
 
-			endwhile;
+					get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
 
-			echo '</div>';
+				endwhile;
 
-			mercia_pagination();
+				echo '</div>';
 
-		else :
+				mercia_pagination();
 
-			get_template_part( 'template-parts/content', 'none' );
+			else :
 
-		endif; ?>
+				get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			endif; ?>
 
-	<?php get_sidebar(); ?>
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

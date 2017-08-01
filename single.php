@@ -11,22 +11,26 @@ while ( have_posts() ) : the_post(); ?>
 
 	<?php get_template_part( 'template-parts/header/header', 'single' ); ?>
 
-	<section id="primary" class="content-single content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="site-content container clearfix">
 
-			<?php
-			get_template_part( 'template-parts/content', 'single' );
+		<section id="primary" class="content-single content-area">
+			<main id="main" class="site-main" role="main">
 
-			mercia_related_posts();
+				<?php
+				get_template_part( 'template-parts/content', 'single' );
 
-			comments_template();
-			?>
+				mercia_related_posts();
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				comments_template();
+				?>
 
-<?php
-endwhile;
+			</main><!-- #main -->
+		</section><!-- #primary -->
 
-get_sidebar();
-get_footer();
+		<?php get_sidebar(); ?>
+
+	</div><!-- #content -->
+
+<?php endwhile; ?>
+
+<?php get_footer(); ?>

@@ -7,19 +7,8 @@
  * @package Mercia
  */
 
-get_header(); ?>
+get_header();
 
-	<section id="primary" class="content-magazine content-single content-area">
-		<main id="main" class="site-main" role="main">
+mercia_magazine_widgets();
 
-		<?php
-		// Display Magazine Homepage Widgets.
-		mercia_magazine_widgets();
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-	<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+get_footer();

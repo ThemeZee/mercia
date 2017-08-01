@@ -13,29 +13,33 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-single content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="site-content container clearfix">
 
-			<?php
-			if ( have_posts() ) :
+		<section id="primary" class="content-single content-area">
+			<main id="main" class="site-main" role="main">
 
-				while ( have_posts() ) : the_post();
+				<?php
+				if ( have_posts() ) :
 
-					get_template_part( 'template-parts/content', 'page' );
+					while ( have_posts() ) : the_post();
 
-				endwhile;
+						get_template_part( 'template-parts/content', 'page' );
 
-				mercia_pagination();
+					endwhile;
 
-			else :
+					mercia_pagination();
 
-				get_template_part( 'template-parts/content', 'none' );
+				else :
 
-			endif; ?>
+					get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				endif; ?>
 
-	<?php get_sidebar(); ?>
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

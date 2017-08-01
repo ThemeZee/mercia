@@ -40,6 +40,8 @@
 
 				</div><!-- .site-branding -->
 
+				<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
+
 			</div><!-- .header-main -->
 
 			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
@@ -49,5 +51,3 @@
 		<?php mercia_featured_content(); ?>
 
 		<?php mercia_breadcrumbs(); ?>
-
-		<div id="content" class="site-content container clearfix">
