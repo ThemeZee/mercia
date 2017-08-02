@@ -52,52 +52,32 @@ Mercia bundles the following third-party resources:
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2017 Automattic, Inc., https://automattic.com/
 
-2. Underscores - http://underscores.me/
+2. Social Icons Subset from Font Awesome - http://fontawesome.io/
+License: Distributed under the terms of the SIL OFL 1.1 (scripts.sil.org/OFL)
+Copyright: 2017 Dave Gandy, http://fontawesome.io/
+
+3. Underscores - http://underscores.me/
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
 
-3. normalize.css - http://necolas.github.io/normalize.css/
+4. normalize.css - http://necolas.github.io/normalize.css/
 License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 
-4. svgxuse - https://github.com/Keyamoon/svgxuse
+5. svgxuse - https://github.com/Keyamoon/svgxuse
 License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
 Copyright: 2017 IcoMoon.io
 
-5. Raleway Font - https://www.google.com/fonts/specimen/Raleway
-License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Pablo Impallari and Rodrigo Fuenzalida
+6. Open Sans Font - https://fonts.google.com/specimen/Open+Sans
+License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0)
+Copyright: Steve Matteson
 
-6. Rambla Font - https://www.google.com/fonts/specimen/Rambla
+7. Rambla Font - https://fonts.google.com/specimen/Rambla
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: Martin Sommaruga
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+8. Image used in screenshot.jpg are from Pexels - https://www.pexels.com
 
-Image 1: https://pixabay.com/en/office-home-glasses-workspace-820390/
+Image: https://www.pexels.com/photo/beverage-breakfast-brewed-coffee-caffeine-374885/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2015 fancycrave1 (https://pixabay.com/en/users/fancycrave1-1115284/)
-
-Image 2: https://pixabay.com/en/blur-close-up-computer-drink-focus-1867997/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2016 Pexels (https://pixabay.com/en/users/Pexels-2286921/)
-
-Image 3: https://pixabay.com/en/computer-macbook-tablet-editing-767781/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2015 Lalmch (https://pixabay.com/en/users/Lalmch-1026205/)
-
-Image 4: https://pixabay.com/en/apple-computer-electronics-keyboard-1846666/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2017 Pexels (https://pixabay.com/en/users/Pexels-2286921/)
-
-Image 5: https://pixabay.com/en/office-work-computer-portable-2009693/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2016 Aracely Mitsu (https://pixabay.com/en/users/aracelymitsu-4366904/)
-
-Image 6: https://pixabay.com/en/floor-gang-input-entrance-hall-2228277/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2017 Orlando (https://pixabay.com/en/users/PIRO4D-2707530/)
-
-Image 7: https://pixabay.com/en/computer-laptop-table-technology-2242274/
-License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2017 engin akyurt (https://pixabay.com/en/users/Engin_Akyurt-3656355/)
+Copyright: Burst (https://www.pexels.com/u/burst/)
