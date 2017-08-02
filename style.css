@@ -712,7 +712,7 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	margin: 0 0 2em;
+	margin: 0 0 2.5rem;
 }
 
 .header-main {
@@ -967,7 +967,7 @@ textarea {
 # 11.0 - Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 2.5em 0;
+	margin: 0 0 2.5rem;
 	padding: 0;
 	max-width: 100%;
 	-ms-word-wrap: break-word;
@@ -975,15 +975,17 @@ textarea {
 }
 
 .widget-title {
-	display: block;
-	margin: 0 0 1.25rem;
-	padding: 0.75em;
+	margin: 0 0 2rem;
+	padding: 0 0 0.5rem;
 	color: #353535;
-	font-weight: normal;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 	font-size: 18px;
 	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	border-top: 4px solid #353535;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.4;
 	border-bottom: 1px solid #353535;
 }
 
@@ -996,7 +998,8 @@ textarea {
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px dotted rgba(0,0,0,0.1);
+	border-bottom: 1px dotted rgba(0,0,0,0.1);
 }
 
 .widget ul li + li {
@@ -1079,22 +1082,6 @@ textarea {
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -2em;
-}
-
-.widget-magazine-posts .widget-title {
-	margin: 0.15rem 0 2rem;
-	padding: 0 0 0.5rem;
-	color: #353535;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
-	font-weight: bold;
-	text-transform: uppercase;
-	line-height: 1.4;
-	border: none;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .widget-magazine-posts .type-post {
@@ -1217,7 +1204,7 @@ article,
 .type-page,
 .type-attachment,
 .comments-area  {
-	margin: 0 0 2.5em 0;
+	margin: 0 0 2.5rem;
 	padding: 0;
 	max-width: 100%;
 }
@@ -1312,7 +1299,17 @@ article,
 	width: 19px;
 	height: 19px;
 	vertical-align: top;
-	fill: #353535;
+	fill: rgba(0,0,0,0.25);
+}
+
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: rgba(0,0,0,0.45);
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #353535;
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1447,14 +1444,12 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 /* Archives and Search Heading */
 .page-header {
-	margin: 0.15em 0 2rem;
-	padding: 0 0 0.5rem;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin: 0 0 2rem;
 }
 
 .archive-title {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0.5rem;
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -1464,7 +1459,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 1.4;
-	border: none;
+	border-bottom: 1px solid #353535;
 }
 
 .blog-description,

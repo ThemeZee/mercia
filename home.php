@@ -11,10 +11,6 @@ get_header();
 
 // Display Magazine Homepage Widgets.
 mercia_magazine_widgets();
-
-if ( have_posts() ) :
-	mercia_blog_title();
-endif;
 ?>
 
 	<div id="content" class="site-content container clearfix">
@@ -24,6 +20,8 @@ endif;
 
 			<?php
 			if ( have_posts() ) :
+
+				mercia_blog_title();
 
 				echo '<div class="post-wrapper">';
 
