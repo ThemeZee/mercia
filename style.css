@@ -974,13 +974,9 @@ textarea {
 	word-wrap: break-word;
 }
 
-.widget-header {
-	margin: 0 0 1.25rem;
-}
-
 .widget-title {
 	display: block;
-	margin: 0;
+	margin: 0 0 1.25rem;
 	padding: 0.75em;
 	color: #353535;
 	font-weight: normal;
@@ -1085,15 +1081,9 @@ textarea {
 	margin-bottom: -2em;
 }
 
-.widget-magazine-posts .widget-header {
-	margin: 0 0 2em;
-	padding: 0 0 0.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
 .widget-magazine-posts .widget-title {
-	margin: 0.15em 0 0.2em;
-	padding: 0;
+	margin: 0.15rem 0 2rem;
+	padding: 0 0 0.5rem;
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -1104,6 +1094,7 @@ textarea {
 	text-transform: uppercase;
 	line-height: 1.4;
 	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .widget-magazine-posts .type-post {
@@ -1133,18 +1124,18 @@ textarea {
 }
 
 .widget-magazine-posts .large-post .entry-title {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.widget-magazine-posts .medium-post .entry-title {
 	font-size: 24px;
 	font-size: 1.5rem;
 }
 
-.widget-magazine-posts .medium-post .entry-title {
+.widget-magazine-posts .small-post .entry-title {
 	font-size: 20px;
 	font-size: 1.25rem;
-}
-
-.widget-magazine-posts .small-post .entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
@@ -1321,7 +1312,7 @@ article,
 	width: 19px;
 	height: 19px;
 	vertical-align: top;
-	fill: rgba(0,0,0,0.3);
+	fill: #353535;
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1342,17 +1333,33 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 /* Entry Tags */
 .entry-tags {
 	margin: 0 0 2.5em;
-	color: #999;
-	font-size: 16px;
-	font-size: 1rem;
+	padding: 0;
+}
+
+.entry-tags .icon {
+	margin: 0.3em 0.3em 0 0;
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+	fill: #353535;
+}
+
+.entry-tags .meta-tags a {
+	margin-right: 0.75em;
+}
+
+.entry-tags .meta-tags a:before {
+	content: "\0023";
 }
 
 /* Post Navigation */
 .post-navigation {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
-	font-size: 1rem;
+	color: #353535;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: 'Rambla', Tahoma, Arial;
 }
 
 .post-navigation .nav-links .nav-previous {
@@ -1371,7 +1378,6 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 .post-navigation .nav-links .nav-link-text {
 	display: block;
-	font-weight: bold;
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text:before {
@@ -1441,13 +1447,13 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 /* Archives and Search Heading */
 .page-header {
-	margin: 0 0 2em;
-	padding: 0 0 0.5em;
+	margin: 0.15em 0 2rem;
+	padding: 0 0 0.5rem;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .archive-title {
-	margin: 0.15em 0 0.2em;
+	margin: 0;
 	padding: 0;
 	color: #353535;
 	-ms-word-wrap: break-word;
@@ -1526,22 +1532,18 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 --------------------------------------------------------------*/
 
 /* Comment Header */
-.comments-header {
-	margin: 0 0 1rem;
-}
-
-.comments-header .comments-title,
+.comments-title,
 .comment-reply-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
+	display: block;
+	margin: 0 0 1.5rem;
+	padding: 0.75em;
 	color: #353535;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
 	font-weight: normal;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	border-top: 4px solid #353535;
+	border-bottom: 1px solid #353535;
 }
 
 /* Comment List */
@@ -1553,10 +1555,14 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 .comment {
 	margin: 0 0 1.5em;
-	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+}
+
+.comment-body {
+	margin: 0;
+	padding: 0 0 1.5em;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .comment-meta {
@@ -1823,18 +1829,18 @@ object {
 
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
 
-	.widget-magazine-posts .medium-post .entry-title {
+	.widget-magazine-posts .small-post .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
-	}
-
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
 	}
 }
 
@@ -2030,8 +2036,8 @@ object {
 
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
@@ -2040,8 +2046,8 @@ object {
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 }
 
@@ -2056,18 +2062,18 @@ object {
 
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 19px;
+		font-size: 1.1875rem;
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
@@ -2077,13 +2083,13 @@ object {
 @media only screen and (max-width: 45em) {
 	/* Magazine Widgets */
 	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 }
 
@@ -2193,7 +2199,16 @@ object {
 	}
 
 	.widget-magazine-posts .medium-post .post-content {
-		padding-left: 1.5em;
+		padding-left: 1em;
+		width: 60%;
+	}
+
+	/* Magazine Small Posts */
+	.widget-magazine-posts .small-post .wp-post-image-link {
+		width: 40%;
+	}
+
+	.widget-magazine-posts .small-post .post-content {
 		width: 60%;
 	}
 
@@ -2215,18 +2230,18 @@ object {
 
 	/* Magazine Widgets Post Titles */
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 22px;
+		font-size: 1.375rem;
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 }
 
@@ -2246,18 +2261,18 @@ object {
 
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
@@ -2273,14 +2288,10 @@ object {
 	}
 
 	/* Magazine Widgets */
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
+	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 }
 
@@ -2302,6 +2313,12 @@ object {
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 
 	.widget-magazine-posts .medium-post .entry-meta,

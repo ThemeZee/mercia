@@ -101,7 +101,7 @@ if ( ! function_exists( 'mercia_blog_title' ) ) :
 				<?php // Display Blog Title.
 				if ( '' !== $blog_title || is_customize_preview() ) : ?>
 
-					<h1 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h1>
+					<h3 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h3>
 
 				<?php endif;
 
@@ -204,7 +204,7 @@ if ( ! function_exists( 'mercia_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		$posted_on = mercia_get_svg( 'edit' ) . $time_string;
+		$posted_on = mercia_get_svg( 'time' ) . $time_string;
 
 		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
@@ -254,12 +254,13 @@ if ( ! function_exists( 'mercia_entry_tags' ) ) :
 	function mercia_entry_tags() {
 
 		// Get tags.
-		$tag_list = get_the_tag_list( esc_html__( 'Tagged with ', 'mercia' ), ', ' );
+		$tag_list = get_the_tag_list();
 
 		// Display tags.
 		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
+				<?php echo mercia_get_svg( 'tag' ); ?>
 				<span class="meta-tags">
 					<?php echo $tag_list; ?>
 				</span>

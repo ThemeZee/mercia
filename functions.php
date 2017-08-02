@@ -105,25 +105,24 @@ add_action( 'after_setup_theme', 'mercia_content_width', 0 );
 function mercia_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'mercia' ),
-		'id' => 'sidebar-1',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'mercia' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'name'          => esc_html__( 'Sidebar', 'mercia' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'mercia' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'mercia' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'mercia' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'name'          => esc_html__( 'Magazine Homepage', 'mercia' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'mercia' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'mercia_widgets_init' );
 

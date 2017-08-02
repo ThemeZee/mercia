@@ -24,13 +24,9 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<header class="comments-header">
-
-			<h2 class="comments-title">
-				<?php comments_number( '', esc_html__( 'One comment', 'mercia' ), esc_html__( '% comments', 'mercia' ) );?>
-			</h2>
-
-		</header><!-- .comment-header -->
+		<h3 class="comments-title">
+			<?php comments_number( '', esc_html__( 'One comment', 'mercia' ), esc_html__( '% comments', 'mercia' ) );?>
+		</h3>
 
 		<?php the_comments_navigation(); ?>
 
