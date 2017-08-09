@@ -24,7 +24,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	// Add Blog Title setting and control.
 	$wp_customize->add_setting( 'mercia_theme_options[blog_title]', array(
 		'default'           => '',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
@@ -38,14 +38,15 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'mercia_theme_options[blog_title]', array(
-		'selector'        => '.blog-header .blog-title',
-		'render_callback' => 'mercia_customize_partial_blog_title',
+		'selector'         => '.blog-header .blog-title',
+		'render_callback'  => 'mercia_customize_partial_blog_title',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Blog Description setting and control.
 	$wp_customize->add_setting( 'mercia_theme_options[blog_description]', array(
 		'default'           => '',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
@@ -59,14 +60,15 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'mercia_theme_options[blog_description]', array(
-		'selector'        => '.blog-header .blog-description',
-		'render_callback' => 'mercia_customize_partial_blog_description',
+		'selector'         => '.blog-header .blog-description',
+		'render_callback'  => 'mercia_customize_partial_blog_description',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Settings and Controls for blog layout.
 	$wp_customize->add_setting( 'mercia_theme_options[blog_layout]', array(
 		'default'           => 'excerpt',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_select',
 	) );
@@ -86,35 +88,35 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'mercia_theme_options[excerpt_length]', array(
 		'default'           => 35,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
 	$wp_customize->add_control( 'mercia_theme_options[excerpt_length]', array(
-		'label'           => esc_html__( 'Excerpt Length', 'mercia' ),
-		'section'         => 'mercia_section_blog',
-		'settings'        => 'mercia_theme_options[excerpt_length]',
-		'type'            => 'text',
-		'priority'        => 40,
+		'label'    => esc_html__( 'Excerpt Length', 'mercia' ),
+		'section'  => 'mercia_section_blog',
+		'settings' => 'mercia_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 40,
 	) );
 
 	// Add Partial for Blog Layout and Excerpt Length.
 	$wp_customize->selective_refresh->add_partial( 'mercia_blog_layout_partial', array(
-		'selector'        => '.site-main .post-wrapper',
-		'settings'        => array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
 			'mercia_theme_options[blog_layout]',
 			'mercia_theme_options[excerpt_length]',
 		),
-		'render_callback' => 'mercia_customize_partial_blog_layout',
+		'render_callback'  => 'mercia_customize_partial_blog_layout',
 		'fallback_refresh' => false,
 	) );
 
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[blog_magazine_widgets_title]', array(
-			'label' => esc_html__( 'Magazine Widgets', 'mercia' ),
-			'section' => 'mercia_section_blog',
+			'label'    => esc_html__( 'Magazine Widgets', 'mercia' ),
+			'section'  => 'mercia_section_blog',
 			'settings' => array(),
 			'priority' => 50,
 		)
@@ -123,7 +125,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	// Add Setting and Control for showing post date.
 	$wp_customize->add_setting( 'mercia_theme_options[blog_magazine_widgets]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
