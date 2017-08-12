@@ -23,7 +23,7 @@
 	<footer class="entry-footer">
 
 		<?php mercia_entry_tags(); ?>
-
+		<?php do_action( 'mercia_author_bio' ); ?>
 		<?php mercia_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
