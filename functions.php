@@ -165,7 +165,7 @@ add_action( 'wp_enqueue_scripts', 'mercia_scripts' );
 function mercia_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Open Sans:400,400italic,700,700italic', 'Rambla:400,400italic,700,700italic' );
+	$font_families = array( 'Roboto:400,400italic,700,700italic', 'Open Sans:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(
@@ -186,9 +186,10 @@ function mercia_add_image_sizes() {
 	add_image_size( 'mercia-single-post', 1100, 440, true );
 
 	// Add different thumbnail sizes for Magazine widgets.
-	add_image_size( 'mercia-thumbnail-small', 200, 125, true );
-	add_image_size( 'mercia-thumbnail-medium', 400, 250, true );
-	add_image_size( 'mercia-thumbnail-large', 600, 375, true );
+	add_image_size( 'mercia-magazine-list-post', 200, 125, true );
+	add_image_size( 'mercia-magazine-small-post', 440, 275, true );
+	add_image_size( 'mercia-magazine-overlay', 840, 630, true );
+	add_image_size( 'mercia-magazine-overlay-small', 440, 330, true );
 
 }
 add_action( 'after_setup_theme', 'mercia_add_image_sizes' );
@@ -232,5 +233,6 @@ require get_template_directory() . '/inc/addons.php';
 require get_template_directory() . '/inc/magazine.php';
 
 // Include Widget Files.
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-focus-center.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-focus-left.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-grid.php';

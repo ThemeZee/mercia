@@ -1,8 +1,8 @@
 <?php
 /**
- * Magazine Posts Grid Widget
+ * Magazine Focus Center Widget
  *
- * Display the latest posts from a selected category in a grid layout.
+ * Display the latest posts from a selected category in a grid layout with large featured post in the center.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
  * @package Mercia
@@ -11,7 +11,7 @@
 /**
  * Magazine Widget Class
  */
-class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
+class Mercia_Magazine_Focus_Center_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'mercia-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine (Grid)', 'mercia' ), // Name.
+			'mercia-magazine-focus-center', // ID.
+			esc_html__( 'Magazine (Focus Center)', 'mercia' ), // Name.
 			array(
-				'classname' => 'mercia-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'mercia' ),
+				'classname' => 'mercia-magazine-focus-center-widget',
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout with large post in the center.', 'mercia' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,10 +36,9 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'    => esc_html__( 'Magazine (Grid)', 'mercia' ),
+			'title'    => esc_html__( 'Magazine (Focus Center)', 'mercia' ),
 			'category' => 0,
-			'layout'   => 'three-columns',
-			'number'   => 6,
+			'style'   => 'regular',
 		);
 
 		return $defaults;
@@ -62,18 +61,18 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$settings = wp_parse_args( $instance, $this->default_settings() );
 
 		// Set Widget class.
-		$class = ( 'three-columns' === $settings['layout'] ) ? 'magazine-grid-three-columns' : 'magazine-grid-two-columns';
+		$class = ( 'overlay' === $settings['style'] ) ? 'magazine-posts-overlay' : 'magazine-posts-regular';
 
 		// Output.
 		echo $args['before_widget'];
 		?>
 
-		<div class="widget-magazine-posts-grid widget-magazine-posts clearfix">
+		<div class="widget-magazine-focus-center widget-magazine-focus widget-magazine-posts clearfix">
 
 			<?php // Display Title.
 			$this->widget_title( $args, $settings ); ?>
 
-			<div class="widget-magazine-posts-content <?php echo $class; ?> magazine-grid">
+			<div class="widget-magazine-focus-center-content widget-magazine-focus-content widget-magazine-content  <?php echo $class; ?> ">
 
 				<?php $this->render( $settings ); ?>
 
@@ -91,8 +90,6 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 	/**
 	 * Renders the Widget Content
 	 *
-	 * Switches between two or three column layout style based on widget settings
-	 *
 	 * @uses this->magazine_posts_two_column_grid() or this->magazine_posts_three_column_grid()
 	 * @used-by this->widget()
 	 *
@@ -101,19 +98,19 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 	function render( $settings ) {
 
 		// Get cached post ids.
-		$post_ids = mercia_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
+		$post_ids = mercia_get_magazine_post_ids( $this->id, $settings['category'], 9 );
 
 		// Fetch posts from database.
 		$query_arguments = array(
 			'post__in'            => $post_ids,
-			'posts_per_page'      => absint( $settings['number'] ),
+			'posts_per_page'      => 5,
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
 
 		// Set template.
-		$template = ( 'three-columns' === $settings['layout'] ) ? 'medium-post' : 'large-post';
+		$template = ( 'overlay' === $settings['style'] ) ? 'magazine-overlay' : 'magazine-regular';
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -122,15 +119,19 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 			add_filter( 'excerpt_length', 'mercia_magazine_posts_excerpt_length' );
 
 			// Display Posts.
-			while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
+			while ( $posts_query->have_posts() ) : $posts_query->the_post();
 
-				<div class="post-column">
+				// Display first post differently.
+				if ( 0 === $posts_query->current_post ) :
 
-					<?php get_template_part( 'template-parts/widgets/magazine-' . $template, 'grid' ); ?>
+					get_template_part( 'template-parts/widgets/' . $template . '-large-post', 'focus-center' );
 
-				</div>
+				else :
 
-				<?php
+					get_template_part( 'template-parts/widgets/' . $template . '-small-post', 'focus-center' );
+
+				endif;
+
 			endwhile;
 
 			// Remove excerpt filter.
@@ -176,8 +177,7 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance = $old_instance;
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 		$instance['category'] = (int) $new_instance['category'];
-		$instance['layout'] = esc_attr( $new_instance['layout'] );
-		$instance['number'] = (int) $new_instance['number'];
+		$instance['style'] = esc_attr( $new_instance['style'] );
 
 		mercia_flush_magazine_post_ids();
 
@@ -217,17 +217,11 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'mercia' ); ?></label><br/>
-			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'mercia' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'mercia' ); ?></option>
+			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php esc_html_e( 'Post Style:', 'mercia' ); ?></label><br/>
+			<select id="<?php echo $this->get_field_id( 'style' ); ?>" name="<?php echo $this->get_field_name( 'style' ); ?>">
+				<option <?php selected( $settings['style'], 'regular' ); ?> value="default" ><?php esc_html_e( 'Default', 'mercia' ); ?></option>
+				<option <?php selected( $settings['style'], 'overlay' ); ?> value="overlay" ><?php esc_html_e( 'Image Overlay', 'mercia' ); ?></option>
 			</select>
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'mercia' ); ?>
-				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
-			</label>
 		</p>
 
 		<?php
@@ -237,9 +231,9 @@ class Mercia_Magazine_Posts_Grid_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function mercia_register_magazine_posts_grid_widget() {
+function mercia_register_magazine_focus_center_widget() {
 
-	register_widget( 'Mercia_Magazine_Posts_Grid_Widget' );
+	register_widget( 'Mercia_Magazine_Focus_Center_Widget' );
 
 }
-add_action( 'widgets_init', 'mercia_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'mercia_register_magazine_focus_center_widget' );

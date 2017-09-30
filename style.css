@@ -34,7 +34,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 10.0 - Navigation
 11.0 - Widgets
 	11.1 - Default Widgets
-	11.2 - Magazine Posts Widgets
+	11.2 - Magazine Widgets
 12.0 - Posts and pages
 11.0 - Comments
 12.0 - Footer
@@ -288,7 +288,7 @@ textarea {
 	color: #353535;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 	line-height: 1.75;
 }
 
@@ -647,7 +647,7 @@ textarea {
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 0 1em;
-	max-width: 1220px;
+	max-width: 50em;
 	width: 100%;
 	background: #fff;
 }
@@ -720,7 +720,7 @@ textarea {
 	font-weight: bold;
 	font-size: 32px;
 	font-size: 2rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
 
@@ -784,7 +784,7 @@ textarea {
 	font-weight: normal;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Roboto', Tahoma, Arial;
 }
 
 .main-navigation-toggle:hover,
@@ -821,9 +821,9 @@ textarea {
 	color: #353535;
 	border-top: 1px solid #353535;
 	list-style: none;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Roboto', Tahoma, Arial;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 }
@@ -990,9 +990,9 @@ textarea {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: bold;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
 
@@ -1084,8 +1084,85 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+## 11.2 - Magazine Widgets
 --------------------------------------------------------------*/
+.widget-magazine-posts .type-post {
+	margin: 0;
+}
+
+.widget-magazine-posts .widget-magazine-content .magazine-post {
+	margin: 0 0 1.5em;
+}
+
+.widget-magazine-posts .type-post .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
+.widget-magazine-posts .type-post .entry-meta {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+/* Magazine Regular Post Styling */
+.widget-magazine-posts .magazine-posts-regular .magazine-post {
+	background: #f0f0f0;
+}
+
+.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
+	padding: 0.25em 1em 0.5em;
+}
+
+/* Magazine Image Overlay Styling */
+.widget-magazine-posts .magazine-posts-overlay .magazine-post {
+	margin: 0 0 2px;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post {
+	position: relative;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-image .wp-post-image {
+	margin: 0;
+	filter: brightness(75%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post:hover .post-image .wp-post-image {
+	filter: brightness(65%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0.5em 0.75em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:visited,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:visited {
+	color: #fff;
+	text-shadow: 1px 2px 3px #303030;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:active,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:active {
+	color: rgba(255,255,255,0.75);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta span .icon {
+	fill: rgba(255,255,255,0.75);
+}
+
+/* Magazine Widget Post Titles */
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
 
 /*--------------------------------------------------------------
 # 12.0 - Posts and pages
@@ -1108,7 +1185,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
 
@@ -1124,7 +1201,7 @@ textarea {
 }
 
 .wp-post-image {
-	margin: 0 0 0.75em;
+	margin: 0 0 0.5em;
 	vertical-align: top;
 }
 
@@ -1257,7 +1334,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	color: #353535;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 }
 
 .post-navigation .nav-links .nav-previous {
@@ -1358,7 +1435,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-weight: bold;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
 
@@ -1439,7 +1516,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-weight: normal;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: 'Rambla', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 }
 
 /* Comment List */
@@ -1662,7 +1739,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Media Queries
+# 14.0 - Media Queries for all Browsers
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -1684,8 +1761,8 @@ object {
 	}
 
 	.entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 22px;
+		font-size: 1.375rem;
 	}
 
 	.alignleft {
@@ -1696,6 +1773,12 @@ object {
 	.alignright {
 		float: right;
 		margin-left: 1.5em;
+	}
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
@@ -1721,8 +1804,14 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 30em) {
 	.entry-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 }
 
@@ -1772,228 +1861,314 @@ object {
 	}
 
 	.entry-title {
-		font-size: 32px;
-		font-size: 2rem;
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 
 	.wp-post-image {
-		margin: 0 0 1em;
+		margin: 0 0 0.75em;
 	}
 
 	.entry-meta {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
-}
 
-/*--------------------------------------------------------------
-## 14.4 - Tablet Small ( > 720px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 45em) {
-
-}
-
-/*--------------------------------------------------------------
-## 14.5 - Tablet Medium ( Larger than 800px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 50em) {
-	.entry-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+	/* Magazine Widgets */
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
 /*--------------------------------------------------------------
-## 14.6 - Desktop Small ( Larger than 960px )
+# 14.0 - Media Queries with CSS Grid for larger screens
 --------------------------------------------------------------*/
-@media only screen and (min-width: 57.5em) {
-	.site-content {
-		display: block;
-	}
 
-	.site-content {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-	}
+@supports ( display: grid ) {
 
-	.content-area {
-		box-sizing: border-box;
-		padding-right: 1em;
-		width: 70%;
-	}
-
-	.sidebar {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		padding-left: 1em;
-		width: 30%;
-		border: none;
-	}
-
-	.header-main {
-		position: relative;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		text-align: left;
-	}
-
-	.header-social-menu {
-		display: block;
-	}
-
-	.entry-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-
-	/*** Main Navigation ***/
-	.main-navigation-toggle {
-		display: none;
-	}
-
-	.primary-navigation {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-	}
-
-	.main-navigation-menu {
-		position: relative;
-		display: -webkit-box !important;
-		display: -ms-flexbox !important;
-		display: flex !important;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		border-top: none;
-	}
-
-	.main-navigation-menu a {
-		display: block;
-		padding: 1em;
-	}
-
-	.main-navigation-menu > .menu-item-has-children a .icon {
-		margin: 0.5em 0 0 0.4em;
-		width: 14px;
-		height: 14px;
-		vertical-align: top;
-		fill: #353535;
-	}
-
-	.main-navigation-menu > .menu-item-has-children a:hover .icon,
-	.main-navigation-menu > .menu-item-has-children a:active .icon  {
-		fill: #33aacc;
-	}
-
-	.main-navigation-menu ul {
-		position: absolute;
-		z-index: 99;
-		display: none;
-		border: 1px solid #353535;
-		border-bottom: none;
-		width: auto;
-	}
-
-	.main-navigation-menu ul li {
-		position: relative;
-		margin: 0;
-	}
-
-	.main-navigation-menu ul a {
-		min-width: 250px;
-		min-width: 16rem;
-		border-bottom: 1px solid #353535;
-	}
-
-	.main-navigation-menu ul a,
-	.main-navigation-menu ul li ul a,
-	.main-navigation-menu ul li ul li ul a,
-	.main-navigation-menu ul li ul li ul li ul a {
-		padding: 1em;
-	}
-
-	.main-navigation-menu ul .menu-item-has-children > a .icon {
-		margin: 0.5em 0 0 0.4em;
-		width: 12px;
-		height: 12px;
-		vertical-align: top;
-		-webkit-transform: rotate(270deg);
-		transform: rotate(270deg);
-	}
-
-	.main-navigation-menu li ul ul {
-		top: -1px;
-		left: 100%;
-	}
-
-	.main-navigation-menu li.menu-item-has-children:hover > ul,
-	.main-navigation-menu li.page_item_has_children:hover > ul,
-	.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
-		display: block;
-	}
-
-	.main-navigation-menu li.current-menu-item > a {
-		text-decoration: underline;
-	}
-
-	.main-navigation-menu li.current-menu-item > a:after {
-		text-decoration: none;
-	}
-}
-
-/*--------------------------------------------------------------
-## 14.7 - Desktop Large ( Larger than 1120px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 70em) {
-	.entry-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
-}
-
-/*--------------------------------------------------------------
-## 14.8 - Desktop X-Large ( Larger than 1200px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 75em) {
 	.site {
-		padding: 0 2.5em;
+		max-width: 1220px;
 	}
 
-	.content-area {
-		padding-right: 1.25em;
+	/*--------------------------------------------------------------
+	## 14.1 - Mobile Small ( > 320px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 20em) {
+
 	}
 
-	.sidebar {
-		padding-left: 1.25em;
+	@media only screen and (min-width: 25em) {
+
 	}
 
-	.site-header,
-	.header-image,
-	.widget,
-	.site-main article,
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.comments-area,
-	.entry-tags,
-	.pagination,
-	.infinite-scroll #infinite-handle span {
-		margin-bottom: 2.5em;
+	/*--------------------------------------------------------------
+	## 14.2 - Mobile Medium ( > 480px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 30em) {
+		/* Magazine Widgets */
+		.widget-magazine-posts .widget-magazine-content .magazine-post {
+			margin: 0;
+		}
+
+		.widget-magazine-posts .magazine-posts-regular {
+			grid-gap: 1em;
+		}
+
+		.widget-magazine-posts .magazine-posts-overlay {
+			grid-gap: 1px;
+		}
+
+		/* Magazine Focus Widgets */
+		.widget-magazine-focus .widget-magazine-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+		}
+
+		/* Magazine Grid Widget */
+		.widget-magazine-grid .widget-magazine-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+		}
 	}
 
-	.footer-wrap {
-		padding-bottom: 2.5em;
+	/*--------------------------------------------------------------
+	## 14.3 - Mobile Extra Large ( > 640px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 40em) {
+		/* Magazine Widgets */
+		.widget-magazine-posts .magazine-posts-regular {
+			grid-gap: 1.5em;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 14.5 - Tablet Medium ( Larger than 800px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 50em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 14.6 - Desktop Small ( Larger than 960px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 57.5em) {
+		.site-content {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+		}
+
+		.content-area {
+			box-sizing: border-box;
+			padding-right: 1em;
+			width: 70%;
+		}
+
+		.sidebar {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			padding-left: 1em;
+			width: 30%;
+			border: none;
+		}
+
+		.header-main {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			text-align: left;
+		}
+
+		.header-social-menu {
+			display: block;
+		}
+
+		.entry-title {
+			font-size: 28px;
+			font-size: 1.75rem;
+		}
+
+		/*** Main Navigation ***/
+		.main-navigation-toggle {
+			display: none;
+		}
+
+		.primary-navigation {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+		}
+
+		.main-navigation-menu {
+			position: relative;
+			display: -webkit-box !important;
+			display: -ms-flexbox !important;
+			display: flex !important;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			border-top: none;
+		}
+
+		.main-navigation-menu a {
+			display: block;
+			padding: 1em;
+		}
+
+		.main-navigation-menu > .menu-item-has-children a .icon {
+			margin: 0.5em 0 0 0.4em;
+			width: 14px;
+			height: 14px;
+			vertical-align: top;
+			fill: #353535;
+		}
+
+		.main-navigation-menu > .menu-item-has-children a:hover .icon,
+		.main-navigation-menu > .menu-item-has-children a:active .icon  {
+			fill: #33aacc;
+		}
+
+		.main-navigation-menu ul {
+			position: absolute;
+			z-index: 99;
+			display: none;
+			border: 1px solid #353535;
+			border-bottom: none;
+			width: auto;
+		}
+
+		.main-navigation-menu ul li {
+			position: relative;
+			margin: 0;
+		}
+
+		.main-navigation-menu ul a {
+			min-width: 250px;
+			min-width: 16rem;
+			border-bottom: 1px solid #353535;
+		}
+
+		.main-navigation-menu ul a,
+		.main-navigation-menu ul li ul a,
+		.main-navigation-menu ul li ul li ul a,
+		.main-navigation-menu ul li ul li ul li ul a {
+			padding: 1em;
+		}
+
+		.main-navigation-menu ul .menu-item-has-children > a .icon {
+			margin: 0.5em 0 0 0.4em;
+			width: 12px;
+			height: 12px;
+			vertical-align: top;
+			-webkit-transform: rotate(270deg);
+			transform: rotate(270deg);
+		}
+
+		.main-navigation-menu li ul ul {
+			top: -1px;
+			left: 100%;
+		}
+
+		.main-navigation-menu li.menu-item-has-children:hover > ul,
+		.main-navigation-menu li.page_item_has_children:hover > ul,
+		.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
+			display: block;
+		}
+
+		.main-navigation-menu li.current-menu-item > a {
+			text-decoration: underline;
+		}
+
+		.main-navigation-menu li.current-menu-item > a:after {
+			text-decoration: none;
+		}
+
+		/* Magazine Focus Widgets */
+		.widget-magazine-focus .widget-magazine-content {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.widget-magazine-focus-center .widget-magazine-content .magazine-post-large {
+			grid-column: 2 / span 2;
+		}
+
+		/* Magazine Grid Widget */
+		.widget-magazine-grid .magazine-grid-four-columns {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.widget-magazine-grid .magazine-grid-three-columns {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 14.7 - Desktop Large ( Larger than 1120px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 70em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 14.8 - Desktop X-Large ( Larger than 1200px )
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 75em) {
+		.site {
+			padding: 0 2.5em;
+		}
+
+		.header-main {
+			padding: 2em 0;
+		}
+
+		.content-area {
+			padding-right: 1.25em;
+		}
+
+		.sidebar {
+			padding-left: 1.25em;
+		}
+
+		.site-header,
+		.header-image,
+		.widget,
+		.site-main article,
+		.type-post,
+		.type-page,
+		.type-attachment,
+		.comments-area,
+		.entry-tags,
+		.pagination,
+		.infinite-scroll #infinite-handle span {
+			margin-bottom: 2.5em;
+		}
+
+		.footer-wrap {
+			padding-bottom: 2.5em;
+		}
 	}
 }
 
@@ -2033,7 +2208,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 17.0 - CSS Hacks for Safari
+# 15.0 - CSS Hacks for Safari
 --------------------------------------------------------------*/
 
 /* Fix Flexbox issues for Safari 6.1-10.0 */
@@ -2053,6 +2228,38 @@ object {
 		.sidebar {
 			margin-right: -1px;
 		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# 16.0 - Media Queries for Internet Explorer
+--------------------------------------------------------------*/
+
+@supports not ( display: grid ) {
+	.site {
+		border-top: 20px solid yellow;
+	}
+
+	/* Magazine Widgets */
+	.widget-magazine-posts .small-post {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.widget-magazine-posts .small-post .post-image {
+		width: 30%;
+	}
+
+	.widget-magazine-posts .small-post .post-image .wp-post-image {
+		margin: 0;
+	}
+
+	.widget-magazine-posts .small-post .post-content {
+		padding-left: 1.5em;
+		width: 70%;
+		box-sizing: border-box;
 	}
 }
 

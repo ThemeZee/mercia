@@ -105,7 +105,7 @@ endif;
  * @return int
  */
 function mercia_magazine_posts_excerpt_length( $length ) {
-	return 12;
+	return 15;
 }
 
 
