@@ -1103,14 +1103,10 @@ textarea {
 	font-size: 0.875rem;
 }
 
-/* Magazine Regular Post Styling */
-.widget-magazine-posts .magazine-posts-regular .magazine-post {
-	background: #f5f5f5;
-	border-bottom: 1px solid #ddd;
-}
-
-.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
-	padding: 0.25em 1em;
+.widget-magazine-posts .type-post .entry-meta span .icon {
+	margin: 0.2em 0.3em 0 0;
+	width: 18px;
+	height: 18px;
 }
 
 /* Magazine Image Overlay Styling */
@@ -1275,9 +1271,9 @@ textarea {
 }
 
 .entry-meta span .icon {
-	margin: 0.3em 0.3em 0 0;
-	width: 19px;
-	height: 19px;
+	margin: 0.2em 0.3em 0 0;
+	width: 18px;
+	height: 18px;
 	vertical-align: top;
 	fill: rgba(0,0,0,0.25);
 }
@@ -1824,6 +1820,38 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
+
+	/* Fallback for Internet Explorer */
+	.widget-magazine-focus .widget-magazine-content,
+	.widget-magazine-grid .widget-magazine-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin-right: -1em;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post,
+	.widget-magazine-grid .widget-magazine-content .magazine-post {
+		width: 50%;
+		padding-right: 1em;
+		box-sizing: border-box;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+		width: 100%;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay,
+	.widget-magazine-grid .magazine-posts-overlay {
+		margin-right: 1px;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay .magazine-post,
+	.widget-magazine-grid .magazine-posts-overlay .magazine-post {
+		padding-right: 1px;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1885,6 +1913,12 @@ object {
 		font-size: 0.9375rem;
 	}
 
+	.entry-meta span .icon {
+		margin: 0.3em 0.3em 0 0;
+		width: 19px;
+		height: 19px;
+	}
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
@@ -1903,6 +1937,16 @@ object {
 		max-width: 1220px;
 	}
 
+	/* Magazine Regular Post Styling */
+	.widget-magazine-posts .magazine-posts-regular .magazine-post {
+		background: #f5f5f5;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
+		padding: 0.25em 1em;
+	}
+
 	/*--------------------------------------------------------------
 	## 14.1 - Mobile Small ( > 320px )
 	--------------------------------------------------------------*/
@@ -1918,6 +1962,22 @@ object {
 	## 14.2 - Mobile Medium ( > 480px )
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 30em) {
+		/* Reset Internet Explorer Styles */
+		.widget-magazine-focus .widget-magazine-content,
+		.widget-magazine-grid .widget-magazine-content {
+			margin-right: 0;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post,
+		.widget-magazine-grid .widget-magazine-content .magazine-post {
+			width: auto;
+			padding-right: 0;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+			width: auto;
+		}
+
 		/* Magazine Widgets */
 		.widget-magazine-posts .widget-magazine-content .magazine-post {
 			margin: 0;
@@ -2269,38 +2329,6 @@ object {
 		.sidebar {
 			margin-right: -1px;
 		}
-	}
-}
-
-
-/*--------------------------------------------------------------
-# 16.0 - Media Queries for Internet Explorer
---------------------------------------------------------------*/
-
-@supports not ( display: grid ) {
-	.site {
-		border-top: 20px solid yellow;
-	}
-
-	/* Magazine Widgets */
-	.widget-magazine-posts .small-post {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	.widget-magazine-posts .small-post .post-image {
-		width: 30%;
-	}
-
-	.widget-magazine-posts .small-post .post-image .wp-post-image {
-		margin: 0;
-	}
-
-	.widget-magazine-posts .small-post .post-content {
-		padding-left: 1.5em;
-		width: 70%;
-		box-sizing: border-box;
 	}
 }
 
