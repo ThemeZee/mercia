@@ -147,12 +147,17 @@ if ( ! function_exists( 'mercia_post_image_archives' ) ) :
 	 */
 	function mercia_post_image_archives() {
 
+		// Set image size.
+		$image_size = ( 'list' === mercia_get_option( 'blog_layout' ) ) ? 'mercia-ratio-four-three-large' : 'post-thumbnail';
+
 		// Display Post Thumbnail if activated.
 		if ( true === mercia_get_option( 'post_image_archives' ) && has_post_thumbnail() ) : ?>
 
-			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
-				<?php the_post_thumbnail(); ?>
-			</a>
+			<div class="post-image">
+				<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
+					<?php the_post_thumbnail( $image_size ); ?>
+				</a>
+			</div>
 
 		<?php
 		endif;

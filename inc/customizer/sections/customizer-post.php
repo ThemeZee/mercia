@@ -149,7 +149,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 
 	$wp_customize->selective_refresh->add_partial( 'mercia_theme_options[post_image_archives]', array(
 		'selector'         => '.site-main .post-wrapper',
-		'render_callback'  => 'mercia_customize_partial_blog_layout',
+		'render_callback'  => 'mercia_customize_partial_blog_content',
 		'fallback_refresh' => false,
 	) );
 

@@ -13,7 +13,7 @@
 
 		<div class="post-image">
 
-			<?php mercia_post_image( 'mercia-magazine-overlay-small' ); ?>
+			<?php mercia_post_image( 'mercia-ratio-four-three-medium' ); ?>
 
 		</div>
 

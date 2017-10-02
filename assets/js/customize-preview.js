@@ -69,6 +69,22 @@
 		} );
 	} );
 
+	// Blog Layout.
+	wp.customize( 'mercia_theme_options[blog_layout]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'list' === newval ) {
+				$( 'body' ).addClass( 'blog-list-layout' );
+				$( 'body' ).removeClass( 'blog-grid-layout' );
+			} else if ( 'grid' === newval ) {
+				$( 'body' ).addClass( 'blog-grid-layout' );
+				$( 'body' ).removeClass( 'blog-list-layout' );
+			} else {
+				$( 'body' ).removeClass( 'blog-grid-layout' );
+				$( 'body' ).removeClass( 'blog-list-layout' );
+			}
+		} );
+	} );
+
 	// Post Date checkbox.
 	wp.customize( 'mercia_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
@@ -124,7 +140,18 @@
 		} );
 	} );
 
-	// Site Description checkbox.
+	// Post Thumbnails checkbox.
+	wp.customize( 'mercia_theme_options[post_image_archives]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'post-thumbnails-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'post-thumbnails-hidden' );
+			}
+		} );
+	} );
+
+	// Credit Link checkbox.
 	wp.customize( 'mercia_theme_options[credit_link]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {

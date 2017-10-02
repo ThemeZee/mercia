@@ -67,7 +67,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 
 	// Add Settings and Controls for blog layout.
 	$wp_customize->add_setting( 'mercia_theme_options[blog_layout]', array(
-		'default'           => 'excerpt',
+		'default'           => 'large',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_select',
@@ -77,11 +77,32 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'label'    => esc_html__( 'Blog Layout', 'mercia' ),
 		'section'  => 'mercia_section_blog',
 		'settings' => 'mercia_theme_options[blog_layout]',
-		'type'     => 'radio',
+		'type'     => 'select',
 		'priority' => 30,
 		'choices'  => array(
-			'index' => esc_html__( 'Display full posts', 'mercia' ),
-			'excerpt' => esc_html__( 'Display post excerpts', 'mercia' ),
+			'large' => esc_html__( 'Large Posts', 'mercia' ),
+			'list'  => esc_html__( 'Post List', 'mercia' ),
+			'grid'  => esc_html__( 'Post Grid', 'mercia' ),
+		),
+	) );
+
+	// Add Settings and Controls for blog content.
+	$wp_customize->add_setting( 'mercia_theme_options[blog_content]', array(
+		'default'           => 'excerpt',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'mercia_sanitize_select',
+	) );
+
+	$wp_customize->add_control( 'mercia_theme_options[blog_content]', array(
+		'label'    => esc_html__( 'Blog Content', 'mercia' ),
+		'section'  => 'mercia_section_blog',
+		'settings' => 'mercia_theme_options[blog_content]',
+		'type'     => 'radio',
+		'priority' => 40,
+		'choices'  => array(
+			'index'   => esc_html__( 'Full post', 'mercia' ),
+			'excerpt' => esc_html__( 'Post excerpt', 'mercia' ),
 		),
 	) );
 
@@ -98,17 +119,18 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'mercia_section_blog',
 		'settings' => 'mercia_theme_options[excerpt_length]',
 		'type'     => 'text',
-		'priority' => 40,
+		'priority' => 50,
 	) );
 
 	// Add Partial for Blog Layout and Excerpt Length.
-	$wp_customize->selective_refresh->add_partial( 'mercia_blog_layout_partial', array(
+	$wp_customize->selective_refresh->add_partial( 'mercia_blog_content_partial', array(
 		'selector'         => '.site-main .post-wrapper',
 		'settings'         => array(
 			'mercia_theme_options[blog_layout]',
+			'mercia_theme_options[blog_content]',
 			'mercia_theme_options[excerpt_length]',
 		),
-		'render_callback'  => 'mercia_customize_partial_blog_layout',
+		'render_callback'  => 'mercia_customize_partial_blog_content',
 		'fallback_refresh' => false,
 	) );
 
@@ -118,7 +140,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Magazine Widgets', 'mercia' ),
 			'section'  => 'mercia_section_blog',
 			'settings' => array(),
-			'priority' => 50,
+			'priority' => 60,
 		)
 	) );
 
@@ -135,7 +157,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'mercia_section_blog',
 		'settings' => 'mercia_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 70,
 	) );
 }
 add_action( 'customize_register', 'mercia_customize_register_blog_settings' );
@@ -155,11 +177,11 @@ function mercia_customize_partial_blog_description() {
 }
 
 /**
- * Render the blog layout for the selective refresh partial.
+ * Render the blog content for the selective refresh partial.
  */
-function mercia_customize_partial_blog_layout() {
+function mercia_customize_partial_blog_content() {
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
+		get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_content' ) ) );
 	}
 }

@@ -186,10 +186,10 @@ function mercia_add_image_sizes() {
 	add_image_size( 'mercia-single-post', 1100, 440, true );
 
 	// Add different thumbnail sizes for Magazine widgets.
-	add_image_size( 'mercia-magazine-list-post', 200, 125, true );
-	add_image_size( 'mercia-magazine-small-post', 440, 275, true );
-	add_image_size( 'mercia-magazine-overlay', 840, 630, true );
-	add_image_size( 'mercia-magazine-overlay-small', 440, 330, true );
+	add_image_size( 'mercia-ratio-sixteen-ten-small', 200, 125, true );
+	add_image_size( 'mercia-ratio-sixteen-ten-medium', 440, 275, true );
+	add_image_size( 'mercia-ratio-four-three-large', 840, 630, true );
+	add_image_size( 'mercia-ratio-four-three-medium', 440, 330, true );
 
 }
 add_action( 'after_setup_theme', 'mercia_add_image_sizes' );

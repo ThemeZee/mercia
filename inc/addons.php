@@ -78,7 +78,7 @@ add_action( 'wp_enqueue_scripts', 'mercia_theme_addons_scripts' );
 function mercia_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_layout' ) ) );
+		get_template_part( 'template-parts/content', esc_attr( mercia_get_option( 'blog_content' ) ) );
 	}
 }
 

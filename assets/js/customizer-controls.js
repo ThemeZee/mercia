@@ -9,7 +9,7 @@
 ( function( wp, $ ) {
 
 	// Based on https://make.xwp.co/2016/07/24/dependently-contextual-customizer-controls/
-	wp.customize( 'mercia_theme_options[blog_layout]', function( setting ) {
+	wp.customize( 'mercia_theme_options[blog_content]', function( setting ) {
 		var setupControl = function( control ) {
 			var setActiveState, isDisplayed;
 			isDisplayed = function() {

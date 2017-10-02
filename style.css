@@ -1182,6 +1182,7 @@ textarea {
 	margin: 0 0 1.5em;
 	padding: 0;
 	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .entry-title {
@@ -1190,8 +1191,8 @@ textarea {
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
@@ -1768,8 +1769,8 @@ object {
 	}
 
 	.entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	.alignleft {
@@ -1833,8 +1834,8 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 30em) {
 	.entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 22px;
+		font-size: 1.375rem;
 	}
 
 	/* Magazine Widget Post Titles */
@@ -1887,6 +1888,11 @@ object {
 }
 
 @media only screen and (min-width: 35em) {
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+
 	/* Magazine Widget Post Titles */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 17px;
@@ -2022,6 +2028,7 @@ object {
 	## 14.2 - Mobile Medium ( > 480px )
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 30em) {
+
 		/* Reset Internet Explorer Styles */
 		.widget-magazine-focus .widget-magazine-content,
 		.widget-magazine-grid .widget-magazine-content {
@@ -2075,6 +2082,47 @@ object {
 	## 14.3 - Mobile Extra Large ( > 640px )
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 40em) {
+
+		/* Blog: List Layout */
+		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail {
+			display: grid;
+			grid-template-columns: 42% auto;
+		}
+
+		.blog-list-layout.post-thumbnails-hidden .content-archive .post-wrapper .has-post-thumbnail {
+			display: block;
+		}
+
+		.blog-list-layout .content-archive .post-wrapper .type-post {
+			margin: 0 0 1.5em;
+			padding: 0 0 1.5em;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail .wp-post-image {
+			margin: 0;
+			padding-right: 1.5em;
+		}
+
+		/* Blog: Grid Layout */
+		.blog-grid-layout .content-archive .post-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			grid-gap: 1.5em;
+		}
+
+		.blog-grid-layout .content-archive .post-wrapper .type-post {
+			margin: 0;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
+		}
+
 		/* Magazine Widgets */
 		.widget-magazine-posts .magazine-posts-regular {
 			grid-gap: 1.5em;
@@ -2088,6 +2136,13 @@ object {
 		.entry-title {
 			font-size: 32px;
 			font-size: 2rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
 		}
 
 		/* Magazine Widget Post Titles */
@@ -2147,6 +2202,13 @@ object {
 		.entry-title {
 			font-size: 28px;
 			font-size: 1.75rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
 		}
 
 		/*** Main Navigation ***/
@@ -2291,6 +2353,13 @@ object {
 			font-size: 2rem;
 		}
 
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+
 		/* Magazine Widget Post Titles */
 		.widget-magazine-posts .large-post .entry-title {
 			font-size: 24px;
@@ -2334,6 +2403,11 @@ object {
 
 		.footer-wrap {
 			padding-bottom: 2.5em;
+		}
+
+		/* Blog Layout */
+		.blog-grid-layout .content-archive .post-wrapper {
+			grid-gap: 2em;
 		}
 
 		/* Magazine Widget Post Titles */
@@ -2439,7 +2513,7 @@ object {
 }
 
 .customize-partial-edit-shortcut-mercia_theme_options-blog_description,
-.customize-partial-edit-shortcut-mercia_blog_layout_partial {
+.customize-partial-edit-shortcut-mercia_blog_content_partial {
 	left: -9999px;
 }
 

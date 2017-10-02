@@ -32,6 +32,13 @@ function mercia_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 
+	// Set Blog Layout.
+	if ( 'list' === $theme_options['blog_layout'] ) {
+		$classes[] = 'blog-list-layout';
+	} elseif ( 'grid' === $theme_options['blog_layout'] ) {
+		$classes[] = 'blog-grid-layout';
+	}
+
 	// Hide Date?
 	if ( false === $theme_options['meta_date'] ) {
 		$classes[] = 'date-hidden';
@@ -45,6 +52,11 @@ function mercia_body_classes( $classes ) {
 	// Hide Category?
 	if ( false === $theme_options['meta_category'] ) {
 		$classes[] = 'categories-hidden';
+	}
+
+	// Featured Images?
+	if ( false === $theme_options['post_image_archives'] ) {
+		$classes[] = 'post-thumbnails-hidden';
 	}
 
 	return $classes;
