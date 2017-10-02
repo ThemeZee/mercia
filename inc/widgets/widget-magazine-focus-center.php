@@ -24,7 +24,7 @@ class Mercia_Magazine_Focus_Center_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Focus Center)', 'mercia' ), // Name.
 			array(
 				'classname' => 'mercia-magazine-focus-center-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout with large post in the center.', 'mercia' ),
+				'description' => esc_html__( 'Displays your posts from a selected category with a featured post in the center.', 'mercia' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);

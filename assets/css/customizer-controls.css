@@ -155,10 +155,14 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 	background-repeat: no-repeat;
 }
 
-.adding-magazine-widget #available-widgets [id*='widget-tpl-mercia-magazine-posts-columns'] .widget-top::before {
-	background-image: url( '../images/magazine-columns.png' );
+.adding-magazine-widget #available-widgets [id*='widget-tpl-mercia-magazine-focus-center'] .widget-top::before {
+	background-image: url( '../images/magazine-focus-center.png' );
 }
 
-.adding-magazine-widget #available-widgets [id*='widget-tpl-mercia-magazine-posts-grid'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-mercia-magazine-focus-left'] .widget-top::before {
+	background-image: url( '../images/magazine-focus-left.png' );
+}
+
+.adding-magazine-widget #available-widgets [id*='widget-tpl-mercia-magazine-grid'] .widget-top::before {
 	background-image: url( '../images/magazine-grid.png' );
 }

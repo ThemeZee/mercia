@@ -24,7 +24,7 @@ class Mercia_Magazine_Focus_Left_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Focus Left)', 'mercia' ), // Name.
 			array(
 				'classname' => 'mercia-magazine-focus-left-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout with large post on the left side.', 'mercia' ),
+				'description' => esc_html__( 'Displays your posts from a selected category with a featured post on the left side.', 'mercia' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
