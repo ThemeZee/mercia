@@ -171,11 +171,17 @@ if ( ! function_exists( 'mercia_post_image_single' ) ) :
 	 */
 	function mercia_post_image_single() {
 
+		// Set image size.
+		$image_size = ( 'full' === mercia_get_option( 'post_layout' ) ) ? 'mercia-single-post' : 'post-thumbnail';
+
 		// Display Post Thumbnail if activated.
-		if ( true === mercia_get_option( 'post_image_single' ) ) :
+		if ( true === mercia_get_option( 'post_image_single' ) ) : ?>
 
-			the_post_thumbnail( 'mercia-single-post' );
+			<div class="post-image">
+				<?php the_post_thumbnail( $image_size ); ?>
+			</div>
 
+		<?php
 		endif;
 	}
 endif;

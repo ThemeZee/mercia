@@ -58,6 +58,7 @@ function mercia_default_options() {
 		'blog_content'          => 'excerpt',
 		'excerpt_length'        => 35,
 		'blog_magazine_widgets' => true,
+		'post_layout'           => 'default',
 		'meta_date'             => true,
 		'meta_author'           => true,
 		'meta_category'         => true,

@@ -27,6 +27,4 @@
 
 	</section>
 
-	<?php get_sidebar(); ?>
-
 </article>

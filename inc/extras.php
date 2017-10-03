@@ -39,6 +39,11 @@ function mercia_body_classes( $classes ) {
 		$classes[] = 'blog-grid-layout';
 	}
 
+	// Set Post Layout.
+	if ( 'full' === $theme_options['post_layout'] && is_single() ) {
+		$classes[] = 'fullwidth-single-post';
+	}
+
 	// Hide Date?
 	if ( false === $theme_options['meta_date'] ) {
 		$classes[] = 'date-hidden';
@@ -133,7 +138,7 @@ function mercia_excerpt_length( $length ) {
 	if ( $excerpt_length >= 0 ) :
 		return absint( $excerpt_length );
 	else :
-		return 40; // Number of words.
+		return 35; // Number of words.
 	endif;
 }
 add_filter( 'excerpt_length', 'mercia_excerpt_length' );
@@ -151,6 +156,6 @@ function mercia_excerpt_more( $more_text ) {
 		return $more_text;
 	}
 
-	return ' &hellip;';
+	return '';
 }
 add_filter( 'excerpt_more', 'mercia_excerpt_more' );

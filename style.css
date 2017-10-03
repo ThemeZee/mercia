@@ -658,28 +658,6 @@ textarea {
 	padding: 2em 0 0;
 }
 
-/* No Sidebar & Centered Layout Template */
-.no-sidebar .site-content,
-.centered-content-area {
-	display: block;
-}
-
-.no-sidebar .content-area,
-.site-content .centered-content-area {
-	margin: 0 auto;
-	padding: 0;
-	max-width: 840px;
-	width: 100%;
-}
-
-/* Fullwidth Template */
-.site-content .fullwidth-content-area {
-	margin: 0;
-	padding: 0;
-	max-width: 100%;
-	width: 100%;
-}
-
 /*--------------------------------------------------------------
 # 9.0 - Header
 --------------------------------------------------------------*/
@@ -1222,31 +1200,6 @@ textarea {
 	padding: 1em 0 0;
 	border-top: 4px solid #353535;
 }
-
-/* Single Post */
-.single-post .entry-header {
-	margin: 0 0 2em;
-	padding: 0 0 1em;
-}
-
-.single-post .entry-title {
-	font-size: 48px;
-	font-size: 3rem;
-}
-
-.single-post .wp-post-image {
-	margin: -2em 0 2em;
-}
-
-.single-post .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-.single-post .entry-content p:first-child {
-	margin-top: 0;
-}
-
 
 /* Read more Link */
 .more-link {
@@ -2005,8 +1958,8 @@ object {
 
 	/* Magazine Regular Post Styling */
 	.widget-magazine-posts .magazine-posts-regular .magazine-post {
-		background: #f5f5f5;
-		border-bottom: 1px solid #ddd;
+		background: rgba(0,0,0,0.05);
+		border-bottom: 1px solid rgba(0,0,0,0.075);
 	}
 
 	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
@@ -2096,7 +2049,7 @@ object {
 		.blog-list-layout .content-archive .post-wrapper .type-post {
 			margin: 0 0 1.5em;
 			padding: 0 0 1.5em;
-			border-bottom: 1px solid #ddd;
+			border-bottom: 1px solid rgba(0,0,0,0.075);
 		}
 
 		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail .wp-post-image {
@@ -2163,27 +2116,24 @@ object {
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 57.5em) {
 		.site-content {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-flow: row wrap;
-			flex-flow: row wrap;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
+			display: grid;
+			grid-template-columns: 70% 30%;
 		}
 
 		.content-area {
 			box-sizing: border-box;
 			padding-right: 1em;
-			width: 70%;
+			grid-row-start: 1;
+			grid-column-start: 1;
 		}
 
 		.sidebar {
+			grid-row-start: 1;
+			grid-column-start: 2;
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
 			padding-left: 1em;
-			width: 30%;
 			border: none;
 		}
 
@@ -2202,6 +2152,62 @@ object {
 		.entry-title {
 			font-size: 28px;
 			font-size: 1.75rem;
+		}
+
+		/* Single Post Layout */
+		.single-post .site-content {
+			display: block;
+		}
+
+		.single-post .type-post {
+			display: grid;
+			grid-template-columns: 70% 30%;
+			grid-template-rows: auto;
+			margin-bottom: 0;
+		}
+
+		.single-post .type-post .single-header,
+		.single-post .type-post .single-content {
+			padding-right: 1em;
+		}
+
+		.single-post .type-post .sidebar {
+			grid-column-start: 2;
+			grid-row: 1 / span 2;
+		}
+
+		/* Fullwidth Single Post Layout */
+		.fullwidth-single-post.single-post .type-post .single-header {
+			grid-column: 1 / span 2;
+		}
+
+		.fullwidth-single-post.single-post .type-post .sidebar {
+			grid-row: 2 / span 1;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header {
+			display: flex;
+			flex-direction: column;
+			margin: 0 0 1em;
+			padding: 0;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-header {
+			order: 1;
+			margin: 0 0 1em;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .post-image {
+			order: 2;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-content .entry-content p:first-child {
+			margin-top: 0;
 		}
 
 		/* Blog Layout Title */
@@ -2347,10 +2353,25 @@ object {
 	/*--------------------------------------------------------------
 	## 14.7 - Desktop Large ( Larger than 1120px )
 	--------------------------------------------------------------*/
+	@media only screen and (min-width: 60em) {
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 36px;
+			font-size: 2.25rem;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 14.7 - Desktop Large ( Larger than 1120px )
+	--------------------------------------------------------------*/
 	@media only screen and (min-width: 70em) {
 		.entry-title {
 			font-size: 32px;
 			font-size: 2rem;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 40px;
+			font-size: 2.5rem;
 		}
 
 		/* Blog Layout Title */
@@ -2379,11 +2400,14 @@ object {
 			padding: 2em 0;
 		}
 
-		.content-area {
+		.content-area,
+		.single-post .type-post .single-header,
+		.single-post .type-post .single-content {
 			padding-right: 1.25em;
 		}
 
-		.sidebar {
+		.sidebar,
+		.single-post .type-post .sidebar {
 			padding-left: 1.25em;
 		}
 
@@ -2429,37 +2453,129 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 15.0 - Theme Option Styles
+# 15.0 - Sidebar Layouts
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-## 15.1 - Sidebar Left Layout
---------------------------------------------------------------*/
-@media only screen and (min-width: 57.5em) {
-	.sidebar-left .content-area {
-		order: 2;
-		padding-right: 0;
-		padding-left: 1em;
-		-webkit-box-ordinal-group: 3;
-		-ms-flex-order: 2;
+@supports ( display: grid ) {
+
+	/*--------------------------------------------------------------
+	## 15.1 - Sidebar Left Layout
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 57.5em) {
+		.sidebar-left .site-content {
+			grid-template-columns: 30% 70%;
+		}
+
+		.sidebar-left .content-area {
+			grid-column-start: 2;
+			padding-right: 0;
+			padding-left: 1em;
+		}
+
+		.sidebar-left .sidebar {
+			grid-column-start: 1;
+			padding-right: 1em;
+			padding-left: 0;
+		}
+
+		/* Left Sidebar on single posts */
+		.sidebar-left.single-post .type-post {
+			grid-template-columns: 30% 70%;
+		}
+
+		.sidebar-left.single-post .type-post .single-header,
+		.sidebar-left.single-post .type-post .single-content {
+			grid-column-start: 2;
+			padding-right: 0;
+			padding-left: 1em;
+		}
+
+		.sidebar-left.single-post .type-post .sidebar {
+			grid-column-start: 1;
+			padding-right: 1em;
+			padding-left: 0;
+		}
+
+		.sidebar-left.fullwidth-single-post.single-post .type-post .single-header {
+			grid-column: 1 / span 2;
+			padding: 0;
+		}
+
+		.sidebar-left.fullwidth-single-post.single-post .type-post .sidebar {
+			grid-row-start: 2;
+		}
 	}
 
-	.sidebar-left .sidebar {
-		order: 1;
-		padding-right: 1em;
-		padding-left: 0;
-		-webkit-box-ordinal-group: 2;
-		-ms-flex-order: 1;
-	}
-}
+	@media only screen and (min-width: 75em) {
+		.sidebar-left .content-area,
+		.sidebar-left.single-post .type-post .single-header,
+		.sidebar-left.single-post .type-post .single-content {
+			padding-left: 1.25em;
+		}
 
-@media only screen and (min-width: 75em) {
-	.sidebar-left .content-area {
-		padding-left: 1.25em;
+		.sidebar-left .sidebar,
+		.sidebar-left.single-post .type-post .sidebar {
+			padding-right: 1.25em;
+		}
 	}
 
-	.sidebar-left .sidebar {
-		padding-right: 1.25em;
+	/*--------------------------------------------------------------
+	## 15.2 - No Sidebar Layout
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 57.5em) {
+		/* No Sidebar & Centered Layout Template */
+		.no-sidebar .site-content,
+		.centered-content-area {
+			display: block;
+		}
+
+		.no-sidebar .content-area,
+		.site-content .centered-content-area {
+			margin: 0 auto;
+			padding: 0;
+			max-width: 840px;
+			width: 100%;
+		}
+
+		/* Fullwidth Template */
+		.site-content .fullwidth-content-area {
+			margin: 0;
+			padding: 0;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	/*--------------------------------------------------------------
+	## 15.3 - No Sidebar on Single Posts
+	--------------------------------------------------------------*/
+	@media only screen and (min-width: 57.5em) {
+
+		/* No Sidebar Post Template */
+		.no-sidebar.single-post .content-single,
+		.single-post .content-no-sidebar {
+			width: 100%;
+		}
+
+		.no-sidebar.single-post .content-single .type-post,
+		.single-post .content-no-sidebar .type-post {
+			display: block;
+		}
+
+		.no-sidebar.single-post .content-single .type-post .single-header,
+		.no-sidebar.single-post .content-single .type-post .single-content,
+		.single-post .content-no-sidebar .type-post .single-header,
+		.single-post .content-no-sidebar .type-post .single-content {
+			max-width: 840px;
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.no-sidebar.fullwidth-single-post.single-post .content-single .type-post .single-header,
+		.fullwidth-single-post.single-post .content-no-sidebar .type-post .single-header {
+			max-width: 100%;
+		}
 	}
 }
 

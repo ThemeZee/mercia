@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Full-width Layout
- * Template Post Type: post, page
+ * Template Post Type: page
  *
  * Description: A custom template for displaying a fullwidth layout with no sidebar.
  *
@@ -10,26 +10,22 @@
 
 get_header(); ?>
 
-	<section id="primary" class="fullwidth-content-area content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="site-content container clearfix">
 
-			<?php while ( have_posts() ) : the_post();
+		<section id="primary" class="fullwidth-content-area content-area">
+			<main id="main" class="site-main" role="main">
 
-				if ( 'post' === get_post_type() ) :
+				<?php while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', 'single' );
+					get_template_part( 'template-parts/content', 'fullwidth' );
 
-				else :
+					comments_template();
 
-					get_template_part( 'template-parts/content', 'page' );
+				endwhile; ?>
 
-				endif;
+			</main><!-- #main -->
+		</section><!-- #primary -->
 
-				comments_template();
-
-			endwhile; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

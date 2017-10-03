@@ -21,13 +21,33 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'panel' => 'mercia_options_panel',
 	) );
 
+	// Add Setting and Control for post layout.
+	$wp_customize->add_setting( 'mercia_theme_options[post_layout]', array(
+		'default'           => 'default',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'mercia_sanitize_select',
+	) );
+
+	$wp_customize->add_control( 'mercia_theme_options[post_layout]', array(
+		'label'    => esc_html__( 'Single Post Layout', 'mercia' ),
+		'section'  => 'mercia_section_post',
+		'settings' => 'mercia_theme_options[post_layout]',
+		'type'     => 'select',
+		'priority' => 10,
+		'choices'  => array(
+			'default' => esc_html__( 'Default', 'mercia' ),
+			'full'    => esc_html__( 'Full Width Header', 'mercia' ),
+		),
+	) );
+
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[post_details]', array(
 			'label' => esc_html__( 'Post Details', 'mercia' ),
 			'section' => 'mercia_section_post',
 			'settings' => array(),
-			'priority' => 10,
+			'priority' => 20,
 		)
 	) );
 
@@ -44,7 +64,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 20,
+		'priority' => 30,
 	) );
 
 	// Add Setting and Control for showing post author.
@@ -60,7 +80,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 30,
+		'priority' => 40,
 	) );
 
 	// Add Setting and Control for showing post categories.
@@ -76,7 +96,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 40,
+		'priority' => 50,
 	) );
 
 	// Add Single Post Headline.
@@ -85,7 +105,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 			'label' => esc_html__( 'Single Post', 'mercia' ),
 			'section' => 'mercia_section_post',
 			'settings' => array(),
-			'priority' => 50,
+			'priority' => 60,
 		)
 	) );
 
@@ -102,7 +122,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 70,
 	) );
 
 	// Add Setting and Control for showing post navigation.
@@ -118,7 +138,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 80,
 	) );
 
 	// Add Featured Images Headline.
@@ -127,7 +147,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'label' => esc_html__( 'Featured Images', 'mercia' ),
 		'section' => 'mercia_section_post',
 		'settings' => array(),
-		'priority' => 80,
+		'priority' => 90,
 		)
 	) );
 
@@ -144,7 +164,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[post_image_archives]',
 		'type'     => 'checkbox',
-		'priority' => 90,
+		'priority' => 100,
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'mercia_theme_options[post_image_archives]', array(
@@ -166,12 +186,17 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'mercia_section_post',
 		'settings' => 'mercia_theme_options[post_image_single]',
 		'type'     => 'checkbox',
-		'priority' => 100,
+		'priority' => 110,
 	) );
 
-	$wp_customize->selective_refresh->add_partial( 'mercia_theme_options[post_image_single]', array(
-		'selector'        => '.content-single .site-main',
-		'render_callback' => 'mercia_customize_partial_post_image_single',
+	// Add Partial for Single Post Layout and Single Post Image.
+	$wp_customize->selective_refresh->add_partial( 'mercia_post_layout_partial', array(
+		'selector'         => '.single-post .content-single .site-main',
+		'settings'         => array(
+			'mercia_theme_options[post_layout]',
+			'mercia_theme_options[post_image_single]',
+		),
+		'render_callback'  => 'mercia_customize_partial_post_layout',
 		'fallback_refresh' => false,
 	) );
 }
@@ -179,13 +204,11 @@ add_action( 'customize_register', 'mercia_customize_register_post_settings' );
 
 
 /**
- * Render featured image on single posts for the selective refresh partial.
+ * Render single posts partial
  */
-function mercia_customize_partial_post_image_single() {
+function mercia_customize_partial_post_layout() {
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'template-parts/content', 'single' );
-		mercia_related_posts();
-		comments_template();
 	}
 }
