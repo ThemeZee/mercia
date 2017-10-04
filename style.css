@@ -3,7 +3,7 @@ Theme Name: Mercia
 Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Mercia is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
+Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
 Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -520,9 +520,9 @@ input[type="reset"],
 input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0,0,0,0.075);
-	background: none;
-	color: #33aacc;
+	border: none;
+	background: #33aacc;
+	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -541,7 +541,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	color: #353535;
+	background: #353535;
 }
 
 input[type="text"],
@@ -942,7 +942,7 @@ textarea {
 	width: 28px;
 	height: 28px;
 	vertical-align: middle;
-	fill: #303030;
+	fill: #353535;
 }
 
 .header-social-menu .social-icons-menu li a:hover .icon {
@@ -1123,7 +1123,7 @@ textarea {
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:link,
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:visited {
 	color: #fff;
-	text-shadow: 1px 2px 3px #303030;
+	text-shadow: 1px 2px 3px #353535;
 }
 
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:hover,
@@ -1394,8 +1394,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-weight: bold;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.4;
 }
@@ -1470,33 +1470,38 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 .comment-reply-title {
 	display: block;
 	margin: 0 0 1.5rem;
-	padding: 0.75em;
-	border-top: 4px solid #353535;
-	border-bottom: 1px solid #353535;
+	padding: 0;
 	color: #353535;
-	font-weight: normal;
-	font-size: 18px;
-	font-size: 1.125rem;
+	text-transform: uppercase;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: bold;
+	font-size: 17px;
+	font-size: 1.0625rem;
 	font-family: 'Open Sans', Tahoma, Arial;
+	line-height: 1.4;
 }
 
 /* Comment List */
 .comment-list {
 	margin: 0;
-	padding: 0;
+	padding: 1.5em 0 0;
+	border-top: 1px solid rgba(0,0,0,0.075);
 	list-style: none;
 }
 
 .comment {
 	margin: 0 0 1.5em;
+	padding: 0;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
-.comment-body {
+.comment .comment-body {
+	display: block;
 	margin: 0;
 	padding: 0 0 1.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .comment-meta {
@@ -1589,8 +1594,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 
 .comment-reply-title small a {
 	margin-left: 1em;
-	text-decoration: underline;
-	font-weight: normal;
+	text-transform: none;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1599,7 +1603,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .site-footer {
-	border-top: 1px solid #303030;
+	border-top: 1px solid #353535;
 }
 
 .site-footer .site-info {
@@ -1892,10 +1896,6 @@ object {
 	.pagination,
 	.infinite-scroll #infinite-handle span {
 		margin-bottom: 2em;
-	}
-
-	.footer-wrap {
-		padding-bottom: 2em;
 	}
 
 	.entry-title {
@@ -2423,10 +2423,6 @@ object {
 		.pagination,
 		.infinite-scroll #infinite-handle span {
 			margin-bottom: 2.5em;
-		}
-
-		.footer-wrap {
-			padding-bottom: 2.5em;
 		}
 
 		/* Blog Layout */

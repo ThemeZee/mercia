@@ -26,6 +26,11 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.1 =
+* added new improved Magazine Widgets usings CSS Grid
+* added settings to change blog layout and single post layout
+* changed responsive layout to a mobile first approach with CSS Grid
+
 = 1.0.1 =
 * fixed some minor prefix issues
 * improved sanitize functions

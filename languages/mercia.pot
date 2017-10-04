@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mercia\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-08-02 15:56+0200\n"
+"POT-Creation-Date: 2017-10-04 15:43+0200\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -31,11 +31,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:28 inc/template-tags.php:285
+#: comments.php:28 inc/template-tags.php:296
 msgid "One comment"
 msgstr ""
 
-#: comments.php:28 inc/template-tags.php:285
+#: comments.php:28 inc/template-tags.php:296
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -183,31 +183,47 @@ msgstr ""
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:54
+#: inc/customizer/sections/customizer-blog.php:55
 msgid "Blog Description"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:75
+#: inc/customizer/sections/customizer-blog.php:77
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:81
-msgid "Display full posts"
+#: inc/customizer/sections/customizer-blog.php:83
+msgid "Large Posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:82
-msgid "Display post excerpts"
+#: inc/customizer/sections/customizer-blog.php:84
+msgid "Post List"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:95
+#: inc/customizer/sections/customizer-blog.php:85
+msgid "Post Grid"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:98
+msgid "Blog Content"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:104
+msgid "Full post"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:105
+msgid "Post excerpt"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:118
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:116
+#: inc/customizer/sections/customizer-blog.php:140
 msgid "Magazine Widgets"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:132
+#: inc/customizer/sections/customizer-blog.php:156
 msgid "Display Magazine widgets on blog index"
 msgstr ""
 
@@ -231,43 +247,58 @@ msgstr ""
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:27
+#: inc/customizer/sections/customizer-post.php:33
+msgid "Single Post Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:39
+#: inc/widgets/widget-magazine-focus-center.php:222
+#: inc/widgets/widget-magazine-focus-left.php:222
+#: inc/widgets/widget-magazine-grid.php:244
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:40
+msgid "Full Width Header"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:47
 msgid "Post Details"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:43
+#: inc/customizer/sections/customizer-post.php:63
 msgid "Display date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:59
+#: inc/customizer/sections/customizer-post.php:79
 msgid "Display author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:75
+#: inc/customizer/sections/customizer-post.php:95
 msgid "Display categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:85
+#: inc/customizer/sections/customizer-post.php:105
 msgid "Single Post"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:101
+#: inc/customizer/sections/customizer-post.php:121
 msgid "Display tags"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:117
+#: inc/customizer/sections/customizer-post.php:137
 msgid "Display previous/next post navigation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:127
+#: inc/customizer/sections/customizer-post.php:147
 msgid "Featured Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:143
+#: inc/customizer/sections/customizer-post.php:163
 msgid "Display images on blog and archives"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:165
+#: inc/customizer/sections/customizer-post.php:185
 msgid "Display image on single posts"
 msgstr ""
 
@@ -286,45 +317,45 @@ msgstr ""
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/template-tags.php:222
+#: inc/template-tags.php:233
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:285
+#: inc/template-tags.php:296
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:303 template-parts/content.php:23
+#: inc/template-tags.php:314 template-parts/content.php:25
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:319
+#: inc/template-tags.php:330
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:320
+#: inc/template-tags.php:331
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:373
+#: inc/template-tags.php:384
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:374
+#: inc/template-tags.php:385
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:388
+#: inc/template-tags.php:399
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:389
+#: inc/template-tags.php:400
 msgid "http://wordpress.org"
 msgstr ""
 
@@ -385,80 +416,85 @@ msgstr ""
 msgid "rate it"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:24
-msgid "Magazine (Columns)"
+#: inc/widgets/widget-magazine-focus-center.php:24
+#: inc/widgets/widget-magazine-focus-center.php:39
+msgid "Magazine (Focus Center)"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:27
-msgid "Displays your posts from two selected categories."
+#: inc/widgets/widget-magazine-focus-center.php:27
+msgid ""
+"Displays your posts from a selected category with a featured post in the "
+"center."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:41
-msgid "Left Category"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:42
-msgid "Right Category"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:248
-msgid "Left Category Title:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:254
-msgid "Left Category:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:257
-#: inc/widgets/widget-magazine-posts-columns.php:278
-#: inc/widgets/widget-magazine-posts-grid.php:208
-msgid "All Categories"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:269
-msgid "Right Category Title:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:275
-msgid "Right Category:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:290
-#: inc/widgets/widget-magazine-posts-grid.php:228
-msgid "Number of posts:"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:298
-msgid "Highlight first post (big image + excerpt)"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-grid.php:24
-#: inc/widgets/widget-magazine-posts-grid.php:39
-msgid "Magazine (Grid)"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-grid.php:27
-msgid "Displays your posts from a selected category in a grid layout."
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-grid.php:199
+#: inc/widgets/widget-magazine-focus-center.php:199
+#: inc/widgets/widget-magazine-focus-left.php:199
+#: inc/widgets/widget-magazine-grid.php:206
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:205
+#: inc/widgets/widget-magazine-focus-center.php:205
+#: inc/widgets/widget-magazine-focus-left.php:205
+#: inc/widgets/widget-magazine-grid.php:212
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:220
+#: inc/widgets/widget-magazine-focus-center.php:208
+#: inc/widgets/widget-magazine-focus-left.php:208
+#: inc/widgets/widget-magazine-grid.php:215
+msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/widget-magazine-focus-center.php:220
+#: inc/widgets/widget-magazine-focus-left.php:220
+#: inc/widgets/widget-magazine-grid.php:242
+msgid "Post Style:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-focus-center.php:223
+#: inc/widgets/widget-magazine-focus-left.php:223
+#: inc/widgets/widget-magazine-grid.php:245
+msgid "Image Overlay"
+msgstr ""
+
+#: inc/widgets/widget-magazine-focus-left.php:24
+#: inc/widgets/widget-magazine-focus-left.php:39
+msgid "Magazine (Focus Left)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-focus-left.php:27
+msgid ""
+"Displays your posts from a selected category with a featured post on the "
+"left side."
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:24
+#: inc/widgets/widget-magazine-grid.php:39
+msgid "Magazine (Grid)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:27
+msgid "Displays your posts from a selected category in a grid layout."
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:227
 msgid "Grid Layout:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:222
-msgid "Two Columns Grid"
+#: inc/widgets/widget-magazine-grid.php:229
+msgid "Two Columns"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:223
-msgid "Three Columns Grid"
+#: inc/widgets/widget-magazine-grid.php:230
+msgid "Three Columns"
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:231
+msgid "Four Columns"
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:236
+msgid "Number of posts:"
 msgstr ""
 
 #: search.php:22
@@ -481,6 +517,11 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
+#: template-parts/content-fullwidth.php:25 template-parts/content-page.php:25
+#: template-parts/single/post-content.php:17
+msgid "Pages:"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -501,8 +542,4 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:25 template-parts/content-single.php:17
-msgid "Pages:"
 msgstr ""
