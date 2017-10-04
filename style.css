@@ -2117,12 +2117,12 @@ object {
 	@media only screen and (min-width: 57.5em) {
 		.site-content {
 			display: grid;
-			grid-template-columns: 70% 30%;
+			grid-template-columns: 7fr 3fr;
+			grid-column-gap: 2em;
 		}
 
 		.content-area {
 			box-sizing: border-box;
-			padding-right: 1em;
 			grid-row-start: 1;
 			grid-column-start: 1;
 		}
@@ -2133,7 +2133,6 @@ object {
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
-			padding-left: 1em;
 			border: none;
 		}
 
@@ -2161,14 +2160,10 @@ object {
 
 		.single-post .type-post {
 			display: grid;
-			grid-template-columns: 70% 30%;
+			grid-template-columns: 7fr 3fr;
 			grid-template-rows: auto;
+			grid-column-gap: 2em;
 			margin-bottom: 0;
-		}
-
-		.single-post .type-post .single-header,
-		.single-post .type-post .single-content {
-			padding-right: 1em;
 		}
 
 		.single-post .type-post .sidebar {
@@ -2400,15 +2395,9 @@ object {
 			padding: 2em 0;
 		}
 
-		.content-area,
-		.single-post .type-post .single-header,
-		.single-post .type-post .single-content {
-			padding-right: 1.25em;
-		}
-
-		.sidebar,
-		.single-post .type-post .sidebar {
-			padding-left: 1.25em;
+		.site-content,
+		.single-post .type-post {
+			grid-column-gap: 2.5em;
 		}
 
 		.site-header,
@@ -2459,59 +2448,37 @@ object {
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 57.5em) {
 		.sidebar-left .site-content {
-			grid-template-columns: 30% 70%;
+			grid-template-columns: 3fr 7fr;
 		}
 
 		.sidebar-left .content-area {
 			grid-column-start: 2;
-			padding-right: 0;
-			padding-left: 1em;
 		}
 
 		.sidebar-left .sidebar {
 			grid-column-start: 1;
-			padding-right: 1em;
-			padding-left: 0;
 		}
 
 		/* Left Sidebar on single posts */
 		.sidebar-left.single-post .type-post {
-			grid-template-columns: 30% 70%;
+			grid-template-columns: 3fr 7fr;
 		}
 
 		.sidebar-left.single-post .type-post .single-header,
 		.sidebar-left.single-post .type-post .single-content {
 			grid-column-start: 2;
-			padding-right: 0;
-			padding-left: 1em;
 		}
 
 		.sidebar-left.single-post .type-post .sidebar {
 			grid-column-start: 1;
-			padding-right: 1em;
-			padding-left: 0;
 		}
 
 		.sidebar-left.fullwidth-single-post.single-post .type-post .single-header {
 			grid-column: 1 / span 2;
-			padding: 0;
 		}
 
 		.sidebar-left.fullwidth-single-post.single-post .type-post .sidebar {
 			grid-row-start: 2;
-		}
-	}
-
-	@media only screen and (min-width: 75em) {
-		.sidebar-left .content-area,
-		.sidebar-left.single-post .type-post .single-header,
-		.sidebar-left.single-post .type-post .single-content {
-			padding-left: 1.25em;
-		}
-
-		.sidebar-left .sidebar,
-		.sidebar-left.single-post .type-post .sidebar {
-			padding-right: 1.25em;
 		}
 	}
 
