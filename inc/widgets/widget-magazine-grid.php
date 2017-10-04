@@ -182,9 +182,9 @@ class Mercia_Magazine_Grid_Widget extends WP_Widget {
 		$instance = $old_instance;
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 		$instance['category'] = (int) $new_instance['category'];
-		$instance['layout'] = esc_attr( $new_instance['layout'] );
+		$instance['layout'] = sanitize_text_field( $new_instance['layout'] );
 		$instance['number'] = (int) $new_instance['number'];
-		$instance['style'] = esc_attr( $new_instance['style'] );
+		$instance['style'] = sanitize_text_field( $new_instance['style'] );
 
 		mercia_flush_magazine_post_ids();
 

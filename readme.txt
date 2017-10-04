@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.0.1 =
+* fixed some minor prefix issues
+* improved sanitize functions
+
 = 1.0 =
 Initial Release
 

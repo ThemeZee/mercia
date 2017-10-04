@@ -26,7 +26,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'default'           => '',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( 'mercia_theme_options[blog_title]', array(
