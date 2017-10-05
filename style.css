@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
-Version: 1.1
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mercia
@@ -647,7 +647,7 @@ textarea {
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 0 1em;
-	max-width: 50em;
+	max-width: 52em;
 	width: 100%;
 	background: #fff;
 }
@@ -1947,6 +1947,110 @@ object {
 }
 
 /*--------------------------------------------------------------
+## 14.6 - Desktop Small ( Larger than 960px )
+--------------------------------------------------------------*/
+@media only screen and (min-width: 55em) {
+
+	/*** Main Navigation ***/
+	.main-navigation-toggle {
+		display: none;
+	}
+
+	.primary-navigation {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+	}
+
+	.main-navigation-menu {
+		position: relative;
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		border-top: none;
+	}
+
+	.main-navigation-menu a {
+		display: block;
+		padding: 1em;
+	}
+
+	.main-navigation-menu > .menu-item-has-children a .icon {
+		margin: 0.5em 0 0 0.4em;
+		width: 14px;
+		height: 14px;
+		vertical-align: top;
+		fill: #353535;
+	}
+
+	.main-navigation-menu > .menu-item-has-children a:hover .icon,
+	.main-navigation-menu > .menu-item-has-children a:active .icon  {
+		fill: #33aacc;
+	}
+
+	.main-navigation-menu ul {
+		position: absolute;
+		z-index: 99;
+		display: none;
+		border: 1px solid #353535;
+		border-bottom: none;
+		width: auto;
+	}
+
+	.main-navigation-menu ul li {
+		position: relative;
+		margin: 0;
+	}
+
+	.main-navigation-menu ul a {
+		min-width: 250px;
+		min-width: 16rem;
+		border-bottom: 1px solid #353535;
+	}
+
+	.main-navigation-menu ul a,
+	.main-navigation-menu ul li ul a,
+	.main-navigation-menu ul li ul li ul a,
+	.main-navigation-menu ul li ul li ul li ul a {
+		padding: 1em;
+	}
+
+	.main-navigation-menu ul .menu-item-has-children > a .icon {
+		margin: 0.5em 0 0 0.4em;
+		width: 12px;
+		height: 12px;
+		vertical-align: top;
+		-webkit-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
+
+	.main-navigation-menu li ul ul {
+		top: -1px;
+		left: 100%;
+	}
+
+	.main-navigation-menu li.menu-item-has-children:hover > ul,
+	.main-navigation-menu li.page_item_has_children:hover > ul,
+	.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
+		display: block;
+	}
+
+	.main-navigation-menu li.current-menu-item > a {
+		text-decoration: underline;
+	}
+
+	.main-navigation-menu li.current-menu-item > a:after {
+		text-decoration: none;
+	}
+}
+
+/*--------------------------------------------------------------
 # 14.0 - Media Queries with CSS Grid for larger screens
 --------------------------------------------------------------*/
 
@@ -1964,17 +2068,6 @@ object {
 
 	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
 		padding: 0.25em 1em;
-	}
-
-	/*--------------------------------------------------------------
-	## 14.1 - Mobile Small ( > 320px )
-	--------------------------------------------------------------*/
-	@media only screen and (min-width: 20em) {
-
-	}
-
-	@media only screen and (min-width: 25em) {
-
 	}
 
 	/*--------------------------------------------------------------
@@ -2210,104 +2303,6 @@ object {
 		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
 			font-size: 18px;
 			font-size: 1.125rem;
-		}
-
-		/*** Main Navigation ***/
-		.main-navigation-toggle {
-			display: none;
-		}
-
-		.primary-navigation {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-flow: row wrap;
-			flex-flow: row wrap;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
-		}
-
-		.main-navigation-menu {
-			position: relative;
-			display: -webkit-box !important;
-			display: -ms-flexbox !important;
-			display: flex !important;
-			-ms-flex-flow: row wrap;
-			flex-flow: row wrap;
-			border-top: none;
-		}
-
-		.main-navigation-menu a {
-			display: block;
-			padding: 1em;
-		}
-
-		.main-navigation-menu > .menu-item-has-children a .icon {
-			margin: 0.5em 0 0 0.4em;
-			width: 14px;
-			height: 14px;
-			vertical-align: top;
-			fill: #353535;
-		}
-
-		.main-navigation-menu > .menu-item-has-children a:hover .icon,
-		.main-navigation-menu > .menu-item-has-children a:active .icon  {
-			fill: #33aacc;
-		}
-
-		.main-navigation-menu ul {
-			position: absolute;
-			z-index: 99;
-			display: none;
-			border: 1px solid #353535;
-			border-bottom: none;
-			width: auto;
-		}
-
-		.main-navigation-menu ul li {
-			position: relative;
-			margin: 0;
-		}
-
-		.main-navigation-menu ul a {
-			min-width: 250px;
-			min-width: 16rem;
-			border-bottom: 1px solid #353535;
-		}
-
-		.main-navigation-menu ul a,
-		.main-navigation-menu ul li ul a,
-		.main-navigation-menu ul li ul li ul a,
-		.main-navigation-menu ul li ul li ul li ul a {
-			padding: 1em;
-		}
-
-		.main-navigation-menu ul .menu-item-has-children > a .icon {
-			margin: 0.5em 0 0 0.4em;
-			width: 12px;
-			height: 12px;
-			vertical-align: top;
-			-webkit-transform: rotate(270deg);
-			transform: rotate(270deg);
-		}
-
-		.main-navigation-menu li ul ul {
-			top: -1px;
-			left: 100%;
-		}
-
-		.main-navigation-menu li.menu-item-has-children:hover > ul,
-		.main-navigation-menu li.page_item_has_children:hover > ul,
-		.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
-			display: block;
-		}
-
-		.main-navigation-menu li.current-menu-item > a {
-			text-decoration: underline;
-		}
-
-		.main-navigation-menu li.current-menu-item > a:after {
-			text-decoration: none;
 		}
 
 		/* Magazine Focus Widgets */

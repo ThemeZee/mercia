@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.1.1 =
+* fixed navigation menu bug in Edge and Internet Explorer
+
 = 1.1 =
 * added new improved Magazine Widgets usings CSS Grid
 * added settings to change blog layout and single post layout

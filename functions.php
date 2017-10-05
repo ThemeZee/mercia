@@ -139,7 +139,7 @@ function mercia_scripts() {
 	wp_enqueue_style( 'mercia-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'mercia-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
+	wp_enqueue_script( 'mercia-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20171005' );
 
 	// Passing Parameters to navigation.js.
 	wp_localize_script( 'mercia-jquery-navigation', 'mercia_menu_title', mercia_get_svg( 'menu' ) . esc_html__( 'Menu', 'mercia' ) );

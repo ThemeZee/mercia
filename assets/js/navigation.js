@@ -27,7 +27,7 @@
 			menuClass: 'menu',
 			toggleClass: 'menu-toggle',
 			toggleText: '',
-			maxWidth: '60em'
+			minWidth: '60em'
 		};
 
 		/* Set Variables */
@@ -36,7 +36,7 @@
 			toggleID = ( vars.toggleID ) ? vars.toggleID : vars.toggleClass,
 			toggleClass = vars.toggleClass,
 			toggleText = vars.toggleText,
-			maxWidth = vars.maxWidth,
+			minWidth = vars.minWidth,
 			$this = $( this ),
 			$menu = $( '.' + menuClass );
 
@@ -46,42 +46,13 @@
 
 		/* Set and reset dropdown animations based on screen size */
 		if ( typeof matchMedia == 'function' ) {
-			var mq = window.matchMedia( '(max-width: ' + maxWidth + ')' );
+			var mq = window.matchMedia( '(min-width: ' + minWidth + ')' );
 			mq.addListener( widthChange );
 			widthChange( mq );
 		}
 		function widthChange( mq ) {
 
 			if ( mq.matches ) {
-
-				/* Reset desktop navigation menu dropdown animation on smaller screens */
-				$menu.find( 'ul.sub-menu' ).css( { display: 'block' } );
-				$menu.find( 'li ul.sub-menu' ).css( { visibility: 'visible', display: 'block' } );
-				$menu.find( 'li.menu-item-has-children' ).unbind( 'mouseenter mouseleave' );
-
-				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).hide();
-					$( this ).parent().find( '.submenu-dropdown-toggle' ).removeClass( 'active' );
-				} );
-
-				/* Remove ARIA states on mobile devices */
-				$menu.find( 'li.menu-item-has-children > a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
-
-				/* Create Sub Menu Dropdown Toggles on mobile devices */
-				$menu.find( 'li.menu-item-has-children a .sub-menu-icon' ).each( function() {
-					$( this ).addClass( 'submenu-dropdown-toggle' ).parent().after(this);
-				} );
-
-				/* Add dropdown animation for submenus on mobile navigation */
-				$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
-					$( this ).hide();
-				} );
-				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).on( 'click', function(e) {
-					$( this ).parent().find( 'ul:first' ).slideToggle();
-					$( this ).toggleClass( 'active' );
-				});
-
-			} else {
 
 				/* Add dropdown animation for desktop navigation menu */
 				$menu.find( 'ul.sub-menu' ).css( { display: 'none' } );
@@ -122,8 +93,36 @@
 					$( this ).removeClass( 'submenu-dropdown-toggle' ).appendTo( $( this ).prev() );
 				} );
 
-			}
+			} else {
 
+				/* Reset desktop navigation menu dropdown animation on smaller screens */
+				$menu.find( 'ul.sub-menu' ).css( { display: 'block' } );
+				$menu.find( 'li ul.sub-menu' ).css( { visibility: 'visible', display: 'block' } );
+				$menu.find( 'li.menu-item-has-children' ).unbind( 'mouseenter mouseleave' );
+
+				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
+					$( this ).hide();
+					$( this ).parent().find( '.submenu-dropdown-toggle' ).removeClass( 'active' );
+				} );
+
+				/* Remove ARIA states on mobile devices */
+				$menu.find( 'li.menu-item-has-children > a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
+
+				/* Create Sub Menu Dropdown Toggles on mobile devices */
+				$menu.find( 'li.menu-item-has-children a .sub-menu-icon' ).each( function() {
+					$( this ).addClass( 'submenu-dropdown-toggle' ).parent().after(this);
+				} );
+
+				/* Add dropdown animation for submenus on mobile navigation */
+				$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
+					$( this ).hide();
+				} );
+				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).on( 'click', function(e) {
+					$( this ).parent().find( 'ul:first' ).slideToggle();
+					$( this ).toggleClass( 'active' );
+				});
+
+			}
 		}
 
 		/********************
@@ -151,7 +150,7 @@
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
 			toggleText: mercia_menu_title,
-			maxWidth: '57.5em'
+			minWidth: '55em'
 		} );
 
 		/* Setup Top Navigation */
@@ -159,7 +158,7 @@
 			menuClass: 'top-navigation-menu',
 			toggleClass: 'top-navigation-toggle',
 			toggleText: mercia_menu_title,
-			maxWidth: '57.5em'
+			minWidth: '55em'
 		} );
 
 	} );
