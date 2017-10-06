@@ -22,11 +22,11 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mercia' ); ?></a>
 
-	<?php do_action( 'mercia_header_bar' ); ?>
-
 	<?php mercia_header_image(); ?>
 
 	<div id="page" class="hfeed site">
+
+		<?php do_action( 'mercia_header_bar' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 

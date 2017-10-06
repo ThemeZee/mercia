@@ -109,7 +109,7 @@ function mercia_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function mercia_customize_preview_js() {
-	wp_enqueue_script( 'mercia-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20170627', true );
+	wp_enqueue_script( 'mercia-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20171005', true );
 }
 add_action( 'customize_preview_init', 'mercia_customize_preview_js' );
 
@@ -118,7 +118,7 @@ add_action( 'customize_preview_init', 'mercia_customize_preview_js' );
  * Embed JS for Customizer Controls.
  */
 function mercia_customizer_controls_js() {
-	wp_enqueue_script( 'mercia-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20170627', true );
+	wp_enqueue_script( 'mercia-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20171005', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'mercia_customizer_controls_js' );
 
@@ -127,7 +127,7 @@ add_action( 'customize_controls_enqueue_scripts', 'mercia_customizer_controls_js
  * Embed CSS styles Customizer Controls.
  */
 function mercia_customizer_controls_css() {
-	wp_enqueue_style( 'mercia-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20170627' );
+	wp_enqueue_style( 'mercia-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20171005' );
 }
 add_action( 'customize_controls_print_styles', 'mercia_customizer_controls_css' );
 

@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mercia
@@ -811,11 +811,15 @@ textarea {
 }
 
 .main-navigation-menu a {
-	position: relative;
-	display: inline-block;
+	display: block;
 	margin: 0;
 	padding: 0.75em 1em;
 	text-decoration: none;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+}
+
+.main-navigation-menu > li:last-child a {
+	border-bottom: none;
 }
 
 .main-navigation-menu a:link,
@@ -840,66 +844,51 @@ textarea {
 }
 
 .main-navigation-menu ul a {
-	display: inline-block;
-	padding-left: 3em;
+	padding-left: 2em;
 }
 
 .main-navigation-menu ul li ul a {
-	padding-left: 4em;
+	padding-left: 3em;
 }
 
 .main-navigation-menu ul li ul li ul a {
-	padding-left: 5em;
+	padding-left: 4em;
 }
 
 .main-navigation-menu ul li ul li ul li ul a {
-	padding-left: 6em;
+	padding-left: 5em;
 }
 
-/* Mobile Submenu Dropdowns */
-.main-navigation-menu .submenu-dropdown-toggle {
-	position: absolute;
-	padding: 0.9em;
+/* Sub Menu Dropdown Icons */
+.main-navigation-menu > .menu-item-has-children a .sub-menu-icon {
+	float: right;
+	margin: -0.75em -1em 0;
+	padding: 0.75em 1em;
 }
 
-.main-navigation-menu .submenu-dropdown-toggle:hover,
-.main-navigation-menu .submenu-dropdown-toggle:active {
-	cursor: pointer;
-}
-
-.main-navigation-menu .submenu-dropdown-toggle .icon {
-	margin: 0.25em 0 0;
-	width: 19px;
-	height: 19px;
+.main-navigation-menu > .menu-item-has-children a .sub-menu-icon .icon {
+	margin: 0.3em 0 0;
+	width: 20px;
+	height: 20px;
 	vertical-align: top;
 	fill: #353535;
 }
 
-.main-navigation-menu .submenu-dropdown-toggle:hover .icon,
-.main-navigation-menu .submenu-dropdown-toggle:active .icon  {
+.main-navigation-menu ul .menu-item-has-children a .sub-menu-icon .icon {
+	width: 18px;
+	height: 18px;
+}
+
+.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:hover .icon,
+.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:active .icon  {
 	fill: #33aacc;
 }
 
-.main-navigation-menu .submenu-dropdown-toggle.active .icon {
-	margin: 0.5em 0 0;
+.main-navigation-menu > .menu-item-has-children a .sub-menu-icon.active .icon {
+	margin: 0.25em 0 0;
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
-
-.main-navigation-menu ul .submenu-dropdown-toggle {
-	padding: 0.8em;
-}
-
-.main-navigation-menu ul .submenu-dropdown-toggle .icon {
-	margin: 0.55em 0 0;
-	width: 16px;
-	height: 16px;
-}
-
-.main-navigation-menu ul .submenu-dropdown-toggle.active .icon {
-	margin: 0.6em 0 0;
-}
-
 
 /*--------------------------------------------------------------
 ## 10.2 - Social Icons Menu
@@ -1956,16 +1945,6 @@ object {
 		display: none;
 	}
 
-	.primary-navigation {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-	}
-
 	.main-navigation-menu {
 		position: relative;
 		display: -webkit-box !important;
@@ -1977,20 +1956,24 @@ object {
 	}
 
 	.main-navigation-menu a {
-		display: block;
 		padding: 1em;
+		border: none;
 	}
 
-	.main-navigation-menu > .menu-item-has-children a .icon {
+	.main-navigation-menu > .menu-item-has-children a .sub-menu-icon {
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-navigation-menu > .menu-item-has-children a .sub-menu-icon .icon {
 		margin: 0.5em 0 0 0.4em;
 		width: 14px;
 		height: 14px;
-		vertical-align: top;
-		fill: #353535;
 	}
 
-	.main-navigation-menu > .menu-item-has-children a:hover .icon,
-	.main-navigation-menu > .menu-item-has-children a:active .icon  {
+	.main-navigation-menu > .menu-item-has-children a:hover .sub-menu-icon .icon,
+	.main-navigation-menu > .menu-item-has-children a:hover .sub-menu-icon .icon  {
 		fill: #33aacc;
 	}
 
@@ -2021,11 +2004,10 @@ object {
 		padding: 1em;
 	}
 
-	.main-navigation-menu ul .menu-item-has-children > a .icon {
+	.main-navigation-menu ul .menu-item-has-children a .sub-menu-icon .icon {
 		margin: 0.5em 0 0 0.4em;
 		width: 12px;
 		height: 12px;
-		vertical-align: top;
 		-webkit-transform: rotate(270deg);
 		transform: rotate(270deg);
 	}

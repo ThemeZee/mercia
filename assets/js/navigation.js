@@ -54,12 +54,20 @@
 
 			if ( mq.matches ) {
 
+				/* Hide all sub menus on desktop navigation */
+				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
+					$( this ).css( { display: 'none' } );
+					$( this ).parent().find( 'a > .sub-menu-icon' ).removeClass( 'active' );
+				} );
+
+				/* Remove click event for dropdown animation of submenu icons*/
+				$menu.find( 'li.menu-item-has-children > a > .sub-menu-icon' ).off( "click", "**" );
+
 				/* Add dropdown animation for desktop navigation menu */
-				$menu.find( 'ul.sub-menu' ).css( { display: 'none' } );
 				$menu.find( 'li.menu-item-has-children' ).hover( function() {
-					$( this ).find( 'ul:first' ).css( { visibility: 'visible', display: 'none' } ).slideDown( 300 );
+					$( this ).children( 'ul.sub-menu' ).css( { visibility: 'visible', display: 'none' } ).slideDown( 300 );
 				}, function() {
-					$( this ).find( 'ul:first' ).css( { visibility: 'hidden' } );
+					$( this ).children( 'ul.sub-menu' ).css( { visibility: 'hidden' } );
 				} );
 
 				/* Make sure menu does not fly off the right of the screen */
@@ -67,9 +75,9 @@
 					if ( $( this ).children( 'ul.sub-menu' ).offset().left + 250 > $( window ).width() ) {
 						$( this ).children( 'ul.sub-menu' ).css( { right: '100%', left: 'auto' } );
 					}
-				});
+				} );
 
-				// Add menu items with submenus to aria-haspopup="true".
+				/* Add menu items with submenus to aria-haspopup="true" */
 				$menu.find( 'li.menu-item-has-children' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
 
 				/* Properly update the ARIA states on focus (keyboard) and mouse over events */
@@ -79,46 +87,37 @@
 
 				/* Properly update the ARIA states on blur (keyboard) and mouse out events */
 				$menu.find( 'li.menu-item-has-children > a' ).on( 'blur.aria  mouseleave.aria', function() {
-
 					if( ! $(this).parent().next( 'li' ).length > 0 && ! $(this).next('ul').length > 0 ) {
-
 						$( this ).closest( 'li.menu-item-has-children' ).attr( 'aria-expanded', false ).find( '.sub-menu' ).css( { display: 'none' } );
-
 					}
-
-				} );
-
-				/* Remove Sub Menu Dropdown Toggles on desktop screens */
-				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).each( function() {
-					$( this ).removeClass( 'submenu-dropdown-toggle' ).appendTo( $( this ).prev() );
 				} );
 
 			} else {
 
 				/* Reset desktop navigation menu dropdown animation on smaller screens */
-				$menu.find( 'ul.sub-menu' ).css( { display: 'block' } );
-				$menu.find( 'li ul.sub-menu' ).css( { visibility: 'visible', display: 'block' } );
-				$menu.find( 'li.menu-item-has-children' ).unbind( 'mouseenter mouseleave' );
-
 				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).hide();
-					$( this ).parent().find( '.submenu-dropdown-toggle' ).removeClass( 'active' );
+					$( this ).css( { display: 'block', visibility: 'visible' } );
 				} );
 
-				/* Remove ARIA states on mobile devices */
-				$menu.find( 'li.menu-item-has-children > a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
+				/* Remove Events */
+				$menu.find( 'li.menu-item-has-children' ).off();
+				$menu.find( 'li ul.sub-menu li.menu-item-has-children' ).off();
 
-				/* Create Sub Menu Dropdown Toggles on mobile devices */
-				$menu.find( 'li.menu-item-has-children a .sub-menu-icon' ).each( function() {
-					$( this ).addClass( 'submenu-dropdown-toggle' ).parent().after(this);
+				/* Remove ARIA states on mobile devices */
+				$menu.find( 'li.menu-item-has-children > a' ).off();
+
+				/* Close all sub menus on mobile navigation */
+				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
+					$( this ).hide();
+					$( this ).parent().find( 'a > .sub-menu-icon' ).removeClass( 'active' );
 				} );
 
 				/* Add dropdown animation for submenus on mobile navigation */
-				$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
-					$( this ).hide();
-				} );
-				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).on( 'click', function(e) {
-					$( this ).parent().find( 'ul:first' ).slideToggle();
+				$menu.find( 'li.menu-item-has-children > a > .sub-menu-icon' ).on( 'click', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					e.stopImmediatePropagation();
+					$( this ).parent().next( 'ul.sub-menu' ).slideToggle();
 					$( this ).toggleClass( 'active' );
 				});
 
@@ -130,7 +129,7 @@
 		*********************/
 
 		/* Add Menu Toggle Button for mobile navigation */
-		$this.before( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
+		$this.prepend( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
 
 		/* Add dropdown slide animation for mobile devices */
 		$( '#' + toggleID ).on( 'click', function() {
