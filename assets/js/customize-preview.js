@@ -162,6 +162,17 @@
 		} );
 	} );
 
+	// Single Post Thumbnail checkbox.
+	wp.customize( 'mercia_theme_options[post_image_single]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'post-thumbnail-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'post-thumbnail-hidden' );
+			}
+		} );
+	} );
+
 	// Credit Link checkbox.
 	wp.customize( 'mercia_theme_options[credit_link]', function( value ) {
 		value.bind( function( newval ) {

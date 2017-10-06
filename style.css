@@ -2276,17 +2276,19 @@ object {
 		.fullwidth-single-post.single-post .type-post .single-header {
 			display: flex;
 			flex-direction: column;
-			margin: 0 0 1em;
+			margin: 0 0 1.5em;
 			padding: 0;
 		}
 
-		.fullwidth-single-post.single-post .type-post .single-header .entry-header {
-			order: 1;
-			margin: 0 0 1em;
+		.fullwidth-single-post.single-post .has-post-thumbnail .single-header .entry-header {
+			margin: -4em 4em 0 0;
+			padding: 1em 1em 0 0;
+			background: #fff;
 		}
 
-		.fullwidth-single-post.single-post .type-post .single-header .post-image {
-			order: 2;
+		.fullwidth-single-post.single-post.post-thumbnail-hidden .has-post-thumbnail .single-header .entry-header {
+			margin: 0;
+			padding: 0;
 		}
 
 		.fullwidth-single-post.single-post .type-post .single-header .entry-title {

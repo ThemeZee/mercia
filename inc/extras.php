@@ -64,6 +64,11 @@ function mercia_body_classes( $classes ) {
 		$classes[] = 'post-thumbnails-hidden';
 	}
 
+	// Single Featured Image?
+	if ( false === $theme_options['post_image_single'] && is_single() ) {
+		$classes[] = 'post-thumbnail-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'mercia_body_classes' );
