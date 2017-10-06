@@ -2254,7 +2254,7 @@ object {
 		.single-post .type-post {
 			display: grid;
 			grid-template-columns: 7fr 3fr;
-			grid-template-rows: auto;
+			grid-template-rows: auto 1fr;
 			grid-column-gap: 2em;
 			margin-bottom: 0;
 		}
@@ -2483,12 +2483,12 @@ object {
 	@media only screen and (min-width: 57.5em) {
 		/* No Sidebar & Centered Layout Template */
 		.no-sidebar .site-content,
-		.centered-content-area {
+		.page-template-template-centered .site-content {
 			display: block;
 		}
 
-		.no-sidebar .content-area,
-		.site-content .centered-content-area {
+		.no-sidebar .site-content .content-area,
+		.page-template-template-centered .site-content .content-area {
 			margin: 0 auto;
 			padding: 0;
 			max-width: 840px;
@@ -2496,11 +2496,8 @@ object {
 		}
 
 		/* Fullwidth Template */
-		.site-content .fullwidth-content-area {
-			margin: 0;
-			padding: 0;
-			max-width: 100%;
-			width: 100%;
+		.page-template-template-fullwidth .site-content {
+			display: block;
 		}
 	}
 
@@ -2533,30 +2530,6 @@ object {
 		.no-sidebar.fullwidth-single-post.single-post .content-single .type-post .single-header,
 		.fullwidth-single-post.single-post .content-no-sidebar .type-post .single-header {
 			max-width: 100%;
-		}
-	}
-}
-
-/*--------------------------------------------------------------
-# 15.0 - CSS Hacks for Safari
---------------------------------------------------------------*/
-
-/* Fix Flexbox issues for Safari 6.1-10.0 */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.content-area,
-		.sidebar {
-			margin-right: -1px;
-		}
-	}
-}
-
-/* Fix Flexbox issues for Safari 10.1+ */
-@media not all and (min-resolution:.001dpcm) {
-	@media {
-		.content-area,
-		.sidebar {
-			margin-right: -1px;
 		}
 	}
 }

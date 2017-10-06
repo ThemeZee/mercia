@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.1.2 =
+* fixed spacing issue on single posts
+* fixed fullwidth and centered page template
+
 = 1.1.1 =
 * fixed navigation menu bug in Edge and Internet Explorer
 
