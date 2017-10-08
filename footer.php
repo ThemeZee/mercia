@@ -15,7 +15,9 @@
 
 		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
 
-			<div id="footer-text" class="site-info">
+			<?php do_action( 'mercia_footer_menu' ); ?>
+
+			<div id="footer-line" class="site-info">
 				<?php do_action( 'mercia_footer_text' ); ?>
 				<?php mercia_credit_link(); ?>
 			</div><!-- .site-info -->

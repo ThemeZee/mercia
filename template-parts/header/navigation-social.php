@@ -8,7 +8,7 @@
 // Check if there is a social menu.
 if ( has_nav_menu( 'social' ) ) : ?>
 
-	<div id="header-social-icons" class="header-social-menu clearfix">
+	<div id="header-social-icons" class="header-social-menu mercia-social-menu clearfix">
 
 		<?php
 		// Display Social Icons Menu.

@@ -17,7 +17,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Sections for Post Settings.
 	$wp_customize->add_section( 'mercia_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'mercia' ),
-		'priority' => 30,
+		'priority' => 40,
 		'panel' => 'mercia_options_panel',
 	) );
 

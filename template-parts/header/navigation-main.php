@@ -8,6 +8,8 @@
 
 <div id="main-navigation-wrap" class="primary-navigation-wrap">
 
+	<?php do_action( 'mercia_header_search' ); ?>
+
 	<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
 		<?php
 			// Display Main Navigation.
