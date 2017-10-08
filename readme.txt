@@ -30,6 +30,7 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 * improved full width layout for single posts
 * fixed spacing issue on single posts
 * fixed fullwidth and centered page template
+* improved styling of navigation menus
 
 = 1.1.1 =
 * fixed navigation menu bug in Edge and Internet Explorer
@@ -89,12 +90,16 @@ Copyright: 2017 IcoMoon.io
 License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0)
 Copyright: Steve Matteson
 
-7. Rambla Font - https://fonts.google.com/specimen/Rambla
-License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Martin Sommaruga
+7. Roboto Font - https://fonts.google.com/specimen/Roboto
+License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0)
+Copyright: Christian Robertson
 
-8. Image used in screenshot.jpg are from Pexels - https://www.pexels.com
+8. Image used in screenshot.jpg
 
-Image: https://www.pexels.com/photo/beverage-breakfast-brewed-coffee-caffeine-374885/
+Image 1: https://www.pexels.com/photo/beverage-breakfast-brewed-coffee-caffeine-374885/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: Burst (https://www.pexels.com/u/burst/)
+
+Image 2: https://pixabay.com/en/computer-laptop-table-technology-2242274/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: Engin Akyurt (https://pixabay.com/en/users/Engin_Akyurt-3656355/)
