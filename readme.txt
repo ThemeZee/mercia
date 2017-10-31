@@ -26,6 +26,11 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.1.3 =
+* improved styling of image captions
+* improved styling of galleries
+* fixed CSS grid bug with long image captions
+
 = 1.1.2 =
 * improved full width layout for single posts
 * fixed spacing issue on single posts

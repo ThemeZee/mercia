@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
-Version: 1.1.2
+Version: 1.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mercia
@@ -1642,45 +1642,32 @@ object {
 
 .gallery-item {
 	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 1em 0.75em 0;
 	width: 100%;
 	vertical-align: top;
 	text-align: center;
 }
 
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item,
+.gallery-columns-4 .gallery-item,
+.gallery-columns-5 .gallery-item,
+.gallery-columns-6 .gallery-item,
+.gallery-columns-7 .gallery-item,
+.gallery-columns-8 .gallery-item,
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+	max-width: 50%;
 }
 
 .gallery-caption {
 	display: block;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: rgba(0,0,0,0.6);
+	margin-bottom: 0.75em;
+	line-height: 1.4;
 }
 
 /*--------------------------------------------------------------
@@ -1769,6 +1756,24 @@ object {
 	.entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
+	}
+
+	/* Gallery */
+	.gallery-item {
+		padding: 0 1.5em 1em 0;
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-8 .gallery-item {
+		max-width: 25%;
 	}
 
 	/* Magazine Widget Post Titles */
@@ -1915,6 +1920,19 @@ object {
 ## 14.3 - Mobile Extra Large ( > 640px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 45em) {
+	/* Gallery */
+	.gallery-columns-5 .gallery-item {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 .gallery-item {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 .gallery-item {
+		max-width: 14.28%;
+	}
+
 	/* Magazine Widget Post Titles */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 19px;
@@ -1930,6 +1948,14 @@ object {
 ## 14.6 - Desktop Small ( Larger than 960px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 55em) {
+	/* Gallery */
+	.gallery-columns-8 .gallery-item {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 .gallery-item {
+		max-width: 11.11%;
+	}
 
 	/*** Main Navigation ***/
 	.main-navigation-toggle {
