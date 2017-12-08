@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.1.4 =
+* fixed CSS Grid issues with pre and table elements
+
 = 1.1.3 =
 * improved styling of image captions
 * improved styling of galleries
