@@ -22,7 +22,7 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content clearfix">
-			<?php the_content( esc_html__( 'Continue reading &raquo;', 'mercia' ) ); ?>
+			<?php the_content( esc_html( mercia_get_option( 'read_more_text' ) ) ); ?>
 		</div><!-- .entry-content -->
 
 	</div>

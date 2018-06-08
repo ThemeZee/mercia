@@ -309,11 +309,17 @@ if ( ! function_exists( 'mercia_more_link' ) ) :
 	 * Displays the more link on posts
 	 */
 	function mercia_more_link() {
+
+		// Get Read More Text.
+		$read_more = mercia_get_option( 'read_more_text' );
+
+		if ( '' !== $read_more || is_customize_preview() ) :
 		?>
 
-		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'mercia' ); ?></a>
+			<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php echo esc_html( $read_more ); ?></a>
 
 		<?php
+		endif;
 	}
 endif;
 

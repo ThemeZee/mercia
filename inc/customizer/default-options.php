@@ -57,6 +57,7 @@ function mercia_default_options() {
 		'blog_layout'           => 'large',
 		'blog_content'          => 'excerpt',
 		'excerpt_length'        => 35,
+		'read_more_text'        => esc_html__( 'Continue reading', 'mercia' ),
 		'blog_magazine_widgets' => true,
 		'post_layout'           => 'default',
 		'meta_date'             => true,
