@@ -18,7 +18,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_section( 'mercia_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'mercia' ),
 		'priority' => 40,
-		'panel' => 'mercia_options_panel',
+		'panel'    => 'mercia_options_panel',
 	) );
 
 	// Add Setting and Control for post layout.
@@ -44,8 +44,8 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[post_details]', array(
-			'label' => esc_html__( 'Post Details', 'mercia' ),
-			'section' => 'mercia_section_post',
+			'label'    => esc_html__( 'Post Details', 'mercia' ),
+			'section'  => 'mercia_section_post',
 			'settings' => array(),
 			'priority' => 20,
 		)
@@ -54,7 +54,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for showing post date.
 	$wp_customize->add_setting( 'mercia_theme_options[meta_date]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -70,7 +70,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for showing post author.
 	$wp_customize->add_setting( 'mercia_theme_options[meta_author]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -86,7 +86,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for showing post categories.
 	$wp_customize->add_setting( 'mercia_theme_options[meta_category]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -102,8 +102,8 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Single Post Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[single_post]', array(
-			'label' => esc_html__( 'Single Post', 'mercia' ),
-			'section' => 'mercia_section_post',
+			'label'    => esc_html__( 'Single Post', 'mercia' ),
+			'section'  => 'mercia_section_post',
 			'settings' => array(),
 			'priority' => 60,
 		)
@@ -112,7 +112,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for showing post tags.
 	$wp_customize->add_setting( 'mercia_theme_options[meta_tags]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -128,7 +128,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for showing post navigation.
 	$wp_customize->add_setting( 'mercia_theme_options[post_navigation]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -144,17 +144,17 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Featured Images Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[featured_images]', array(
-		'label' => esc_html__( 'Featured Images', 'mercia' ),
-		'section' => 'mercia_section_post',
-		'settings' => array(),
-		'priority' => 90,
+			'label' => esc_html__( 'Featured Images', 'mercia' ),
+			'section' => 'mercia_section_post',
+			'settings' => array(),
+			'priority' => 90,
 		)
 	) );
 
 	// Add Setting and Control for featured images on blog and archives.
 	$wp_customize->add_setting( 'mercia_theme_options[post_image_archives]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
@@ -176,7 +176,7 @@ function mercia_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for featured images on single posts.
 	$wp_customize->add_setting( 'mercia_theme_options[post_image_single]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'mercia_sanitize_checkbox',
 	) );
