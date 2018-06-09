@@ -18,7 +18,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_section( 'mercia_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'mercia' ),
 		'priority' => 30,
-		'panel' => 'mercia_options_panel',
+		'panel'    => 'mercia_options_panel',
 	) );
 
 	// Add Blog Title setting and control.
@@ -134,13 +134,29 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
+	// Add Setting and Control for Read More Text.
+	$wp_customize->add_setting( 'mercia_theme_options[read_more_text]', array(
+		'default'           => esc_html__( 'Continue reading', 'mercia' ),
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'mercia_theme_options[read_more_text]', array(
+		'label'    => esc_html__( 'Read More Text', 'mercia' ),
+		'section'  => 'mercia_section_blog',
+		'settings' => 'mercia_theme_options[read_more_text]',
+		'type'     => 'text',
+		'priority' => 60,
+	) );
+
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Mercia_Customize_Header_Control(
 		$wp_customize, 'mercia_theme_options[blog_magazine_widgets_title]', array(
 			'label'    => esc_html__( 'Magazine Widgets', 'mercia' ),
 			'section'  => 'mercia_section_blog',
 			'settings' => array(),
-			'priority' => 60,
+			'priority' => 70,
 		)
 	) );
 
@@ -157,7 +173,7 @@ function mercia_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'mercia_section_blog',
 		'settings' => 'mercia_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 80,
 	) );
 }
 add_action( 'customize_register', 'mercia_customize_register_blog_settings' );

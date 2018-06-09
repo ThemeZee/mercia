@@ -17,6 +17,8 @@
 #customize-control-mercia_theme_options-blog_description,
 #customize-control-mercia_theme_options-blog_layout,
 #customize-control-mercia_theme_options-blog_content,
+#customize-control-mercia_theme_options-excerpt_length,
+#customize-control-mercia_theme_options-read_more_text,
 #customize-control-mercia_theme_options-blog_magazine_widgets_title,
 #customize-control-mercia_theme_options-post_details,
 #customize-control-mercia_theme_options-single_post,
@@ -31,6 +33,10 @@
 #customize-control-mercia_theme_options-featured_images,
 #customize-control-mercia_theme_options-activate_featured_posts {
 	margin-bottom: 0;
+}
+
+#customize-control-mercia_theme_options-blog_content {
+	padding: 0;
 }
 
 #customize-control-mercia_theme_options-blog_description textarea {
