@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.3.1 =
+* fixed styling of image captions
+
 = 1.3 =
 * added new setting to change the text of the Read More button
 * improved styling of checkbox labels in comment form
