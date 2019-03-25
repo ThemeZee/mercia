@@ -402,10 +402,12 @@ function mercia_credit_link() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'mercia' ),
-			'<a href="' . esc_url( __( 'http://wordpress.org', 'mercia' ) ) . '" title="WordPress">WordPress</a>',
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'mercia' ),
 			'<a href="https://themezee.com/themes/mercia/" title="Mercia WordPress Theme">Mercia</a>'
-		); ?>
+		);
+		?>
 	</span>
 
 	<?php
