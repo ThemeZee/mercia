@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.4.3 =
+* improved implementation of footer credit link
+
 = 1.4.2 =
 * added support for responsive embed blocks
 

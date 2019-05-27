@@ -399,16 +399,19 @@ endif;
  * Displays credit link on footer line
  */
 function mercia_credit_link() {
-	?>
-
-	<span class="credit-link">
-		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'mercia' ),
-			'<a href="https://themezee.com/themes/mercia/" title="Mercia WordPress Theme">Mercia</a>'
-		);
+	if ( true === mercia_get_option( 'credit_link' ) || is_customize_preview() ) :
 		?>
-	</span>
 
-	<?php
+		<span class="credit-link">
+			<?php
+			// translators: Theme Name and Link to ThemeZee.
+			printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'mercia' ),
+				esc_html__( 'Mercia', 'mercia' ),
+				'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+			);
+			?>
+		</span>
+
+		<?php
+	endif;
 }

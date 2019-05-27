@@ -67,6 +67,7 @@ function mercia_default_options() {
 		'post_navigation'       => true,
 		'post_image_archives'   => true,
 		'post_image_single'     => true,
+		'credit_link'           => true,
 	);
 
 	return $default_options;
