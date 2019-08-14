@@ -223,6 +223,20 @@ add_action( 'after_setup_theme', 'mercia_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function mercia_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'                 => esc_html__( 'Mercia Blog Post', 'mercia' ),
+		'mercia-single-post'             => esc_html__( 'Mercia Single Post', 'mercia' ),
+		'mercia-ratio-four-three-large'  => esc_html__( 'Mercia Magazine Post', 'mercia' ),
+		'mercia-ratio-sixteen-ten-small' => esc_html__( 'Mercia Thumbnail', 'mercia' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'mercia_add_image_size_names' );
+
+
+/**
  * Add pingback url on single posts
  */
 function mercia_pingback_url() {
