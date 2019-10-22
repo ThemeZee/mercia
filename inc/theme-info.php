@@ -47,7 +47,8 @@ function mercia_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/mercia/', 'mercia' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=mercia&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'mercia' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=mercia&utm_source=theme-info&utm_campaign=mercia" target="_blank"><?php esc_html_e( 'Theme Demo', 'mercia' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/mercia-documentation/', 'mercia' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=mercia&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'mercia' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/mercia/reviews/?filter=5', 'mercia' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'mercia' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=mercia', 'mercia' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'mercia' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/mercia/reviews/', 'mercia' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'mercia' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -149,7 +150,7 @@ function mercia_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'mercia' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'mercia' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=mercia" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/mercia/reviews/?filter=5', 'mercia' ) . '" title="' . esc_attr__( 'Review Mercia', 'mercia' ) . '">' . esc_html__( 'rate it', 'mercia' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/mercia/reviews/', 'mercia' ) . '" title="' . esc_attr__( 'Review Mercia', 'mercia' ) . '">' . esc_html__( 'rate it', 'mercia' ) . '</a>'); ?>
 			</p>
 
 		</div>

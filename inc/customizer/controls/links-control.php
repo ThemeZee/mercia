@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/mercia/', 'mercia' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'mercia' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=mercia/', 'mercia' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'mercia' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/mercia/reviews/?filter=5', 'mercia' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/mercia/reviews/', 'mercia' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'mercia' ); ?>
 					</a>
 				</p>
