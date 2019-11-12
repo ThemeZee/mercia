@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.5.2 - 2019-11-12 =
+* added font display swap to default theme fonts
+
 = 1.5.1 - 2019-10-22 =
 * added improved Theme Info section to Customizer
 
