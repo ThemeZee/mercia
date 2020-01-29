@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mercia\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2019-10-22 12:55+0200\n"
+"POT-Creation-Date: 2020-01-29 10:50+0100\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -31,11 +31,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:28 inc/template-tags.php:296
+#: comments.php:28
 msgid "One comment"
 msgstr ""
 
-#: comments.php:28 inc/template-tags.php:296
+#: comments.php:28
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -382,36 +382,32 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:296
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:336
+#: inc/template-tags.php:315
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:337
+#: inc/template-tags.php:316
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:390
+#: inc/template-tags.php:369
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:391
+#: inc/template-tags.php:370
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:408
+#: inc/template-tags.php:387
 #, php-format
 msgid "WordPress Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/template-tags.php:409
+#: inc/template-tags.php:388
 msgid "Mercia"
 msgstr ""
 
