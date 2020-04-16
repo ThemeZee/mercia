@@ -1,0 +1,39 @@
+.mercia-social-menu .social-icons-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+}
+
+.mercia-social-menu .social-icons-menu li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.mercia-social-menu .social-icons-menu li a {
+	display: block;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.mercia-social-menu .social-icons-menu li a .icon {
+	margin: 0;
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	fill: #353535;
+}
+
+.mercia-social-menu .social-icons-menu li a:hover .icon {
+	fill: #3377bb;
+}

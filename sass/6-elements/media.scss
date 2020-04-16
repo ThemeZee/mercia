@@ -1,0 +1,75 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## 16.1 - Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 0;
+	max-width: 100%;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: rgba(0,0,0,0.6);
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## 16.2 - Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 1em 0.75em 0;
+	width: 100%;
+	vertical-align: top;
+	text-align: center;
+}
+
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item,
+.gallery-columns-4 .gallery-item,
+.gallery-columns-5 .gallery-item,
+.gallery-columns-6 .gallery-item,
+.gallery-columns-7 .gallery-item,
+.gallery-columns-8 .gallery-item,
+.gallery-columns-9 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-caption {
+	display: block;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	color: rgba(0,0,0,0.6);
+	margin-bottom: 0.75em;
+	line-height: 1.4;
+}

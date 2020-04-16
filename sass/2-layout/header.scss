@@ -1,0 +1,76 @@
+.site-header {
+	margin: 0 0 1.5em;
+}
+
+.header-main {
+	display: block;
+	text-align: center;
+	padding: 1.5em 0;
+}
+
+.header-social-menu {
+	display: none;
+}
+
+.site-branding {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+.site-branding a:link,
+.site-branding a:visited,
+.site-branding a:hover {
+	padding: 0;
+	border: none;
+	text-decoration: none;
+}
+
+.site-title {
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #353535;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 32px;
+	font-size: 2rem;
+	font-family: 'Open Sans', Tahoma, Arial;
+	line-height: 1.4;
+}
+
+.site-title a:link,
+.site-title a:visited {
+	color: #353535;
+}
+
+.site-title a:hover,
+.site-title a:active {
+	color: #3377bb;
+}
+
+.site-branding .custom-logo {
+	margin: 0 0 0.5em;
+	padding: 0;
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
+}
+
+.site-description {
+	margin: 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+/* Custom Header Image */
+.header-image {
+	margin: 0 0 1.5em;
+	text-align: center;
+}
+
+.header-image img {
+	max-width: 100%;
+	vertical-align: top;
+}

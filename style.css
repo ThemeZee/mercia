@@ -46,12 +46,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# 1.0 - Normalize
+# - CSS Variables
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Normalize
 --------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -256,7 +260,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-# 2.0 - Typography
+# - Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -335,7 +339,7 @@ pre {
 	margin-bottom: 1.5em;
 	padding: 1.5em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -368,15 +372,16 @@ big {
 }
 
 /*--------------------------------------------------------------
-# 3.0 - Elements
+# - Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
 }
 
+/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -416,7 +421,7 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: rgba(0,0,0,0.15);
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
 ul,
@@ -462,7 +467,7 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 a {
@@ -491,7 +496,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# 4.0 - Forms
+# - Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -531,7 +536,7 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	color: #666;
 }
@@ -542,7 +547,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	color: #353535;
 }
 
@@ -551,8 +556,9 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 5.0 - Accessibility
+# - Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	position: absolute !important;
@@ -585,7 +591,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 6.0 - Alignments
+# - Alignments
 --------------------------------------------------------------*/
 .alignleft,
 .alignright,
@@ -602,7 +608,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 7.0 - Clearings
+# - Clearings
 --------------------------------------------------------------*/
 .clearfix:before,
 .clearfix:after,
@@ -621,7 +627,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 8.0 - Layout Structure
+# - Site Layout
 --------------------------------------------------------------*/
 .site {
 	box-sizing: border-box;
@@ -633,12 +639,12 @@ textarea {
 }
 
 .sidebar {
-	border-top: 1px solid rgba(0,0,0,0.15);
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
 	padding: 1.5em 0 0;
 }
 
 /*--------------------------------------------------------------
-# 9.0 - Header
+# - Header
 --------------------------------------------------------------*/
 .site-header {
 	margin: 0 0 1.5em;
@@ -718,11 +724,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 10.0 - Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 10.1 - Main Navigation
+# - Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	position: relative;
@@ -866,7 +868,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 10.2 - Social Icons Menu
+# - Social Icons Menu
 --------------------------------------------------------------*/
 .mercia-social-menu .social-icons-menu {
 	display: -webkit-box;
@@ -909,7 +911,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 11.0 - Widgets
+# - Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
@@ -942,11 +944,11 @@ textarea {
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .widget ul > li:last-child {
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .widget ul .children,
@@ -961,7 +963,7 @@ textarea {
 }
 
 .widget-title a:link,
-.widget-title a:visited  {
+.widget-title a:visited {
 	color: #353535;
 }
 
@@ -1089,11 +1091,11 @@ textarea {
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:active,
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:hover,
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:active {
-	color: rgba(255,255,255,0.75);
+	color: rgba(255, 255, 255, 0.75);
 }
 
 .widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta span .icon {
-	fill: rgba(255,255,255,0.75);
+	fill: rgba(255, 255, 255, 0.75);
 }
 
 /* Magazine Widget Post Titles */
@@ -1109,15 +1111,15 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-## 11.3 - Magazine Blocks
+# - Plugins // move below later
 --------------------------------------------------------------*/
 :root {
 	--tz-column-gap: 2em;
 }
 
 .tz-magazine-block .tz-entry-title {
-    font-size: 24px;
-    font-size: 1.5rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
@@ -1158,7 +1160,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 12.0 - Posts and pages
+# - Posts and pages
 --------------------------------------------------------------*/
 .site-main article,
 .type-post,
@@ -1238,7 +1240,7 @@ textarea {
 /* Entry Meta */
 .entry-meta {
 	margin: 0.5em 0;
-	color: rgba(0,0,0,0.45);
+	color: rgba(0, 0, 0, 0.45);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1254,12 +1256,12 @@ textarea {
 	width: 18px;
 	height: 18px;
 	vertical-align: top;
-	fill: rgba(0,0,0,0.25);
+	fill: rgba(0, 0, 0, 0.25);
 }
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: rgba(0,0,0,0.45);
+	color: rgba(0, 0, 0, 0.45);
 }
 
 .entry-meta a:hover,
@@ -1382,7 +1384,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	display: inline-block;
 	margin: 0 0 1.5em;
 	padding: 0.6em 1em;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid rgba(0, 0, 0, 0.075);
 	background: none;
 	color: #3377bb;
 	text-decoration: none;
@@ -1463,20 +1465,44 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	content: "\00bb"; /* Raquo */
 }
 
-.trail-separator-slash .trail-items li::after { content: "\002F"; }
-.trail-separator-dash .trail-items li::after { content: "\2013"; }
-.trail-separator-bull .trail-items li::after { content: "\2022"; }
-.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
-.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
-.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
-.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
 
 .breadcrumbs .trail-items li:last-of-type::after {
 	display: none;
 }
 
 /*--------------------------------------------------------------
-# 13.0 - Gutenberg Blocks
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Blocks
 --------------------------------------------------------------*/
 
 /* Audio */
@@ -1517,8 +1543,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .wp-block-pullquote {
 	margin-bottom: 1.5em;
 	padding: 1.5em 0;
-    border-bottom: 4px solid #353535;
-    border-top: 4px solid #353535;
+	border-bottom: 4px solid #353535;
+	border-top: 4px solid #353535;
 }
 
 .wp-block-pullquote blockquote {
@@ -1545,11 +1571,11 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 /* Image */
 .wp-block-image .alignleft {
-    margin-right: 1.5em;
+	margin-right: 1.5em;
 }
 
 .wp-block-image .alignright {
-    margin-left: 1.5em;
+	margin-left: 1.5em;
 }
 
 /* Captions */
@@ -1560,8 +1586,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	margin-bottom: 1em;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: rgba(0,0,0,0.6);
-    text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+	text-align: center;
 }
 
 /* Latest Posts */
@@ -1618,7 +1644,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Comments
+# - Comments
 --------------------------------------------------------------*/
 
 /* Comment Header */
@@ -1642,7 +1668,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 .comment-list {
 	margin: 0;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
 	list-style: none;
 }
 
@@ -1657,7 +1683,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	display: block;
 	margin: 0;
 	padding: 0 0 1.5em;
-	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .comment-meta {
@@ -1762,10 +1788,10 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 15.0 - Footer
+# - Footer
 --------------------------------------------------------------*/
 .site-footer {
-	border-top: 1px solid rgba(0,0,0,0.15);
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .site-footer .site-info {
@@ -1776,7 +1802,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# 16.0 - Media
+# - Media - switch with footer
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1802,7 +1828,7 @@ object {
 	max-width: 100%;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: rgba(0,0,0,0.6);
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1849,13 +1875,17 @@ object {
 	display: block;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: rgba(0,0,0,0.6);
+	color: rgba(0, 0, 0, 0.6);
 	margin-bottom: 0.75em;
 	line-height: 1.4;
 }
 
 /*--------------------------------------------------------------
-# 17.0 - Media Queries for all Browsers
+# - Plugins
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2235,17 +2265,15 @@ object {
 /*--------------------------------------------------------------
 # 18.0 - Media Queries with CSS Grid for larger screens
 --------------------------------------------------------------*/
-
-@supports ( display: grid ) {
-
+@supports (display: grid) {
 	.site {
 		max-width: 1220px;
 	}
 
 	/* Magazine Regular Post Styling */
 	.widget-magazine-posts .magazine-posts-regular .magazine-post {
-		background: rgba(0,0,0,0.05);
-		border-bottom: 1px solid rgba(0,0,0,0.075);
+		background: rgba(0, 0, 0, 0.05);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 	}
 
 	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
@@ -2256,7 +2284,6 @@ object {
 	## 18.2 - Mobile Medium ( > 480px )
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 30em) {
-
 		/* Reset Internet Explorer Styles */
 		.widget-magazine-focus .widget-magazine-content,
 		.widget-magazine-grid .widget-magazine-content {
@@ -2310,7 +2337,6 @@ object {
 	## 18.3 - Mobile Extra Large ( > 640px )
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 40em) {
-
 		/* Blog: List Layout */
 		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail {
 			display: grid;
@@ -2324,7 +2350,7 @@ object {
 		.blog-list-layout .content-archive .post-wrapper .type-post {
 			margin: 0 0 1.5em;
 			padding: 0 0 1.5em;
-			border-bottom: 1px solid rgba(0,0,0,0.075);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 		}
 
 		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail .wp-post-image {
@@ -2635,9 +2661,7 @@ object {
 /*--------------------------------------------------------------
 # 19.0 - Sidebar Layouts
 --------------------------------------------------------------*/
-
-@supports ( display: grid ) {
-
+@supports (display: grid) {
 	/*--------------------------------------------------------------
 	## 19.1 - Sidebar Left Layout
 	--------------------------------------------------------------*/
@@ -2705,7 +2729,6 @@ object {
 	## 19.3 - No Sidebar on Single Posts
 	--------------------------------------------------------------*/
 	@media only screen and (min-width: 57.5em) {
-
 		/* No Sidebar Post Template */
 		.no-sidebar.single-post .content-single,
 		.single-post .content-no-sidebar {
@@ -2733,6 +2756,26 @@ object {
 		}
 	}
 }
+
+/*--------------------------------------------------------------
+## - Media Queries for Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## - Media Queries for Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# - Theme Options
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # 20.0 Customizer Preview
@@ -2767,7 +2810,6 @@ object {
 /*--------------------------------------------------------------
 # 21.0 Print Styles
 --------------------------------------------------------------*/
-
 @media print {
 	/* Hide elements */
 	form,
