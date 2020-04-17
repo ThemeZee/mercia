@@ -911,255 +911,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# - Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	padding: 0;
-	max-width: 100%;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-
-.widget-title {
-	margin: 0 0 0.75em;
-	padding: 0;
-	color: #353535;
-	text-transform: uppercase;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	font-weight: bold;
-	font-size: 17px;
-	font-size: 1.0625rem;
-	font-family: 'Open Sans', Tahoma, Arial;
-	line-height: 1.4;
-}
-
-.widget ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.widget ul li,
-.widget ol li {
-	padding: 0.4em 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
-}
-
-.widget ul > li:last-child {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-}
-
-.widget ul .children,
-.widget ul .sub-menu {
-	margin: 0.5em 0 0.5em 1em;
-	padding: 0;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
-
-.widget-title a:link,
-.widget-title a:visited {
-	color: #353535;
-}
-
-.widget-title a:hover,
-.widget-title a:active {
-	color: #3377bb;
-}
-
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
-/* Theme Search Widget */
-.search-form {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-.search-form .screen-reader-text {
-	display: none;
-}
-
-.search-form .search-field {
-	display: inline-block;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0.5em 1.5em 0.5em 0.7em;
-	min-width: 150px;
-	width: 100%;
-	-webkit-appearance: none;
-}
-
-.search-form .search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	padding: 0.6em 0.8em;
-	border: none;
-	background: #3377bb;
-}
-
-.search-form .search-submit:hover,
-.search-form .search-submit:active {
-	background: #353535;
-}
-
-.search-form .search-submit .icon-search {
-	margin: 5px 0 0;
-	width: 22px;
-	height: 22px;
-	fill: #fff;
-}
-
-/*--------------------------------------------------------------
-## 11.2 - Magazine Widgets
---------------------------------------------------------------*/
-.widget-magazine-posts .type-post {
-	margin: 0;
-}
-
-.widget-magazine-posts .widget-magazine-content .magazine-post {
-	margin: 0 0 1.5em;
-}
-
-.widget-magazine-posts .type-post .wp-post-image {
-	margin: 0 0 0.5em;
-}
-
-.widget-magazine-posts .type-post .entry-meta {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.widget-magazine-posts .type-post .entry-meta span .icon {
-	margin: 0.2em 0.3em 0 0;
-	width: 18px;
-	height: 18px;
-}
-
-/* Magazine Image Overlay Styling */
-.widget-magazine-posts .magazine-posts-overlay .magazine-post {
-	margin: 0 0 2px;
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post {
-	position: relative;
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-image .wp-post-image {
-	margin: 0;
-	filter: brightness(75%);
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post:hover .post-image .wp-post-image {
-	filter: brightness(65%);
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 0.5em 0.75em;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
-	display: none;
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:link,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:visited,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:link,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:visited {
-	color: #fff;
-	text-shadow: 1px 2px 3px #353535;
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:hover,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:active,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:hover,
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:active {
-	color: rgba(255, 255, 255, 0.75);
-}
-
-.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta span .icon {
-	fill: rgba(255, 255, 255, 0.75);
-}
-
-/* Magazine Widget Post Titles */
-.widget-magazine-posts .large-post .entry-title {
-	font-size: 17px;
-	font-size: 1.0625rem;
-}
-
-.widget-magazine-posts .medium-post .entry-title,
-.widget-magazine-posts .small-post .entry-title {
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-/*--------------------------------------------------------------
-# - Plugins // move below later
---------------------------------------------------------------*/
-:root {
-	--tz-column-gap: 2em;
-}
-
-.tz-magazine-block .tz-entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-}
-
-.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
-.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
-.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-.tz-magazine-block .tz-entry-meta {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.tz-magazine-block .tz-meta-field {
-	margin-right: 0;
-}
-
-.tz-magazine-block .tz-meta-field a {
-	text-decoration: none;
-}
-
-.tz-magazine-block .tz-entry-content {
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-.tz-magazine-block .tz-read-more {
-	margin-top: -0.5em;
-}
-
-.tz-magazine-block .tz-more-link {
-	text-decoration: none;
-}
-
-/*--------------------------------------------------------------
 # - Posts and pages
 --------------------------------------------------------------*/
 .site-main article,
@@ -1644,6 +1395,206 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
+# - Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	padding: 0;
+	max-width: 100%;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.widget-title {
+	margin: 0 0 0.75em;
+	padding: 0;
+	color: #353535;
+	text-transform: uppercase;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: bold;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Open Sans', Tahoma, Arial;
+	line-height: 1.4;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.widget ul li,
+.widget ol li {
+	padding: 0.4em 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+.widget ul > li:last-child {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+.widget ul .children,
+.widget ul .sub-menu {
+	margin: 0.5em 0 0.5em 1em;
+	padding: 0;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+.widget-title a:link,
+.widget-title a:visited {
+	color: #353535;
+}
+
+.widget-title a:hover,
+.widget-title a:active {
+	color: #3377bb;
+}
+
+/*--------------------------------------------------------------
+## 11.1 - Default Widgets
+--------------------------------------------------------------*/
+
+/* Theme Search Widget */
+.search-form {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em 1.5em 0.5em 0.7em;
+	min-width: 150px;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.6em 0.8em;
+	border: none;
+	background: #3377bb;
+}
+
+.search-form .search-submit:hover,
+.search-form .search-submit:active {
+	background: #353535;
+}
+
+.search-form .search-submit .icon-search {
+	margin: 5px 0 0;
+	width: 22px;
+	height: 22px;
+	fill: #fff;
+}
+
+/*--------------------------------------------------------------
+## 11.2 - Magazine Widgets
+--------------------------------------------------------------*/
+.widget-magazine-posts .type-post {
+	margin: 0;
+}
+
+.widget-magazine-posts .widget-magazine-content .magazine-post {
+	margin: 0 0 1.5em;
+}
+
+.widget-magazine-posts .type-post .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
+.widget-magazine-posts .type-post .entry-meta {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget-magazine-posts .type-post .entry-meta span .icon {
+	margin: 0.2em 0.3em 0 0;
+	width: 18px;
+	height: 18px;
+}
+
+/* Magazine Image Overlay Styling */
+.widget-magazine-posts .magazine-posts-overlay .magazine-post {
+	margin: 0 0 2px;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post {
+	position: relative;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-image .wp-post-image {
+	margin: 0;
+	filter: brightness(75%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post:hover .post-image .wp-post-image {
+	filter: brightness(65%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0.5em 0.75em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+	display: none;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:visited,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:visited {
+	color: #fff;
+	text-shadow: 1px 2px 3px #353535;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:active,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:active {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta span .icon {
+	fill: rgba(255, 255, 255, 0.75);
+}
+
+/* Magazine Widget Post Titles */
+.widget-magazine-posts .large-post .entry-title {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.widget-magazine-posts .medium-post .entry-title,
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+/*--------------------------------------------------------------
 # - Comments
 --------------------------------------------------------------*/
 
@@ -1788,21 +1739,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-# - Footer
---------------------------------------------------------------*/
-.site-footer {
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.site-footer .site-info {
-	padding: 1em 0;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	text-align: center;
-}
-
-/*--------------------------------------------------------------
-# - Media - switch with footer
+# - Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1881,8 +1818,67 @@ object {
 }
 
 /*--------------------------------------------------------------
+# - Footer
+--------------------------------------------------------------*/
+.site-footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.site-footer .site-info {
+	padding: 1em 0;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
+:root {
+	--tz-column-gap: 2em;
+}
+
+.tz-magazine-block .tz-entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.tz-magazine-block .tz-entry-meta {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.tz-magazine-block .tz-meta-field {
+	margin-right: 0;
+}
+
+.tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.tz-magazine-block .tz-entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.tz-magazine-block .tz-read-more {
+	margin-top: -0.5em;
+}
+
+.tz-magazine-block .tz-more-link {
+	text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # - Media Queries
