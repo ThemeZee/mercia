@@ -1,0 +1,28 @@
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 1.25rem;
+}
+
+.archive-title {
+	margin: 0;
+	padding: 0;
+	color: #353535;
+	text-transform: uppercase;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: bold;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Open Sans', Tahoma, Arial;
+	line-height: 1.4;
+}
+
+.blog-description,
+.archive-description,
+.archive-description p {
+	margin: 0.25em 0 0;
+}
+
+.page-header .search-form {
+	margin: 1.25rem 0 2.5em;
+}

@@ -1,0 +1,69 @@
+/* Entry Meta */
+.entry-meta {
+	margin: 0.5em 0;
+	color: rgba(0, 0, 0, 0.45);
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-meta .meta-date,
+.entry-meta .meta-author,
+.entry-meta .meta-category {
+	display: block;
+}
+
+.entry-meta span .icon {
+	margin: 0.2em 0.3em 0 0;
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+	fill: rgba(0, 0, 0, 0.25);
+}
+
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: rgba(0, 0, 0, 0.45);
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #353535;
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.categories-hidden .type-post .entry-meta .meta-category {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+}
+
+body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry-meta {
+	display: none;
+}
+
+/* Entry Tags */
+.entry-tags {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.entry-tags .icon {
+	margin: 0.3em 0.3em 0 0;
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+	fill: #353535;
+}
+
+.entry-tags .meta-tags a {
+	display: inline-block;
+	margin-right: 0.75em;
+}
+
+.entry-tags .meta-tags a:before {
+	content: "\0023";
+}
