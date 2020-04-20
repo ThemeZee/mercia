@@ -1878,11 +1878,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# - Media Queries
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## 17.1 - Mobile Small ( > 320px )
+# - Media Queries for Typography
 --------------------------------------------------------------*/
 @media only screen and (min-width: 20em) {
 	body,
@@ -1903,30 +1899,116 @@ object {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
+}
 
-	.alignleft {
-		float: left;
-		margin-right: 1.5em;
-	}
-
-	.alignright {
-		float: right;
-		margin-left: 1.5em;
-	}
-
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title,
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+@media only screen and (min-width: 30em) {
+	.entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
 	}
 }
 
+@media only screen and (min-width: 35em) {
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.site-title {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+
+	.site-description {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+}
+
+@supports (display: grid) {
+	@media only screen and (min-width: 40em) {
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
+		}
+	}
+
+	@media only screen and (min-width: 50em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+	}
+
+	@media only screen and (min-width: 57.5em) {
+		.entry-title {
+			font-size: 28px;
+			font-size: 1.75rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
+		}
+	}
+
+	@media only screen and (min-width: 60em) {
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 36px;
+			font-size: 2.25rem;
+		}
+	}
+
+	@media only screen and (min-width: 70em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 40px;
+			font-size: 2.5rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# - Media Queries for Layout
+--------------------------------------------------------------*/
 @media only screen and (min-width: 25em) {
 	.entry-meta .meta-date,
 	.entry-meta .meta-author,
@@ -1938,126 +2020,9 @@ object {
 	.entry-meta .meta-author {
 		margin-right: 1em;
 	}
-
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 19px;
-		font-size: 1.1875rem;
-	}
-
-	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
-		display: block;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title,
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
 }
 
-/*--------------------------------------------------------------
-## 17.2 - Mobile Medium ( > 480px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 30em) {
-	.entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-
-	/* Gallery */
-	.gallery-item {
-		padding: 0 1.5em 1em 0;
-	}
-
-	.gallery-columns-3 .gallery-item,
-	.gallery-columns-5 .gallery-item,
-	.gallery-columns-6 .gallery-item,
-	.gallery-columns-7 .gallery-item,
-	.gallery-columns-9 .gallery-item {
-		max-width: 33.33%;
-	}
-
-	.gallery-columns-4 .gallery-item,
-	.gallery-columns-8 .gallery-item {
-		max-width: 25%;
-	}
-
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
-		display: none;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title,
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
-	/* Fallback for Internet Explorer */
-	.widget-magazine-focus .widget-magazine-content,
-	.widget-magazine-grid .widget-magazine-content {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		margin-right: -1em;
-	}
-
-	.widget-magazine-focus .widget-magazine-content .magazine-post,
-	.widget-magazine-grid .widget-magazine-content .magazine-post {
-		width: 50%;
-		padding-right: 1em;
-		box-sizing: border-box;
-	}
-
-	.widget-magazine-focus .widget-magazine-content .magazine-post-large {
-		width: 100%;
-	}
-
-	.widget-magazine-focus .magazine-posts-overlay,
-	.widget-magazine-grid .magazine-posts-overlay {
-		margin-right: 1px;
-	}
-
-	.widget-magazine-focus .magazine-posts-overlay .magazine-post,
-	.widget-magazine-grid .magazine-posts-overlay .magazine-post {
-		padding-right: 1px;
-	}
-}
-
-@media only screen and (min-width: 35em) {
-	.entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
-	}
-
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-}
-
-/*--------------------------------------------------------------
-## 17.3 - Mobile Extra Large ( > 640px )
---------------------------------------------------------------*/
 @media only screen and (min-width: 40em) {
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-
 	.site {
 		padding: 0 2em;
 	}
@@ -2080,21 +2045,6 @@ object {
 		margin: 0 0 1em;
 	}
 
-	.site-title {
-		font-size: 40px;
-		font-size: 2.5rem;
-	}
-
-	.site-description {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
-	.entry-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
-
 	.wp-post-image {
 		margin: 0 0 0.75em;
 	}
@@ -2109,61 +2059,192 @@ object {
 		width: 19px;
 		height: 19px;
 	}
+}
 
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+@supports (display: grid) {
+	.site {
+		max-width: 1220px;
 	}
 
-	.widget-magazine-posts .medium-post .entry-title,
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
+	@media only screen and (min-width: 40em) {
+		/* Blog: List Layout */
+		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail {
+			display: grid;
+			grid-template-columns: 42% auto;
+		}
+
+		.blog-list-layout.post-thumbnails-hidden .content-archive .post-wrapper .has-post-thumbnail {
+			display: block;
+		}
+
+		.blog-list-layout .content-archive .post-wrapper .type-post {
+			margin: 0 0 1.5em;
+			padding: 0 0 1.5em;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+		}
+
+		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail .wp-post-image {
+			margin: 0;
+			padding-right: 1.5em;
+		}
+
+		/* Blog: Grid Layout */
+		.blog-grid-layout .content-archive .post-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			grid-gap: 1.5em;
+			margin: 0 0 2em;
+		}
+
+		.blog-grid-layout .content-archive .post-wrapper .type-post {
+			margin: 0;
+		}
+	}
+
+	@media only screen and (min-width: 57.5em) {
+		.site-content {
+			display: grid;
+			grid-template-columns: 7fr 3fr;
+			grid-column-gap: 2em;
+		}
+
+		.content-area {
+			box-sizing: border-box;
+			grid-row-start: 1;
+			grid-column-start: 1;
+			min-width: 0;
+		}
+
+		.sidebar {
+			grid-row-start: 1;
+			grid-column-start: 2;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			border: none;
+			min-width: 0;
+		}
+
+		.header-main {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			text-align: left;
+		}
+
+		.header-social-menu {
+			display: block;
+			margin-top: 0.25em;
+			margin-left: auto;
+		}
+
+		.site-footer .site-info {
+			text-align: left;
+		}
+
+		/* Single Post Layout */
+		.single-post .site-content {
+			display: block;
+		}
+
+		.single-post .type-post {
+			display: grid;
+			grid-template-columns: 7fr 3fr;
+			grid-template-rows: auto 1fr;
+			grid-column-gap: 2em;
+			margin-bottom: 0;
+		}
+
+		.single-post .type-post .single-header,
+		.single-post .type-post .single-content,
+		.single-post .type-post .sidebar {
+			min-width: 0;
+		}
+
+		.single-post .type-post .sidebar {
+			grid-column-start: 2;
+			grid-row: 1 / span 2;
+		}
+
+		/* Fullwidth Single Post Layout */
+		.fullwidth-single-post.single-post .type-post .single-header {
+			grid-column: 1 / span 2;
+		}
+
+		.fullwidth-single-post.single-post .type-post .sidebar {
+			grid-row: 2 / span 1;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header {
+			display: flex;
+			flex-direction: column;
+			margin: 0 0 1.5em;
+			padding: 0;
+		}
+
+		.fullwidth-single-post.single-post .has-post-thumbnail .single-header .entry-header {
+			margin: -4em 4em 0 0;
+			padding: 1em 1em 0 0;
+			background: #fff;
+		}
+
+		.fullwidth-single-post.single-post.post-thumbnail-hidden .has-post-thumbnail .single-header .entry-header {
+			margin: 0;
+			padding: 0;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-content .entry-content p:first-child {
+			margin-top: 0;
+		}
+	}
+
+	@media only screen and (min-width: 75em) {
+		.site {
+			padding: 0 2.5em;
+		}
+
+		.header-main {
+			padding: 2em 0;
+		}
+
+		.site-content,
+		.single-post .type-post {
+			grid-column-gap: 2.5em;
+		}
+
+		.site-header,
+		.header-image,
+		.widget,
+		.site-main article,
+		.type-post,
+		.type-page,
+		.type-attachment,
+		.comments-area,
+		.entry-tags,
+		.pagination,
+		.infinite-scroll #infinite-handle span,
+		.blog-grid-layout .content-archive .post-wrapper {
+			margin-bottom: 2.5em;
+		}
+
+		/* Blog Layout */
+		.blog-grid-layout .content-archive .post-wrapper {
+			grid-gap: 2em;
+		}
 	}
 }
 
 /*--------------------------------------------------------------
-## 17.3 - Mobile Extra Large ( > 640px )
---------------------------------------------------------------*/
-@media only screen and (min-width: 45em) {
-	/* Gallery */
-	.gallery-columns-5 .gallery-item {
-		max-width: 20%;
-	}
-
-	.gallery-columns-6 .gallery-item {
-		max-width: 16.66%;
-	}
-
-	.gallery-columns-7 .gallery-item {
-		max-width: 14.28%;
-	}
-
-	/* Magazine Widget Post Titles */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 19px;
-		font-size: 1.1875rem;
-	}
-
-	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
-		display: block;
-	}
-}
-
-/*--------------------------------------------------------------
-## 17.6 - Desktop Small ( Larger than 960px )
+# - Media Queries for Navigation
 --------------------------------------------------------------*/
 @media only screen and (min-width: 55em) {
-	/* Gallery */
-	.gallery-columns-8 .gallery-item {
-		max-width: 12.5%;
-	}
-
-	.gallery-columns-9 .gallery-item {
-		max-width: 11.11%;
-	}
-
 	/*** Main Navigation ***/
 	.main-navigation-toggle {
 		display: none;
@@ -2256,13 +2337,125 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 18.0 - Media Queries with CSS Grid for larger screens
+# - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
-@supports (display: grid) {
-	.site {
-		max-width: 1220px;
+@media only screen and (min-width: 20em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 25em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: block;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: none;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	/* Fallback for Internet Explorer */
+	.widget-magazine-focus .widget-magazine-content,
+	.widget-magazine-grid .widget-magazine-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin-right: -1em;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post,
+	.widget-magazine-grid .widget-magazine-content .magazine-post {
+		width: 50%;
+		padding-right: 1em;
+		box-sizing: border-box;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+		width: 100%;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay,
+	.widget-magazine-grid .magazine-posts-overlay {
+		margin-right: 1px;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay .magazine-post,
+	.widget-magazine-grid .magazine-posts-overlay .magazine-post {
+		padding-right: 1px;
+	}
+}
+
+@media only screen and (min-width: 35em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 45em) {
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: block;
+	}
+}
+
+@supports (display: grid) {
 	/* Magazine Regular Post Styling */
 	.widget-magazine-posts .magazine-posts-regular .magazine-post {
 		background: rgba(0, 0, 0, 0.05);
@@ -2273,9 +2466,6 @@ object {
 		padding: 0.25em 1em 0.5em;
 	}
 
-	/*--------------------------------------------------------------
-	## 18.2 - Mobile Medium ( > 480px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 30em) {
 		/* Reset Internet Explorer Styles */
 		.widget-magazine-focus .widget-magazine-content,
@@ -2326,73 +2516,14 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 18.3 - Mobile Extra Large ( > 640px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 40em) {
-		/* Blog: List Layout */
-		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail {
-			display: grid;
-			grid-template-columns: 42% auto;
-		}
-
-		.blog-list-layout.post-thumbnails-hidden .content-archive .post-wrapper .has-post-thumbnail {
-			display: block;
-		}
-
-		.blog-list-layout .content-archive .post-wrapper .type-post {
-			margin: 0 0 1.5em;
-			padding: 0 0 1.5em;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-		}
-
-		.blog-list-layout .content-archive .post-wrapper .has-post-thumbnail .wp-post-image {
-			margin: 0;
-			padding-right: 1.5em;
-		}
-
-		/* Blog: Grid Layout */
-		.blog-grid-layout .content-archive .post-wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto;
-			grid-gap: 1.5em;
-			margin: 0 0 2em;
-		}
-
-		.blog-grid-layout .content-archive .post-wrapper .type-post {
-			margin: 0;
-		}
-
-		/* Blog Layout Title */
-		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
-		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
-			font-size: 18px;
-			font-size: 1.125rem;
-		}
-
 		/* Magazine Widgets */
 		.widget-magazine-posts .magazine-posts-regular {
 			grid-gap: 1.5em;
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 18.5 - Tablet Medium ( Larger than 800px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 50em) {
-		.entry-title {
-			font-size: 32px;
-			font-size: 2rem;
-		}
-
-		/* Blog Layout Title */
-		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
-		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
-			font-size: 20px;
-			font-size: 1.25rem;
-		}
-
 		/* Magazine Widget Post Titles */
 		.widget-magazine-posts .large-post .entry-title {
 			font-size: 20px;
@@ -2406,123 +2537,7 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 18.6 - Desktop Small ( Larger than 960px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 57.5em) {
-		.site-content {
-			display: grid;
-			grid-template-columns: 7fr 3fr;
-			grid-column-gap: 2em;
-		}
-
-		.content-area {
-			box-sizing: border-box;
-			grid-row-start: 1;
-			grid-column-start: 1;
-			min-width: 0;
-		}
-
-		.sidebar {
-			grid-row-start: 1;
-			grid-column-start: 2;
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-			border: none;
-			min-width: 0;
-		}
-
-		.header-main {
-			position: relative;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			text-align: left;
-		}
-
-		.header-social-menu {
-			display: block;
-			margin-top: 0.25em;
-			margin-left: auto;
-		}
-
-		.site-footer .site-info {
-			text-align: left;
-		}
-
-		.entry-title {
-			font-size: 28px;
-			font-size: 1.75rem;
-		}
-
-		/* Single Post Layout */
-		.single-post .site-content {
-			display: block;
-		}
-
-		.single-post .type-post {
-			display: grid;
-			grid-template-columns: 7fr 3fr;
-			grid-template-rows: auto 1fr;
-			grid-column-gap: 2em;
-			margin-bottom: 0;
-		}
-
-		.single-post .type-post .single-header,
-		.single-post .type-post .single-content,
-		.single-post .type-post .sidebar {
-			min-width: 0;
-		}
-
-		.single-post .type-post .sidebar {
-			grid-column-start: 2;
-			grid-row: 1 / span 2;
-		}
-
-		/* Fullwidth Single Post Layout */
-		.fullwidth-single-post.single-post .type-post .single-header {
-			grid-column: 1 / span 2;
-		}
-
-		.fullwidth-single-post.single-post .type-post .sidebar {
-			grid-row: 2 / span 1;
-		}
-
-		.fullwidth-single-post.single-post .type-post .single-header {
-			display: flex;
-			flex-direction: column;
-			margin: 0 0 1.5em;
-			padding: 0;
-		}
-
-		.fullwidth-single-post.single-post .has-post-thumbnail .single-header .entry-header {
-			margin: -4em 4em 0 0;
-			padding: 1em 1em 0 0;
-			background: #fff;
-		}
-
-		.fullwidth-single-post.single-post.post-thumbnail-hidden .has-post-thumbnail .single-header .entry-header {
-			margin: 0;
-			padding: 0;
-		}
-
-		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
-			font-size: 32px;
-			font-size: 2rem;
-		}
-
-		.fullwidth-single-post.single-post .type-post .single-content .entry-content p:first-child {
-			margin-top: 0;
-		}
-
-		/* Blog Layout Title */
-		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
-		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
-			font-size: 18px;
-			font-size: 1.125rem;
-		}
-
 		/* Magazine Focus Widgets */
 		.widget-magazine-focus .widget-magazine-content {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2558,37 +2573,7 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 18.7 - Desktop Large ( Larger than 1120px )
-	--------------------------------------------------------------*/
-	@media only screen and (min-width: 60em) {
-		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
-			font-size: 36px;
-			font-size: 2.25rem;
-		}
-	}
-
-	/*--------------------------------------------------------------
-	## 18.8 - Desktop Large ( Larger than 1120px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 70em) {
-		.entry-title {
-			font-size: 32px;
-			font-size: 2rem;
-		}
-
-		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
-			font-size: 40px;
-			font-size: 2.5rem;
-		}
-
-		/* Blog Layout Title */
-		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
-		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
-			font-size: 20px;
-			font-size: 1.25rem;
-		}
-
 		/* Magazine Widget Post Titles */
 		.widget-magazine-posts .large-post .entry-title {
 			font-size: 24px;
@@ -2596,43 +2581,7 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 18.8 - Desktop X-Large ( Larger than 1200px )
-	--------------------------------------------------------------*/
 	@media only screen and (min-width: 75em) {
-		.site {
-			padding: 0 2.5em;
-		}
-
-		.header-main {
-			padding: 2em 0;
-		}
-
-		.site-content,
-		.single-post .type-post {
-			grid-column-gap: 2.5em;
-		}
-
-		.site-header,
-		.header-image,
-		.widget,
-		.site-main article,
-		.type-post,
-		.type-page,
-		.type-attachment,
-		.comments-area,
-		.entry-tags,
-		.pagination,
-		.infinite-scroll #infinite-handle span,
-		.blog-grid-layout .content-archive .post-wrapper {
-			margin-bottom: 2.5em;
-		}
-
-		/* Blog Layout */
-		.blog-grid-layout .content-archive .post-wrapper {
-			grid-gap: 2em;
-		}
-
 		/* Magazine Widget Post Titles */
 		.widget-magazine-posts .large-post .entry-title {
 			font-size: 26px;
@@ -2652,12 +2601,71 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 19.0 - Sidebar Layouts
+# - Media Queries for Media
+--------------------------------------------------------------*/
+@media only screen and (min-width: 20em) {
+	.alignleft {
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		float: right;
+		margin-left: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+	/* Gallery */
+	.gallery-item {
+		padding: 0 1.5em 1em 0;
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-8 .gallery-item {
+		max-width: 25%;
+	}
+}
+
+@media only screen and (min-width: 45em) {
+	/* Gallery */
+	.gallery-columns-5 .gallery-item {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 .gallery-item {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 .gallery-item {
+		max-width: 14.28%;
+	}
+}
+
+@media only screen and (min-width: 55em) {
+	/* Gallery */
+	.gallery-columns-8 .gallery-item {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 .gallery-item {
+		max-width: 11.11%;
+	}
+}
+
+/*--------------------------------------------------------------
+# - Theme Options
 --------------------------------------------------------------*/
 @supports (display: grid) {
-	/*--------------------------------------------------------------
-	## 19.1 - Sidebar Left Layout
-	--------------------------------------------------------------*/
+	/* Sidebar Left Layout */
 	@media only screen and (min-width: 57.5em) {
 		.sidebar-left .site-content {
 			grid-template-columns: 3fr 7fr;
@@ -2694,11 +2702,8 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 19.2 - No Sidebar Layout
-	--------------------------------------------------------------*/
+	/* No Sidebar Layout */
 	@media only screen and (min-width: 57.5em) {
-		/* No Sidebar & Centered Layout Template */
 		.no-sidebar .site-content,
 		.page-template-template-centered .site-content {
 			display: block;
@@ -2718,9 +2723,7 @@ object {
 		}
 	}
 
-	/*--------------------------------------------------------------
-	## 19.3 - No Sidebar on Single Posts
-	--------------------------------------------------------------*/
+	/* No Sidebar on Single Posts */
 	@media only screen and (min-width: 57.5em) {
 		/* No Sidebar Post Template */
 		.no-sidebar.single-post .content-single,
@@ -2749,26 +2752,6 @@ object {
 		}
 	}
 }
-
-/*--------------------------------------------------------------
-## - Media Queries for Typography
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## - Media Queries for Layout
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## - Media Queries for Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## - Media Queries for Media
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# - Theme Options
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # 20.0 Customizer Preview

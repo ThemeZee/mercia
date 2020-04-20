@@ -1,0 +1,60 @@
+@media only screen and (min-width: 20em) {
+	.alignleft {
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		float: right;
+		margin-left: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+
+	/* Gallery */
+	.gallery-item {
+		padding: 0 1.5em 1em 0;
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-8 .gallery-item {
+		max-width: 25%;
+	}
+}
+
+@media only screen and (min-width: 45em) {
+
+	/* Gallery */
+	.gallery-columns-5 .gallery-item {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 .gallery-item {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 .gallery-item {
+		max-width: 14.28%;
+	}
+}
+
+@media only screen and (min-width: 55em) {
+
+	/* Gallery */
+	.gallery-columns-8 .gallery-item {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 .gallery-item {
+		max-width: 11.11%;
+	}
+}

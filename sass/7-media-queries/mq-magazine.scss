@@ -1,0 +1,273 @@
+@media only screen and (min-width: 20em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 25em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: block;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: none;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	/* Fallback for Internet Explorer */
+	.widget-magazine-focus .widget-magazine-content,
+	.widget-magazine-grid .widget-magazine-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin-right: -1em;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post,
+	.widget-magazine-grid .widget-magazine-content .magazine-post {
+		width: 50%;
+		padding-right: 1em;
+		box-sizing: border-box;
+	}
+
+	.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+		width: 100%;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay,
+	.widget-magazine-grid .magazine-posts-overlay {
+		margin-right: 1px;
+	}
+
+	.widget-magazine-focus .magazine-posts-overlay .magazine-post,
+	.widget-magazine-grid .magazine-posts-overlay .magazine-post {
+		padding-right: 1px;
+	}
+}
+
+@media only screen and (min-width: 35em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title,
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 45em) {
+
+	/* Magazine Widget Post Titles */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
+	.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+		display: block;
+	}
+}
+
+@supports ( display: grid ) {
+
+	/* Magazine Regular Post Styling */
+	.widget-magazine-posts .magazine-posts-regular .magazine-post {
+		background: rgba(0, 0, 0, 0.05);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	}
+
+	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
+		padding: 0.25em 1em 0.5em;
+	}
+
+	@media only screen and (min-width: 30em) {
+
+		/* Reset Internet Explorer Styles */
+		.widget-magazine-focus .widget-magazine-content,
+		.widget-magazine-grid .widget-magazine-content {
+			margin-right: 0;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post,
+		.widget-magazine-grid .widget-magazine-content .magazine-post {
+			width: auto;
+			padding-right: 0;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+			width: auto;
+		}
+
+		/* Magazine Widgets */
+		.widget-magazine-posts .widget-magazine-content .magazine-post {
+			margin: 0;
+		}
+
+		.widget-magazine-posts .magazine-posts-regular {
+			grid-gap: 1em;
+		}
+
+		.widget-magazine-posts .magazine-posts-overlay {
+			grid-gap: 1px;
+		}
+
+		/* Magazine Focus Widgets */
+		.widget-magazine-focus .widget-magazine-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+		}
+
+		.widget-magazine-focus .widget-magazine-content .magazine-post-large {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+		}
+
+		/* Magazine Grid Widget */
+		.widget-magazine-grid .widget-magazine-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+		}
+	}
+
+	@media only screen and (min-width: 40em) {
+
+		/* Magazine Widgets */
+		.widget-magazine-posts .magazine-posts-regular {
+			grid-gap: 1.5em;
+		}
+	}
+
+	@media only screen and (min-width: 50em) {
+
+		/* Magazine Widget Post Titles */
+		.widget-magazine-posts .large-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+
+		.widget-magazine-posts .medium-post .entry-title,
+		.widget-magazine-posts .small-post .entry-title {
+			font-size: 17px;
+			font-size: 1.0625rem;
+		}
+	}
+
+	@media only screen and (min-width: 57.5em) {
+
+		/* Magazine Focus Widgets */
+		.widget-magazine-focus .widget-magazine-content {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.widget-magazine-focus-center .widget-magazine-content .magazine-post-large {
+			grid-column: 2 / span 2;
+		}
+
+		/* Magazine Grid Widget */
+		.widget-magazine-grid .magazine-grid-four-columns {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.widget-magazine-grid .magazine-grid-three-columns {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		/* Magazine Widget Post Titles */
+		.widget-magazine-posts .large-post .entry-title {
+			font-size: 22px;
+			font-size: 1.375rem;
+		}
+
+		.widget-magazine-posts .medium-post .entry-title {
+			font-size: 16px;
+			font-size: 1rem;
+		}
+
+		.widget-magazine-posts .small-post .entry-title {
+			font-size: 15px;
+			font-size: 0.9375rem;
+		}
+	}
+
+	@media only screen and (min-width: 70em) {
+
+		/* Magazine Widget Post Titles */
+		.widget-magazine-posts .large-post .entry-title {
+			font-size: 24px;
+			font-size: 1.5rem;
+		}
+	}
+
+	@media only screen and (min-width: 75em) {
+
+		/* Magazine Widget Post Titles */
+		.widget-magazine-posts .large-post .entry-title {
+			font-size: 26px;
+			font-size: 1.625rem;
+		}
+
+		.widget-magazine-posts .medium-post .entry-title {
+			font-size: 17px;
+			font-size: 1.0625rem;
+		}
+
+		.widget-magazine-posts .small-post .entry-title {
+			font-size: 16px;
+			font-size: 1rem;
+		}
+	}
+}

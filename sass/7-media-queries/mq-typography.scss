@@ -1,0 +1,128 @@
+@media only screen and (min-width: 20em) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.site-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	.entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+	.entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+}
+
+
+@media only screen and (min-width: 35em) {
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.site-title {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+
+	.site-description {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+}
+
+@supports ( display: grid ) {
+
+	@media only screen and (min-width: 40em) {
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
+		}
+	}
+
+	@media only screen and (min-width: 50em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+	}
+
+	@media only screen and (min-width: 57.5em) {
+		.entry-title {
+			font-size: 28px;
+			font-size: 1.75rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 18px;
+			font-size: 1.125rem;
+		}
+	}
+
+	@media only screen and (min-width: 60em) {
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 36px;
+			font-size: 2.25rem;
+		}
+	}
+
+	@media only screen and (min-width: 70em) {
+		.entry-title {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+
+		.fullwidth-single-post.single-post .type-post .single-header .entry-title {
+			font-size: 40px;
+			font-size: 2.5rem;
+		}
+
+		/* Blog Layout Title */
+		.blog-list-layout .content-archive .post-wrapper .type-post .entry-title,
+		.blog-grid-layout .content-archive .post-wrapper .type-post .entry-title {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+	}
+}

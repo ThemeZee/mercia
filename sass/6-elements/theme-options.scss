@@ -1,3 +1,93 @@
+@supports ( display: grid ) {
+
+	/* Sidebar Left Layout */
+	@media only screen and (min-width: 57.5em) {
+		.sidebar-left .site-content {
+			grid-template-columns: 3fr 7fr;
+		}
+
+		.sidebar-left .content-area {
+			grid-column-start: 2;
+		}
+
+		.sidebar-left .sidebar {
+			grid-column-start: 1;
+		}
+
+		/* Left Sidebar on single posts */
+		.sidebar-left.single-post .type-post {
+			grid-template-columns: 3fr 7fr;
+		}
+
+		.sidebar-left.single-post .type-post .single-header,
+		.sidebar-left.single-post .type-post .single-content {
+			grid-column-start: 2;
+		}
+
+		.sidebar-left.single-post .type-post .sidebar {
+			grid-column-start: 1;
+		}
+
+		.sidebar-left.fullwidth-single-post.single-post .type-post .single-header {
+			grid-column: 1 / span 2;
+		}
+
+		.sidebar-left.fullwidth-single-post.single-post .type-post .sidebar {
+			grid-row-start: 2;
+		}
+	}
+
+	/* No Sidebar Layout */
+	@media only screen and (min-width: 57.5em) {
+		.no-sidebar .site-content,
+		.page-template-template-centered .site-content {
+			display: block;
+		}
+
+		.no-sidebar .site-content .content-area,
+		.page-template-template-centered .site-content .content-area {
+			margin: 0 auto;
+			padding: 0;
+			max-width: 840px;
+			width: 100%;
+		}
+
+		/* Fullwidth Template */
+		.page-template-template-fullwidth .site-content {
+			display: block;
+		}
+	}
+
+	/* No Sidebar on Single Posts */
+	@media only screen and (min-width: 57.5em) {
+
+		/* No Sidebar Post Template */
+		.no-sidebar.single-post .content-single,
+		.single-post .content-no-sidebar {
+			width: 100%;
+		}
+
+		.no-sidebar.single-post .content-single .type-post,
+		.single-post .content-no-sidebar .type-post {
+			display: block;
+		}
+
+		.no-sidebar.single-post .content-single .type-post .single-header,
+		.no-sidebar.single-post .content-single .type-post .single-content,
+		.single-post .content-no-sidebar .type-post .single-header,
+		.single-post .content-no-sidebar .type-post .single-content {
+			max-width: 840px;
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.no-sidebar.fullwidth-single-post.single-post .content-single .type-post .single-header,
+		.fullwidth-single-post.single-post .content-no-sidebar .type-post .single-header {
+			max-width: 100%;
+		}
+	}
+}
 
 /*--------------------------------------------------------------
 # 20.0 Customizer Preview
