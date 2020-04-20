@@ -22,27 +22,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Normalize
-2.0 - Typography
-3.0 - Elements
-4.0 - Forms
-5.0 - Accessibility
-6.0 - Alignments
-7.0 - Clearings
-8.0 - Layout Structure
-9.0 - Header
-10.0 - Navigation
-11.0 - Widgets
-12.0 - Posts and pages
-13.0 - Gutenberg Blocks
-14.0 - Comments
-15.0 - Footer
-16.0 - Media
-17.0 - Media Queries
-18.0 - Media Queries for CSS Grids
-19.0 - Theme Option Styles
-20.0 - Customizer Preview
-21.0 - Print Styles
+# - CSS Variables
+# - Normalize
+# - Typography
+# - Elements
+# - Forms
+# - Accessibility
+# - Alignments
+# - Clearings
+# - Site Layout
+# - Header
+# - Navigation
+# - Social Icons Menu
+# - Posts and pages
+# - Archives and Blog Layouts
+# - Blocks
+# - Featured Posts
+# - Widgets
+# - Magazine Widgets
+# - Comments
+# - Media
+# - Footer
+# - Plugins
+# - Media Queries for Typography
+# - Media Queries for Layout
+# - Media Queries for Navigation
+# - Media Queries for Featured Posts
+# - Media Queries for Media
+# - Theme Options
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2662,6 +2669,41 @@ object {
 }
 
 /*--------------------------------------------------------------
+# - Media Queries for Print Styles
+--------------------------------------------------------------*/
+@media print {
+	form,
+	button,
+	input,
+	select,
+	textarea,
+	.header-bar-wrap,
+	.primary-navigation-wrap,
+	#secondary,
+	.footer-navigation,
+	.footer-widgets-background,
+	.header-image,
+	.page-links,
+	.post-navigation,
+	.pagination.navigation,
+	.comments-area,
+	.footer-wrap,
+	.scroll-to-top {
+		display: none !important;
+	}
+
+	body,
+	.site {
+		background: none !important;
+	}
+
+	.content-area {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+/*--------------------------------------------------------------
 # - Theme Options
 --------------------------------------------------------------*/
 @supports (display: grid) {
@@ -2753,9 +2795,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-# 20.0 Customizer Preview
---------------------------------------------------------------*/
+/* Customizer Preview */
 .magazine-widgets-placeholder {
 	position: relative;
 }
@@ -2781,40 +2821,4 @@ object {
 .customize-partial-edit-shortcut-mercia_theme_options-blog_description,
 .customize-partial-edit-shortcut-mercia_blog_content_partial {
 	left: -9999px;
-}
-
-/*--------------------------------------------------------------
-# 21.0 Print Styles
---------------------------------------------------------------*/
-@media print {
-	/* Hide elements */
-	form,
-	button,
-	input,
-	select,
-	textarea,
-	.header-bar-wrap,
-	.primary-navigation-wrap,
-	#secondary,
-	.footer-navigation,
-	.footer-widgets-background,
-	.header-image,
-	.page-links,
-	.post-navigation,
-	.pagination.navigation,
-	.comments-area,
-	.footer-wrap,
-	.scroll-to-top {
-		display: none !important;
-	}
-
-	body,
-	.site {
-		background: none !important;
-	}
-
-	.content-area {
-		padding: 0;
-		width: 100%;
-	}
 }

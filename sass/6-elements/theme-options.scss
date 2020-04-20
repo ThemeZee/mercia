@@ -89,9 +89,7 @@
 	}
 }
 
-/*--------------------------------------------------------------
-# 20.0 Customizer Preview
---------------------------------------------------------------*/
+/* Customizer Preview */
 .magazine-widgets-placeholder {
 	position: relative;
 }
@@ -117,41 +115,4 @@
 .customize-partial-edit-shortcut-mercia_theme_options-blog_description,
 .customize-partial-edit-shortcut-mercia_blog_content_partial {
 	left: -9999px;
-}
-
-/*--------------------------------------------------------------
-# 21.0 Print Styles
---------------------------------------------------------------*/
-
-@media print {
-	/* Hide elements */
-	form,
-	button,
-	input,
-	select,
-	textarea,
-	.header-bar-wrap,
-	.primary-navigation-wrap,
-	#secondary,
-	.footer-navigation,
-	.footer-widgets-background,
-	.header-image,
-	.page-links,
-	.post-navigation,
-	.pagination.navigation,
-	.comments-area,
-	.footer-wrap,
-	.scroll-to-top {
-		display: none !important;
-	}
-
-	body,
-	.site {
-		background: none !important;
-	}
-
-	.content-area {
-		padding: 0;
-		width: 100%;
-	}
 }
