@@ -1,0 +1,85 @@
+
+.widget-magazine-posts .type-post {
+	margin: 0;
+}
+
+.widget-magazine-posts .widget-magazine-content .magazine-post {
+	margin: 0 0 1.5em;
+}
+
+.widget-magazine-posts .type-post .wp-post-image {
+	margin: 0 0 0.5em;
+}
+
+.widget-magazine-posts .type-post .entry-meta {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget-magazine-posts .type-post .entry-meta span .icon {
+	margin: 0.2em 0.3em 0 0;
+	width: 18px;
+	height: 18px;
+}
+
+/* Magazine Image Overlay Styling */
+.widget-magazine-posts .magazine-posts-overlay .magazine-post {
+	margin: 0 0 2px;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post {
+	position: relative;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-image .wp-post-image {
+	margin: 0;
+	filter: brightness(75%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post:hover .post-image .wp-post-image {
+	filter: brightness(65%);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0.5em 0.75em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .large-post .post-content .entry-meta {
+	display: none;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:visited,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:link,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:visited {
+	color: #fff;
+	text-shadow: 1px 2px 3px #353535;
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-title a:active,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:hover,
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta a:active {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.widget-magazine-posts .magazine-posts-overlay .type-post .post-content .entry-meta span .icon {
+	fill: rgba(255, 255, 255, 0.75);
+}
+
+/* Magazine Widget Post Titles */
+.widget-magazine-posts .large-post .entry-title {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.widget-magazine-posts .medium-post .entry-title,
+.widget-magazine-posts .small-post .entry-title {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}

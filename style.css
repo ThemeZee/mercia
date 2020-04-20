@@ -1385,10 +1385,6 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 	color: #3377bb;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Theme Search Widget */
 .search-form {
 	position: relative;
@@ -1436,7 +1432,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts .type-post {
 	margin: 0;
