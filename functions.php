@@ -173,8 +173,16 @@ function mercia_scripts() {
 	// Register and enqueue navigation.js.
 	wp_enqueue_script( 'mercia-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20171005' );
 
-	// Passing Parameters to navigation.js.
-	wp_localize_script( 'mercia-jquery-navigation', 'mercia_menu_title', mercia_get_svg( 'menu' ) . esc_html__( 'Menu', 'mercia' ) );
+	// Register and enqueue navigation.js.
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'mercia-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$mercia_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'mercia' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'mercia' ),
+			'icon'     => mercia_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'mercia-navigation', 'merciaScreenReaderText', $mercia_l10n );
+	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );

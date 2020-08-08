@@ -1,93 +1,102 @@
-@media only screen and (min-width: 55em) {
-
-	/*** Main Navigation ***/
-	.main-navigation-toggle {
+@media only screen and (min-width: 60em) {
+	.primary-menu-toggle,
+	.main-navigation .dropdown-toggle {
 		display: none;
 	}
 
-	.main-navigation-menu {
-		position: relative;
-		display: -webkit-box !important;
-		display: -ms-flexbox !important;
-		display: flex !important;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		border-top: none;
-	}
-
-	.main-navigation-menu a {
-		padding: 1em;
-		border: none;
-	}
-
-	.main-navigation-menu > .menu-item-has-children a .sub-menu-icon {
-		float: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.main-navigation-menu > .menu-item-has-children a .sub-menu-icon .icon {
-		margin: 0.5em 0 0 0.4em;
-		width: 14px;
-		height: 14px;
-	}
-
-	.main-navigation-menu > .menu-item-has-children a:hover .sub-menu-icon .icon {
-		fill: #3377bb;
-	}
-
-	.main-navigation-menu ul {
-		position: absolute;
-		z-index: 99;
-		display: none;
-		border: 1px solid #353535;
-		border-bottom: none;
-		width: auto;
-	}
-
-	.main-navigation-menu ul li {
-		position: relative;
-		margin: 0;
-	}
-
-	.main-navigation-menu ul a {
-		min-width: 250px;
-		min-width: 16rem;
-		border-bottom: 1px solid #353535;
-	}
-
-	.main-navigation-menu ul a,
-	.main-navigation-menu ul li ul a,
-	.main-navigation-menu ul li ul li ul a,
-	.main-navigation-menu ul li ul li ul li ul a {
-		padding: 1em;
-	}
-
-	.main-navigation-menu ul .menu-item-has-children a .sub-menu-icon .icon {
-		margin: 0.5em 0 0 0.4em;
-		width: 12px;
-		height: 12px;
-		-webkit-transform: rotate(270deg);
-		transform: rotate(270deg);
-	}
-
-	.main-navigation-menu li ul ul {
-		top: -1px;
-		left: 100%;
-	}
-
-	.main-navigation-menu li.menu-item-has-children:hover > ul,
-	.main-navigation-menu li.page_item_has_children:hover > ul,
-	.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
+	.main-navigation ul,
+	.main-navigation ul ul {
 		display: block;
 	}
 
-	.main-navigation-menu li.current-menu-item > a {
-		text-decoration: underline;
+	.primary-navigation {
+		display: flex;
+		margin-left: auto;
+		width: auto;
+		align-items: center;
 	}
 
-	.main-navigation-menu li.current-menu-item > a:after {
-		text-decoration: none;
+	#masthead .main-navigation > ul.menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin: 0;
+		border-bottom: none;
+	}
+
+	.main-navigation > ul {
+		border: none;
+	}
+
+	.main-navigation > ul > li > a {
+		padding: 1em;
+	}
+
+	/* Dropdown Menus */
+	.main-navigation ul ul {
+		position: absolute;
+		left: -999em;
+		top: 100%;
+		z-index: 99999;
+		background: #fff;
+		border: 1px solid #353535;
+		border-bottom: none;
+	}
+
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		right: auto;
+		left: 0;
+	}
+
+	.main-navigation ul ul li a {
+		width: 16rem;
+		border-bottom: 1px solid #353535;
+	}
+
+	.main-navigation ul ul ul {
+		left: -999em;
+		margin-top: -1px;
+		top: 0;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		right: auto;
+		left: 100%;
+	}
+
+	.main-navigation ul ul li a,
+	.main-navigation ul ul ul li a,
+	.main-navigation ul ul ul ul li a {
+		padding: 1em;
+	}
+
+	/* Dropdown Icons */
+	.main-navigation .menu-item-has-children > a > .icon {
+		position: relative;
+		display: inline-block;
+		left: 0.5rem;
+		top: 0.1rem;
+		width: 14px;
+		height: 14px;
+		fill: #353535;
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a > .icon {
+		position: absolute;
+		left: auto;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.4rem;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.main-navigation ul .menu-item-has-children > a:hover > .icon {
+		fill: #3377bb;
 	}
 }
-

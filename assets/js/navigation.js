@@ -1,165 +1,122 @@
+/* global merciaScreenReaderText */
 /**
- * Navigation Plugin
- * Includes responsiveMenu() function
- *
- * Copyright 2016 ThemeZee
- * Free to use under the GPLv2 and later license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Author: Thomas Weichselbaumer (themezee.com)
+ * Theme Navigation
  *
  * @package Mercia
  */
 
-(function($) {
+(function( $ ) {
 
-	/**--------------------------------------------------------------
-	# Responsive Navigation for WordPress menus
-	--------------------------------------------------------------*/
-	$.fn.responsiveMenu = function( options ) {
+	function initNavigation( containerClass ) {
+		var container  = $( containerClass );
+		var navigation = container.find( 'nav[role=navigation]' );
 
-		if ( options === undefined ) {
-			options = {};
+		// Return early if navigation is missing.
+		if ( ! navigation.length ) {
+			return;
 		}
 
-		/* Set Defaults */
-		var defaults = {
-			menuClass: 'menu',
-			toggleClass: 'menu-toggle',
-			toggleText: '',
-			minWidth: '60em'
-		};
+		// Enable menuToggle.
+		(function() {
+			var menuToggle = container.find( '.menu-toggle' );
 
-		/* Set Variables */
-		var vars = $.extend( {}, defaults, options ),
-			menuClass = vars.menuClass,
-			toggleID = ( vars.toggleID ) ? vars.toggleID : vars.toggleClass,
-			toggleClass = vars.toggleClass,
-			toggleText = vars.toggleText,
-			minWidth = vars.minWidth,
-			$this = $( this ),
-			$menu = $( '.' + menuClass );
-
-		/*********************
-		* Desktop Navigation *
-		**********************/
-
-		/* Set and reset dropdown animations based on screen size */
-		if ( typeof matchMedia == 'function' ) {
-			var mq = window.matchMedia( '(min-width: ' + minWidth + ')' );
-			mq.addListener( widthChange );
-			widthChange( mq );
-		}
-		function widthChange( mq ) {
-
-			if ( mq.matches ) {
-
-				/* Hide all sub menus on desktop navigation */
-				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).css( { display: 'none' } );
-					$( this ).parent().find( 'a > .sub-menu-icon' ).removeClass( 'active' );
-				} );
-
-				/* Remove click event for dropdown animation of submenu icons*/
-				$menu.find( 'li.menu-item-has-children > a > .sub-menu-icon' ).off( "click", "**" );
-
-				/* Add dropdown animation for desktop navigation menu */
-				$menu.find( 'li.menu-item-has-children' ).hover( function() {
-					$( this ).children( 'ul.sub-menu' ).css( { visibility: 'visible', display: 'none' } ).slideDown( 300 );
-				}, function() {
-					$( this ).children( 'ul.sub-menu' ).css( { visibility: 'hidden' } );
-				} );
-
-				/* Make sure menu does not fly off the right of the screen */
-				$menu.find( 'li ul.sub-menu li.menu-item-has-children' ).mouseenter( function() {
-					if ( $( this ).children( 'ul.sub-menu' ).offset().left + 250 > $( window ).width() ) {
-						$( this ).children( 'ul.sub-menu' ).css( { right: '100%', left: 'auto' } );
-					}
-				} );
-
-				/* Add menu items with submenus to aria-haspopup="true" */
-				$menu.find( 'li.menu-item-has-children' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
-
-				/* Properly update the ARIA states on focus (keyboard) and mouse over events */
-				$menu.find( 'li.menu-item-has-children > a' ).on( 'focus.aria mouseenter.aria', function() {
-					$( this ).parents( '.menu-item' ).attr( 'aria-expanded', true ).find( 'ul:first' ).css( { visibility: 'visible', display: 'block' } );
-				} );
-
-				/* Properly update the ARIA states on blur (keyboard) and mouse out events */
-				$menu.find( 'li.menu-item-has-children > a' ).on( 'blur.aria  mouseleave.aria', function() {
-					if( ! $(this).parent().next( 'li' ).length > 0 && ! $(this).next('ul').length > 0 ) {
-						$( this ).closest( 'li.menu-item-has-children' ).attr( 'aria-expanded', false ).find( '.sub-menu' ).css( { display: 'none' } );
-					}
-				} );
-
-			} else {
-
-				/* Reset desktop navigation menu dropdown animation on smaller screens */
-				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).css( { display: 'block', visibility: 'visible' } );
-				} );
-
-				/* Remove Events */
-				$menu.find( 'li.menu-item-has-children' ).off();
-				$menu.find( 'li ul.sub-menu li.menu-item-has-children' ).off();
-
-				/* Remove ARIA states on mobile devices */
-				$menu.find( 'li.menu-item-has-children > a' ).off();
-
-				/* Close all sub menus on mobile navigation */
-				$menu.find( 'li.menu-item-has-children ul.sub-menu' ).each( function() {
-					$( this ).hide();
-					$( this ).parent().find( 'a > .sub-menu-icon' ).removeClass( 'active' );
-				} );
-
-				/* Add dropdown animation for submenus on mobile navigation */
-				$menu.find( 'li.menu-item-has-children > a > .sub-menu-icon' ).on( 'click', function(e) {
-					e.preventDefault();
-					e.stopPropagation();
-					e.stopImmediatePropagation();
-					$( this ).parent().next( 'ul.sub-menu' ).slideToggle();
-					$( this ).toggleClass( 'active' );
-				});
-
+			// Return early if menuToggle is missing.
+			if ( ! menuToggle.length ) {
+				return;
 			}
-		}
 
-		/********************
-		* Mobile Navigation *
-		*********************/
+			// Add an initial value for the attribute.
+			menuToggle.attr( 'aria-expanded', 'false' );
 
-		/* Add Menu Toggle Button for mobile navigation */
-		$this.prepend( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
+			menuToggle.on( 'click.mercia_', function() {
+				navigation.toggleClass( 'toggled-on' );
 
-		/* Add dropdown slide animation for mobile devices */
-		$( '#' + toggleID ).on( 'click', function() {
-			$menu.slideToggle();
-			$( this ).toggleClass( 'active' );
-		});
+				$( this ).attr( 'aria-expanded', navigation.hasClass( 'toggled-on' ) );
+			});
+		})();
 
-	};
+		// Enable dropdownToggles that displays child menu items.
+		(function() {
 
-	/**--------------------------------------------------------------
-	# Setup Navigation Menus
-	--------------------------------------------------------------*/
-	$( document ).ready( function() {
+			var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
+				.append( merciaScreenReaderText.icon )
+				.append( $( '<span />', { 'class': 'screen-reader-text', text: merciaScreenReaderText.expand } ) );
 
-		/* Setup Main Navigation */
-		$( '#main-navigation' ).responsiveMenu( {
-			menuClass: 'main-navigation-menu',
-			toggleClass: 'main-navigation-toggle',
-			toggleText: mercia_menu_title,
-			minWidth: '55em'
-		} );
+			navigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
-		/* Setup Top Navigation */
-		$( '#top-navigation' ).responsiveMenu( {
-			menuClass: 'top-navigation-menu',
-			toggleClass: 'top-navigation-toggle',
-			toggleText: mercia_menu_title,
-			minWidth: '55em'
-		} );
+			// Set the active submenu dropdown toggle button initial state.
+			navigation.find( '.current-menu-ancestor > button' )
+				.addClass( 'toggled-on' )
+				.attr( 'aria-expanded', 'true' )
+				.find( '.screen-reader-text' )
+				.text( merciaScreenReaderText.collapse );
 
-	} );
+			// Set the active submenu initial state.
+			navigation.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-}(jQuery));
+			navigation.find( '.dropdown-toggle' ).click( function( e ) {
+				var _this = $( this ),
+					screenReaderSpan = _this.find( '.screen-reader-text' );
+
+				e.preventDefault();
+				_this.toggleClass( 'toggled-on' );
+				_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+				_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+				screenReaderSpan.text( screenReaderSpan.text() === merciaScreenReaderText.expand ? merciaScreenReaderText.collapse : merciaScreenReaderText.expand );
+			} );
+		})();
+
+		// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+		(function() {
+			var menuList   = navigation.children( 'ul.menu' );
+
+			if ( ! menuList.length || ! menuList.children().length ) {
+				return;
+			}
+
+			// Toggle `focus` class to allow submenu access on tablets.
+			function toggleFocusClassTouchScreen() {
+				if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+
+					$( document.body ).on( 'touchstart.mercia_', function( e ) {
+						if ( ! $( e.target ).closest( naviClass + ' li' ).length ) {
+							$( naviClass + ' li' ).removeClass( 'focus' );
+						}
+					});
+
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+						.on( 'touchstart.mercia_', function( e ) {
+							var el = $( this ).parent( 'li' );
+
+							if ( ! el.hasClass( 'focus' ) ) {
+								e.preventDefault();
+								el.toggleClass( 'focus' );
+								el.siblings( '.focus' ).removeClass( 'focus' );
+							}
+						});
+
+				} else {
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.mercia_' );
+				}
+			}
+
+			if ( 'ontouchstart' in window ) {
+				$( window ).on( 'resize.mercia_', toggleFocusClassTouchScreen );
+				toggleFocusClassTouchScreen();
+			}
+
+			menuList.find( 'a' ).on( 'focus.mercia_ blur.mercia_', function() {
+				$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+			});
+		})();
+	}
+
+	// Init Main Navigation.
+	initNavigation( '.primary-navigation-wrap' );
+
+	// Init Top Navigation.
+	//initNavigation( '.header-bar' );
+
+})( jQuery );
