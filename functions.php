@@ -174,7 +174,7 @@ function mercia_scripts() {
 	wp_enqueue_script( 'mercia-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20171005' );
 
 	// Register and enqueue navigation.js.
-	if ( has_nav_menu( 'primary' ) ) {
+	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
 		wp_enqueue_script( 'mercia-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
 		$mercia_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'mercia' ),
