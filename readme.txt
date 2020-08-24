@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.7.1 - 2020-04-24 =
+* fixed styling of menu items with empty links
+* fixed undefined naviClass variable warning
+
 = 1.7 - 2020-08-18 =
 Changed implementation, styles and scripts of main navigation menu
 Important Update: Please read https://themezee.com/2020/08/updates-for-improved-navigation-menus/
