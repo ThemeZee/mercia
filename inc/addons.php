@@ -38,6 +38,9 @@ function mercia_theme_addons_setup() {
 	// Add Theme Support for wooCommerce.
 	add_theme_support( 'woocommerce' );
 
+	// Add theme support for AMP.
+	add_theme_support( 'amp' );
+
 }
 add_action( 'after_setup_theme', 'mercia_theme_addons_setup' );
 
@@ -103,3 +106,32 @@ function mercia_wrapper_end() {
 }
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_after_main_content', 'mercia_wrapper_end', 10 );
+
+
+/**
+ * Checks if AMP page is rendered.
+ */
+function mercia_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
+
+/**
+ * Adds amp support for menu toggle.
+ */
+function mercia_amp_menu_toggle() {
+	if ( mercia_is_amp() ) {
+		echo "[aria-expanded]=\"primaryMenuExpanded? 'true' : 'false'\" ";
+		echo 'on="tap:AMP.setState({primaryMenuExpanded: !primaryMenuExpanded})"';
+	}
+}
+
+
+/**
+ * Adds amp support for mobile dropdown navigation menu.
+ */
+function mercia_amp_menu_is_toggled() {
+	if ( mercia_is_amp() ) {
+		echo "[class]=\"'main-navigation' + ( primaryMenuExpanded ? ' toggled-on' : '' )\"";
+	}
+}

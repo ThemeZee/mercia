@@ -171,7 +171,7 @@ function mercia_scripts() {
 	wp_enqueue_style( 'mercia-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.min.js.
-	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
+	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! mercia_is_amp() ) {
 		wp_enqueue_script( 'mercia-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '20200822', true );
 		$mercia_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'mercia' ),
@@ -182,7 +182,9 @@ function mercia_scripts() {
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
-	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	if ( ! mercia_is_amp() ) {
+		wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

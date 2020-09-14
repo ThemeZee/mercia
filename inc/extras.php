@@ -69,6 +69,11 @@ function mercia_body_classes( $classes ) {
 		$classes[] = 'post-thumbnail-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( mercia_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'mercia_body_classes' );

@@ -2,7 +2,7 @@
 /**
  * Main Navigation
  *
- * @version 1.1
+ * @version 1.2
  * @package Mercia
  */
 ?>
@@ -13,7 +13,7 @@
 
 		<?php do_action( 'mercia_header_search' ); ?>
 
-		<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false" <?php mercia_amp_menu_toggle(); ?>>
 			<?php
 			echo mercia_get_svg( 'menu' );
 			echo mercia_get_svg( 'close' );
@@ -23,7 +23,7 @@
 
 		<div class="primary-navigation">
 
-			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'mercia' ); ?>">
+			<nav id="site-navigation" class="main-navigation" role="navigation" <?php mercia_amp_menu_is_toggled(); ?> aria-label="<?php esc_attr_e( 'Primary Menu', 'mercia' ); ?>">
 
 				<?php
 				wp_nav_menu(
