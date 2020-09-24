@@ -8,6 +8,7 @@ Version: 1.8
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 5.6
+AMP: true
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mercia
@@ -808,7 +809,7 @@ textarea {
 	font-size: 0.9375rem;
 }
 
-.is-amp-page .main-navigation ul ul,
+.is-amp-page .main-navigation ul button.toggled-on + ul,
 .main-navigation ul ul.toggled-on {
 	display: block;
 }
