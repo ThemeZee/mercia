@@ -15,7 +15,9 @@
 	color: #353535;
 	list-style: none;
 	@include font-size(17);
-	font-family: 'Roboto', Tahoma, Arial;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -95,8 +97,9 @@
 	color: #353535;
 	text-decoration: none;
 	@include font-size(17);
-	font-family: 'Roboto', Tahoma, Arial;
-	font-weight: normal;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	text-align: left;
 	align-items: center;
 }

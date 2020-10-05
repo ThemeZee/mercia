@@ -15,10 +15,11 @@
 	color: #353535;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: 'Open Sans', Tahoma, Arial;
-	line-height: 1.4;
+	@include font-size(18);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,
