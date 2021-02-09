@@ -73,12 +73,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--button-hover-color: #353535;
 	--button-hover-text-color: #fff;
 	--page-background-color: #fff;
-	--header-background-color: #111133;
-	--site-title-color: #fff;
-	--site-title-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-color: #fff;
-	--navi-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-border-color: rgba(255, 255, 255, 0.1);
+	--site-title-color: #353535;
+	--site-title-hover-color: #3377bb;
+	--navi-color: #353535;
+	--navi-hover-color: #3377bb;
+	--navi-border-color: #353535;
 	--title-color: #111133;
 	--title-hover-color: #4477aa;
 	--widget-title-color: #111133;
@@ -714,11 +713,14 @@ textarea {
 	padding: 0 1.5em;
 	max-width: 52em;
 	width: 100%;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--page-background-color);
 }
 
 .sidebar {
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--light-border-color);
 	padding: 1.5em 0 0;
 }
 
@@ -758,6 +760,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #353535;
+	color: var(--site-title-color);
 	text-decoration: none;
 	font-size: 32px;
 	font-size: 2rem;
@@ -774,11 +777,13 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #353535;
+	color: var(--site-title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: #3377bb;
+	color: var(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {
@@ -812,8 +817,10 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	position: relative;
-	border-top: 6px solid #353535;
-	border-bottom: 1px solid #353535;
+	border-top: 6px solid;
+	border-bottom: 1px solid;
+	border-color: #353535;
+	border-color: var(--navi-border-color);
 }
 
 .primary-navigation {
@@ -825,6 +832,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #353535;
+	color: var(--navi-color);
 	list-style: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -837,7 +845,9 @@ textarea {
 }
 
 .main-navigation > ul {
-	border-top: 1px solid #353535;
+	border-top: 1px solid;
+	border-color: #353535;
+	border-color: var(--navi-border-color);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -868,6 +878,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #353535;
+	color: var(--navi-color);
 	text-decoration: none;
 }
 
@@ -875,6 +886,7 @@ textarea {
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
 	color: #3377bb;
+	color: var(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -912,6 +924,7 @@ textarea {
 	border: none;
 	background: none;
 	color: #353535;
+	color: var(--navi-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -932,12 +945,14 @@ textarea {
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	color: #353535;
+	color: var(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
 	color: #3377bb;
+	color: var(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -948,11 +963,13 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #353535;
+	fill: var(--navi-color);
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
 	fill: #3377bb;
+	fill: var(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -978,6 +995,7 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #353535;
+	color: var(--navi-color);
 	background: none;
 }
 
@@ -992,12 +1010,14 @@ textarea {
 	height: 22px;
 	vertical-align: top;
 	fill: #353535;
+	fill: var(--navi-color);
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
 	fill: #3377bb;
+	fill: var(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -1912,7 +1932,9 @@ object {
 # - Footer
 --------------------------------------------------------------*/
 .site-footer {
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--light-border-color);
 }
 
 .site-footer .site-info {

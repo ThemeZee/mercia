@@ -30,7 +30,7 @@
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #353535;
+	@include color(--site-title-color);
 	text-decoration: none;
 	@include font-size(32);
 	@include font-family(--title-font);
@@ -41,12 +41,12 @@
 
 .site-title a:link,
 .site-title a:visited {
-	color: #353535;
+	@include color(--site-title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #3377bb;
+	@include color(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {

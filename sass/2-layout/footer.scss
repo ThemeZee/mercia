@@ -1,5 +1,6 @@
 .site-footer {
-	border-top: 1px solid rgba(0,0,0,0.15);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .site-footer .site-info {

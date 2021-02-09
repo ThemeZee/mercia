@@ -1,7 +1,8 @@
 .primary-navigation-wrap {
 	position: relative;
-	border-top: 6px solid #353535;
-	border-bottom: 1px solid #353535;
+	border-top: 6px solid;
+	border-bottom: 1px solid;
+	@include border-color(--navi-border-color);
 }
 
 .primary-navigation {
@@ -12,7 +13,7 @@
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #353535;
+	@include color(--navi-color);
 	list-style: none;
 	@include font-size(17);
 	@include font-family(--navi-font);
@@ -21,7 +22,8 @@
 }
 
 .main-navigation > ul {
-	border-top: 1px solid #353535;
+	border-top: 1px solid;
+	@include border-color(--navi-border-color);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -51,14 +53,14 @@
 .main-navigation ul a,
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
-	color: #353535;
+	@include color(--navi-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	color: #3377bb;
+	@include color(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -94,7 +96,7 @@
 	padding: 1em;
 	border: none;
 	background: none;
-	color: #353535;
+	@include color(--navi-color);
 	text-decoration: none;
 	@include font-size(17);
 	@include font-family(--navi-font);
@@ -110,13 +112,13 @@
 
 .primary-menu-toggle:focus {
 	outline: thin dotted;
-	color: #353535;
+	@include color(--navi-color);
 	background: none;
 }
 
 .primary-menu-toggle:hover,
 .primary-menu-toggle:active {
-	color: #3377bb;
+	@include color(--navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -126,12 +128,12 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #353535;
+	@include fill(--navi-color);
 }
 
 .primary-menu-toggle:hover .icon,
 .primary-menu-toggle:active .icon {
-	fill: #3377bb;
+	@include fill(--navi-hover-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -156,7 +158,7 @@
 
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #353535;
+	@include color(--navi-color);
 	background: none;
 }
 
@@ -170,13 +172,13 @@
 	width: 22px;
 	height: 22px;
 	vertical-align: top;
-	fill: #353535;
+	@include fill(--navi-color);
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
-	fill: #3377bb;
+	@include fill(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
