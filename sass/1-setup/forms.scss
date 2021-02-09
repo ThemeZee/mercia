@@ -5,12 +5,11 @@ input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
 	border: none;
-	background: #3377bb;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 16px;
-	font-size: 1rem;
+	@include font-size(16);
 }
 
 button:hover,
@@ -25,7 +24,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #353535;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }
 
 input[type="text"],
@@ -36,9 +36,10 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0,0,0,0.075);
+	border: 1px solid;
+	@include border-color(--light-border-color);
+	@include color(--medium-text-color);
 	background: none;
-	color: #666;
 }
 
 input[type="text"]:focus,
@@ -47,8 +48,9 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid rgba(0,0,0,0.2);
-	color: #353535;
+	border: 1px solid;
+	@include border-color(--medium-border-color);
+	@include color(--text-color);
 }
 
 textarea {

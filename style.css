@@ -60,6 +60,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--text-color: #353535;
+	--medium-text-color: #666;
+	--light-text-color: #999;
+	--dark-border-color: #353535;
+	--medium-border-color: rgba(0, 0, 0, 0.2);
+	--light-border-color: rgba(0, 0, 0, 0.1);
+	--link-color: #3377bb;
+	--link-hover-color: #353535;
+	--button-color: #3377bb;
+	--button-text-color: #fff;
+	--button-hover-color: #353535;
+	--button-hover-text-color: #fff;
+	--page-background-color: #fff;
+	--header-background-color: #111133;
+	--site-title-color: #fff;
+	--site-title-hover-color: rgba(255, 255, 255, 0.6);
+	--navi-color: #fff;
+	--navi-hover-color: rgba(255, 255, 255, 0.6);
+	--navi-border-color: rgba(255, 255, 255, 0.1);
+	--title-color: #111133;
+	--title-hover-color: #4477aa;
+	--widget-title-color: #111133;
+	--widget-title-hover-color: #4477aa;
+	--widget-title-border-color: #111133;
+	--footer-background-color: #111133;
+	--footer-text-color: rgba(255, 255, 255, 0.6);
+	--footer-link-color: #fff;
+	--footer-link-hover-color: rgba(255, 255, 255, 0.6);
 	--text-font: "Roboto", arial, helvetica, sans-serif;
 	--title-font: "Open Sans", arial, helvetica, sans-serif;
 	--navi-font: "Roboto", arial, helvetica, sans-serif;
@@ -293,6 +321,7 @@ input,
 select,
 textarea {
 	color: #353535;
+	color: var(--text-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Roboto", arial, helvetica, sans-serif;
@@ -308,7 +337,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	margin: 0.75em 0;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 	line-height: 1.4;
 	line-height: var(--title-line-height);
 }
@@ -420,8 +450,11 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 4px solid #353535;
-	color: #777;
+	border-left: 4px solid;
+	border-color: #353535;
+	border-color: var(--dark-border-color);
+	color: #666;
+	color: var(--medium-text-color);
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -431,13 +464,14 @@ blockquote small {
 	display: block;
 	margin-top: 1em;
 	color: #353535;
+	color: var(--text-color);
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
 }
 
-blockquote cite:before,
-blockquote small:before {
+blockquote cite::before,
+blockquote small::before {
 	content: "\2014\00a0";
 }
 
@@ -449,7 +483,8 @@ hr {
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.2);
+	background-color: var(--medium-border-color);
 }
 
 ul,
@@ -495,23 +530,28 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid rgba(0, 0, 0, 0.075);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--light-border-color);
 }
 
 a {
 	color: #3377bb;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
 	color: #3377bb;
+	color: var(--link-color);
 }
 
 a:hover,
 a:focus,
 a:active {
 	color: #353535;
+	color: var(--link-hover-color);
 }
 
 a:focus {
@@ -533,8 +573,10 @@ input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
 	border: none;
-	background: #3377bb;
+	background-color: #3377bb;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 16px;
@@ -553,7 +595,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #353535;
+	background-color: #353535;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 input[type="text"],
@@ -564,9 +609,12 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.075);
-	background: none;
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--light-border-color);
 	color: #666;
+	color: var(--medium-text-color);
+	background: none;
 }
 
 input[type="text"]:focus,
@@ -575,8 +623,11 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-color: var(--medium-border-color);
 	color: #353535;
+	color: var(--text-color);
 }
 
 textarea {
