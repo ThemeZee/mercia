@@ -23,8 +23,8 @@ $themeColors: (
 
 	// Text Colors
 	--text-color                     : #353535,
-	--medium-text-color              : #666,
-	--light-text-color               : #999,
+	--medium-text-color              : rgba(0, 0, 0, 0.45),
+	--light-text-color               : rgba(0, 0, 0, 0.25),
 	--dark-border-color              : #353535,
 	--medium-border-color            : rgba(0, 0, 0, 0.2),
 	--light-border-color             : rgba(0, 0, 0, 0.1),
@@ -48,19 +48,12 @@ $themeColors: (
 	--navi-border-color              : #353535,
 
 	// Posts
-	--title-color                    : #111133,
-	--title-hover-color              : #4477aa,
+	--title-color                    : #353535,
+	--title-hover-color              : #3377bb,
 
 	// Widgets
-	--widget-title-color             : #111133,
-	--widget-title-hover-color       : #4477aa,
-	--widget-title-border-color      : #111133,
-
-	// Footer
-	--footer-background-color        : #111133,
-	--footer-text-color              : rgba(255, 255, 255, 0.6),
-	--footer-link-color              : #fff,
-	--footer-link-hover-color        : rgba(255, 255, 255, 0.6),
+	--widget-title-color             : #353535,
+	--widget-title-hover-color       : #3377bb,
 );
 
 // Theme Fonts

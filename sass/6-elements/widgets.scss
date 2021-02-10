@@ -9,7 +9,7 @@
 .widget-title {
 	margin: 0 0 0.75em;
 	padding: 0;
-	color: #353535;
+	@include color(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(17);
@@ -28,11 +28,13 @@
 .widget ul li,
 .widget ol li {
 	padding: 0.4em 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.075);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .widget ul > li:last-child {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 }
 
 .widget ul .children,
@@ -48,12 +50,12 @@
 
 .widget-title a:link,
 .widget-title a:visited {
-	color: #353535;
+	@include color(--widget-title-color);
 }
 
 .widget-title a:hover,
 .widget-title a:active {
-	color: #3377bb;
+	@include color(--widget-title-hover-color);
 }
 
 /* Theme Search Widget */
@@ -87,17 +89,17 @@
 	bottom: 0;
 	padding: 0.6em 0.8em;
 	border: none;
-	background: #3377bb;
+	@include background(--button-color);
 }
 
 .search-form .search-submit:hover,
 .search-form .search-submit:active {
-	background: #353535;
+	@include background(--button-hover-color);
 }
 
 .search-form .search-submit .icon-search {
 	margin: 5px 0 0;
 	width: 22px;
 	height: 22px;
-	fill: #fff;
+	@include fill(--button-text-color);
 }

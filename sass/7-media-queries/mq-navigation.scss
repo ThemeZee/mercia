@@ -40,8 +40,9 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		background: #fff;
-		border: 1px solid #353535;
+		@include background(--page-background-color);
+		border: 1px solid;
+		@include border-color(--navi-border-color);
 		border-bottom: none;
 	}
 
@@ -53,7 +54,8 @@
 
 	.main-navigation ul ul li a {
 		width: 16rem;
-		border-bottom: 1px solid #353535;
+		border-bottom: 1px solid;
+		@include border-color(--navi-border-color);
 	}
 
 	.main-navigation ul ul ul {
@@ -82,7 +84,7 @@
 		top: 0.1rem;
 		width: 14px;
 		height: 14px;
-		fill: #353535;
+		@include fill(--navi-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon {
@@ -97,6 +99,6 @@
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon {
-		fill: #3377bb;
+		@include fill(--navi-hover-color);
 	}
 }

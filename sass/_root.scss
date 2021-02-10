@@ -31,13 +31,6 @@
 	@include variable(--title-hover-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
 	@include variable(--widget-title-hover-color, $themeColors);
-	@include variable(--widget-title-border-color, $themeColors);
-
-	// Footer
-	@include variable(--footer-background-color, $themeColors);
-	@include variable(--footer-text-color, $themeColors);
-	@include variable(--footer-link-color, $themeColors);
-	@include variable(--footer-link-hover-color, $themeColors);
 
 	// Typography Styling
 	@include variable(--text-font, $themeFonts);

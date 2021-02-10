@@ -2,7 +2,7 @@
 .post-navigation {
 	margin: 0;
 	padding: 0;
-	color: #353535;
+	@include color(--text-color);
 }
 
 .post-navigation .nav-links .nav-previous {

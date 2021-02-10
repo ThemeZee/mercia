@@ -31,9 +31,9 @@
 	width: 28px;
 	height: 28px;
 	vertical-align: middle;
-	fill: #353535;
+	@include fill(--site-title-color);
 }
 
 .mercia-social-menu .social-icons-menu li a:hover .icon {
-	fill: #3377bb;
+	@include fill(--site-title-hover-color);
 }

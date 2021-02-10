@@ -12,7 +12,7 @@
 .entry-title {
 	margin: 0.15em 0 0.2em;
 	padding: 0;
-	color: #353535;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(18);
@@ -24,13 +24,13 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #353535;
+	@include color(--title-color);
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #3377bb;
+	@include color(--title-hover-color);
 }
 
 .wp-post-image {
@@ -40,12 +40,14 @@
 
 .site-main .sticky {
 	padding-bottom: 1.5em;
-	border-bottom: 1px solid #353535;
+	border-bottom: 1px solid;
+	@include border-color(--title-color);
 }
 
 .site-main .sticky .entry-header {
 	padding: 1em 0 0;
-	border-top: 4px solid #353535;
+	border-top: 4px solid;
+	@include border-color(--title-color);
 }
 
 .entry-content a {
