@@ -157,15 +157,19 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
 Copyright: 2017 IcoMoon.io
 
-6. Open Sans Font - https://fonts.google.com/specimen/Open+Sans
+6. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+7. Open Sans Font - https://fonts.google.com/specimen/Open+Sans
 License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0)
 Copyright: Steve Matteson
 
-7. Roboto Font - https://fonts.google.com/specimen/Roboto
+8. Roboto Font - https://fonts.google.com/specimen/Roboto
 License: Distributed under the terms of the Apache License (http://www.apache.org/licenses/LICENSE-2.0)
 Copyright: Christian Robertson
 
-8. Image used in screenshot.jpg
+9. Image used in screenshot.jpg
 
 Image 1: https://www.pexels.com/photo/beverage-breakfast-brewed-coffee-caffeine-374885/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
