@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9 - 2021-02-13 =
+* added WPTT Webfont loader to host theme fonts locally
+* added CSS variables for theme colors
+
 = 1.8.1 - 2020-10-05 =
 * added AMP dropdown toggles for sub menus
 * added CSS variables for typography styling
