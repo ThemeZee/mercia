@@ -55,7 +55,7 @@
 
 .widget-title a:hover,
 .widget-title a:active {
-	@include color(--widget-title-hover-color);
+	text-decoration: underline;
 }
 
 /* Theme Search Widget */
@@ -101,5 +101,5 @@
 	margin: 5px 0 0;
 	width: 22px;
 	height: 22px;
-	@include fill(--button-text-color);
+	fill: currentColor;
 }
