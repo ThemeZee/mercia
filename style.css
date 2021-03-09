@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
-Version: 1.9
+Version: 1.9.1
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -60,20 +60,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
-	--light-gray-color: #f0f0f0;
-	--gray-color: #999;
-	--dark-gray-color: #303030;
+	--primary-color: #3377bb;
+	--secondary-color: #0d5195;
+	--tertiary-color: #002b6f;
+	--accent-color: #0d9551;
+	--highlight-color: #bb3353;
+	--light-gray-color: #e5e5e5;
+	--gray-color: #858585;
+	--dark-gray-color: #353535;
 	--text-color: #353535;
 	--medium-text-color: rgba(0, 0, 0, 0.45);
 	--light-text-color: rgba(0, 0, 0, 0.25);
 	--dark-border-color: #353535;
 	--medium-border-color: rgba(0, 0, 0, 0.2);
 	--light-border-color: rgba(0, 0, 0, 0.1);
+	--light-background-color: rgba(0, 0, 0, 0.05);
 	--link-color: #3377bb;
 	--link-hover-color: #353535;
 	--button-color: #3377bb;
@@ -1487,31 +1488,31 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #3377bb;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #0d5195;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #002b6f;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #0d9551;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #bb3353;
 	color: var(--highlight-color);
 }
 
@@ -1522,19 +1523,19 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 .has-light-gray-color,
 .wp-block-button__link.has-light-gray-color {
-	color: #f0f0f0;
+	color: #e5e5e5;
 	color: var(--light-gray-color);
 }
 
 .has-gray-color,
 .wp-block-button__link.has-gray-color {
-	color: #999;
+	color: #858585;
 	color: var(--gray-color);
 }
 
 .has-dark-gray-color,
 .wp-block-button__link.has-dark-gray-color {
-	color: #303030;
+	color: #353535;
 	color: var(--dark-gray-color);
 }
 
@@ -1546,31 +1547,31 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #3377bb;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #0d5195;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #002b6f;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #0d9551;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #bb3353;
 	background-color: var(--highlight-color);
 }
 
@@ -1581,19 +1582,19 @@ body.date-hidden.author-hidden.categories-hidden .content-area .type-post .entry
 
 .has-light-gray-background-color,
 .has-light-gray-background-color[class] {
-	background-color: #f0f0f0;
+	background-color: #e5e5e5;
 	background-color: var(--light-gray-color);
 }
 
 .has-gray-background-color,
 .has-gray-background-color[class] {
-	background-color: #999;
+	background-color: #858585;
 	background-color: var(--gray-color);
 }
 
 .has-dark-gray-background-color,
 .has-dark-gray-background-color[class] {
-	background-color: #303030;
+	background-color: #353535;
 	background-color: var(--dark-gray-color);
 }
 
@@ -2780,8 +2781,11 @@ object {
 @supports (display: grid) {
 	/* Magazine Regular Post Styling */
 	.widget-magazine-posts .magazine-posts-regular .magazine-post {
-		background: rgba(0, 0, 0, 0.05);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+		background-color: rgba(0, 0, 0, 0.05);
+		background-color: var(--light-background-color);
+		border-bottom: 1px solid;
+		border-color: rgba(0, 0, 0, 0.1);
+		border-color: var(--light-border-color);
 	}
 
 	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {
