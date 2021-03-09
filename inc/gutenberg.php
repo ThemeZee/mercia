@@ -18,14 +18,14 @@ function mercia_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'mercia_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
-		'light_gray_color' => '#f0f0f0',
-		'gray_color'       => '#999999',
-		'dark_gray_color'  => '#303030',
+		'primary_color'    => '#3377bb',
+		'secondary_color'  => '#0d5195',
+		'tertiary_color'   => '#002b6f',
+		'accent_color'     => '#0d9551',
+		'highlight_color'  => '#bb3353',
+		'light_gray_color' => '#e5e5e5',
+		'gray_color'       => '#858585',
+		'dark_gray_color'  => '#353535',
 	) );
 
 	// Add theme support for block color palette.

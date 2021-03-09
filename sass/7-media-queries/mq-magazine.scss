@@ -124,8 +124,9 @@
 
 	/* Magazine Regular Post Styling */
 	.widget-magazine-posts .magazine-posts-regular .magazine-post {
-		background: rgba(0, 0, 0, 0.05);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+		@include background(--light-background-color);
+		border-bottom: 1px solid;
+		@include border-color(--light-border-color);
 	}
 
 	.widget-magazine-posts .magazine-posts-regular .magazine-post .type-post .post-content {

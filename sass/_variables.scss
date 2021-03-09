@@ -13,14 +13,14 @@ $wideBlockFullwidth: 1440px;
 $themeColors: (
 
 	// Block Editor Colors
-	--primary-color                  : #cc5555,
-	--secondary-color                : #5d7b94,
-	--tertiary-color                 : #90aec7,
-	--accent-color                   : #60945d,
-	--highlight-color                : #915d94,
-	--light-gray-color               : #f0f0f0,
-	--gray-color                     : #999,
-	--dark-gray-color                : #303030,
+	--primary-color                  : #3377bb,
+	--secondary-color                : #0d5195,
+	--tertiary-color                 : #002b6f,
+	--accent-color                   : #0d9551,
+	--highlight-color                : #bb3353,
+	--light-gray-color               : #e5e5e5,
+	--gray-color                     : #858585,
+	--dark-gray-color                : #353535,
 
 	// Text Colors
 	--text-color                     : #353535,
@@ -29,6 +29,7 @@ $themeColors: (
 	--dark-border-color              : #353535,
 	--medium-border-color            : rgba(0, 0, 0, 0.2),
 	--light-border-color             : rgba(0, 0, 0, 0.1),
+	--light-background-color         : rgba(0, 0, 0, 0.05),
 
 	// Links and Buttons
 	--link-color                     : #3377bb,

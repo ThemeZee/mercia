@@ -18,6 +18,7 @@
 	@include variable(--dark-border-color, $themeColors);
 	@include variable(--medium-border-color, $themeColors);
 	@include variable(--light-border-color, $themeColors);
+	@include variable(--light-background-color, $themeColors);
 
 	// Links and Buttons
 	@include variable(--link-color, $themeColors);
