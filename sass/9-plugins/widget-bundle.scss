@@ -1,37 +1,14 @@
-/*
- * ThemeZee Widget Bundle CSS
- * https://themezee.com/plugins/widget-bundle/
- *
- * Copyright(C) 2015, ThemeZee.com - support@themezee.com
- * License: GPL v3
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- *
- * @package Mercia
- */
-
-
-/*--------------------------------------------------------------
-# General Styles
----------------------------------------------------------------- */
-
-/* Clearing Floats */
-.tzwb-clearfix:before,
-.tzwb-clearfix:after {
+/* Widget Bundle */
+.tzwb-clearfix::before,
+.tzwb-clearfix::after {
 	display: table;
 	content: " ";
 }
 
-.tzwb-clearfix:after {
+.tzwb-clearfix::after {
 	clear: both;
 }
 
-.tzwb-clearfix {
-	*zoom: 1; /* For IE 6/7 only */
-}
-
-/*--------------------------------------------------------------
-# Posts List
----------------------------------------------------------------- */
 .tzwb-posts-list li {
 	overflow: hidden;
 	margin: 0;
@@ -64,14 +41,11 @@
 	margin-right: 1em;
 }
 
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date:after,
-.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author:after {
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date::after,
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author::after {
 	display: none;
 }
 
-/*--------------------------------------------------------------
-# Comments List
----------------------------------------------------------------- */
 .tzwb-comments-list li {
 	overflow: hidden;
 	margin: 0;
@@ -97,9 +71,6 @@
 	font-size: 0.875rem;
 }
 
-/*--------------------------------------------------------------
-# Tabbed Content Widget
----------------------------------------------------------------- */
 .tzwb-tabbed-content .tzwb-tabnavi-wrap {
 	overflow: auto;
 	margin: 0;
@@ -137,7 +108,7 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
-.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited {
 	color: #fff;
 }
 
@@ -160,9 +131,6 @@
 	padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Social Icons Widget
----------------------------------------------------------------- */
 .tzwb-social-icons .social-icons-menu {
 	margin: 0;
 	padding: 0;
@@ -196,11 +164,4 @@
 	height: 24px;
 	vertical-align: middle;
 	fill: #fff;
-}
-
-/*--------------------------------------------------------------
-# Facebook Like Box Widget
----------------------------------------------------------------- */
-.tzwb-facebook-likebox .tzwb-content {
-	overflow: hidden;
 }
