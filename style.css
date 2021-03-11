@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/mercia/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Mercia is a flexible and versatile theme perfect for lifestyle, travel, or fashion magazines. It features a modern and minimalist design with great typropaphy. Of course it works on all screen sizes. With multiple blog layouts and powerful Magazine widgets, you can easily create a stunning and dynamic news website in just a few minutes.
-Version: 1.9.1
+Version: 1.9.2
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -2473,6 +2473,7 @@ ul.related-posts-list {
 
 .tzwb-comments-list .tzwb-comment-date {
 	color: rgba(0, 0, 0, 0.45);
+	color: var(--medium-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2505,8 +2506,10 @@ ul.related-posts-list {
 	display: block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	background: #353535;
+	background-color: #353535;
+	background-color: var(--button-hover-color);
 	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 15px;
@@ -2516,11 +2519,15 @@ ul.related-posts-list {
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
 	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #3377bb;
+	background-color: #3377bb;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 }
 
@@ -2529,7 +2536,10 @@ ul.related-posts-list {
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #3377bb;
+	background-color: #3377bb;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -2557,11 +2567,17 @@ ul.related-posts-list {
 	display: block;
 	margin: 0 2px 2px 0;
 	padding: 0.65em 0.8em;
-	background: #3377bb;
+	background-color: #3377bb;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #353535;
+	background-color: #353535;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a .icon {
@@ -2569,7 +2585,7 @@ ul.related-posts-list {
 	width: 24px;
 	height: 24px;
 	vertical-align: middle;
-	fill: #fff;
+	fill: currentColor;
 }
 
 /*--------------------------------------------------------------

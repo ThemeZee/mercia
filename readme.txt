@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9.2 - 2021-03-11 =
+* added CSS variables for Widget Bundle and Related Posts plugin styling
+
 = 1.9.1 - 2021-03-09 =
 * updated CSS variables for colors
 * updated Block Editor color palette
