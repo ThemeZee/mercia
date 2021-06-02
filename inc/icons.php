@@ -18,7 +18,7 @@ function mercia_get_svg( $icon = null ) {
 	}
 
 	// Create SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
+	$svg  = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
 	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/genericons-neue.svg#' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
@@ -62,7 +62,7 @@ function mercia_get_social_svg( $icon = null ) {
 	}
 
 	// Create SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
+	$svg  = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
 	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/social-icons.svg#icon-' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
@@ -80,20 +80,27 @@ function mercia_get_social_svg( $icon = null ) {
  * @return string  $item_output The menu item output with social icon.
  */
 function mercia_social_icons_menu( $item_output, $item, $depth, $args ) {
+	// Return early if no social menu is filtered.
+	if ( 'social' !== $args->theme_location ) {
+		return $item_output;
+	}
 
 	// Get supported social icons.
 	$social_icons = mercia_supported_social_icons();
 
-	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'social' === $args->theme_location ) {
-		$icon = 'star';
-		foreach ( $social_icons as $attr => $value ) {
-			if ( false !== strpos( $item_output, $attr ) ) {
-				$icon = esc_attr( $value );
-			}
+	// Search if menu URL is in supported icons.
+	$icon = 'star';
+	foreach ( $social_icons as $attr => $value ) {
+		if ( false !== strpos( $item_output, $attr ) ) {
+			$icon = esc_attr( $value );
 		}
-		$item_output = str_replace( $args->link_after, '</span>' . mercia_get_social_svg( $icon ), $item_output );
 	}
+
+	// Get SVG.
+	$svg = apply_filters( 'mercia_get_social_svg', mercia_get_social_svg( $icon ), $item_output );
+
+	// Add SVG to menu item.
+	$item_output = str_replace( $args->link_after, $args->link_after . $svg, $item_output );
 
 	return $item_output;
 }
@@ -141,6 +148,7 @@ function mercia_supported_social_icons() {
 		'snapchat.com'    => 'snapchat',
 		'soundcloud.com'  => 'soundcloud',
 		'spotify.com'     => 'spotify',
+		'strava'          => 'strava',
 		'stumbleupon.com' => 'stumbleupon',
 		'telegram'        => 'telegram',
 		't.me'            => 'telegram',
@@ -159,5 +167,5 @@ function mercia_supported_social_icons() {
 		'youtube.com'     => 'youtube',
 	);
 
-	return $supported_social_icons;
+	return apply_filters( 'mercia_supported_social_icons', $supported_social_icons );
 }
