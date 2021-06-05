@@ -14,7 +14,7 @@ var wprtl        = require( 'postcss-wprtl' );
 
 // Minify JS
 gulp.task( 'minifyjs', function() {
-	return gulp.src( ['assets/js/navigation.js'] )
+	return gulp.src( ['assets/js/navigation.js', 'assets/js/customize-preview.js', 'assets/js/customizer-controls.js'] )
 		.pipe( uglify() )
 		.pipe( rename( {
 			suffix: '.min'
@@ -69,5 +69,5 @@ gulp.task( 'sass', function() {
 
 // Sass Watch
 gulp.task('sass:watch', function () {
-	gulp.watch( 'sass/**/*.scss', gulp.series('sass'));
+	gulp.watch( 'sass/**/*.scss', gulp.series('sass', 'editor'));
 });

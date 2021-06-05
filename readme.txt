@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/mercia/
 Contributors: themezee
 Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, block-styles, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 5.2
-Tested up to: 5.7
+Tested up to: 5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.9.4 - 2021-06-05 =
+* added filter hooks for social icons menu
+* added new icons to social icons menu
 
 = 1.9.3 - 2021-05-03 =
 * fixed minor AMP bugs for pagination and featured image header
