@@ -11,7 +11,6 @@ require( get_template_directory() . '/inc/customizer/sanitize-functions.php' );
 // Load Custom Controls.
 require( get_template_directory() . '/inc/customizer/controls/headline-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/links-control.php' );
-require( get_template_directory() . '/inc/customizer/controls/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/plugin-control.php' );
 require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
 
@@ -19,7 +18,6 @@ require( get_template_directory() . '/inc/customizer/controls/upgrade-control.ph
 require( get_template_directory() . '/inc/customizer/sections/customizer-layout.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-website.php' );
 
