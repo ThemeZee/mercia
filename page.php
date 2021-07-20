@@ -21,6 +21,8 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', 'page' );
 
+					do_action( 'mercia_after_pages' );
+
 					comments_template();
 
 				endwhile; ?>

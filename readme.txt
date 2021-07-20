@@ -26,6 +26,11 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9.5 - 2021-07-20 =
+* added action hooks for additional widget areas
+* fixed broken Customizer panels caused by new block-based Widget Editor in WordPress 5.8
+* removed Magazine Widget Customizer control
+
 = 1.9.4 - 2021-06-05 =
 * added filter hooks for social icons menu
 * added new icons to social icons menu

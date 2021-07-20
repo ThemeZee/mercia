@@ -20,6 +20,8 @@
 		<?php
 		get_template_part( 'template-parts/single/post', 'content' );
 
+		do_action( 'mercia_after_posts' );
+
 		mercia_related_posts();
 
 		comments_template();

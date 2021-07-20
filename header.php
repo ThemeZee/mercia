@@ -23,11 +23,15 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mercia' ); ?></a>
 
+	<?php do_action( 'mercia_before_site' ); ?>
+
 	<?php mercia_header_image(); ?>
 
 	<div id="page" class="hfeed site">
 
 		<?php do_action( 'mercia_header_bar' ); ?>
+
+		<?php do_action( 'mercia_before_header' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
@@ -48,5 +52,7 @@
 			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
 
 		</header><!-- #masthead -->
+
+		<?php do_action( 'mercia_after_header' ); ?>
 
 		<?php mercia_breadcrumbs(); ?>

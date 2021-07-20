@@ -19,6 +19,8 @@ mercia_magazine_widgets();
 			<main id="main" class="site-main" role="main">
 
 			<?php
+			do_action( 'mercia_before_blog' );
+
 			if ( have_posts() ) :
 
 				mercia_blog_title();
