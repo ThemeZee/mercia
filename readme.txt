@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9.6 - 2021-08-19 =
+* added Widget Title block style
+* improved Block styling on frontend and Block Editor
+
 = 1.9.5 - 2021-07-20 =
 * added action hooks for additional widget areas
 * fixed broken Customizer panels caused by new block-based Widget Editor in WordPress 5.8

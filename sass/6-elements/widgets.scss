@@ -6,7 +6,8 @@
 	word-wrap: break-word;
 }
 
-.widget-title {
+.widget-title,
+.is-style-widget-title {
 	margin: 0 0 0.75em;
 	padding: 0;
 	@include color(--widget-title-color);
