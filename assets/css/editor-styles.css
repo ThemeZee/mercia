@@ -378,7 +378,7 @@ body.mercia-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-p
 	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
-	table-layout: fixed;
+	table-layout: auto;
 }
 
 .editor-styles-wrapper th,
