@@ -26,6 +26,10 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9.7 - 2021-08-26 =
+* fixed table layout styling
+* fixed responsive images with Classic Editor
+
 = 1.9.6 - 2021-08-19 =
 * added Widget Title block style
 * improved Block styling on frontend and Block Editor
