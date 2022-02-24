@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 1.9.9 - 2022-02-24 =
+* fixed keyboard navigation of dropdown menus
+
 = 1.9.8 - 2021-11-05 =
 * added Steam and Discord to social icons
 * updated navigation.js to use vanilla js instead of jQuery
