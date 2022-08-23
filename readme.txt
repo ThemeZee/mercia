@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 2.0.1 - 2022-08-23 =
+* updated footer credit link
+
 = 2.0 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block
