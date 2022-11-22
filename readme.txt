@@ -26,6 +26,9 @@ For more information about Mercia please go to https://themezee.com/themes/merci
 
 == Changelog ==
 
+= 2.0.3 - 2022-11-22 =
+* added Mastodon to social icons menu
+
 = 2.0.2 - 2022-10-19 =
 * improved accessibility of search form
 

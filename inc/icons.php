@@ -63,7 +63,7 @@ function mercia_get_social_svg( $icon = null ) {
 
 	// Create SVG markup.
 	$svg  = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
-	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/social-icons.svg#icon-' ) . esc_html( $icon ) . '"></use> ';
+	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/social-icons.svg?ver=20221122#icon-' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
 	return $svg;
@@ -91,7 +91,7 @@ function mercia_social_icons_menu( $item_output, $item, $depth, $args ) {
 	// Search if menu URL is in supported icons.
 	$icon = 'star';
 	foreach ( $social_icons as $attr => $value ) {
-		if ( false !== strpos( $item_output, $attr ) ) {
+		if ( false !== stripos( $item_output, $attr ) ) {
 			$icon = esc_attr( $value );
 		}
 	}
@@ -137,6 +137,7 @@ function mercia_supported_social_icons() {
 		'instagram.com'   => 'instagram',
 		'linkedin.com'    => 'linkedin',
 		'mailto:'         => 'envelope',
+		'mastodon'        => 'mastodon',
 		'medium.com'      => 'medium-m',
 		'meetup.com'      => 'meetup',
 		'patreon'         => 'patreon',
