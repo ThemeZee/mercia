@@ -63,7 +63,7 @@ function mercia_get_social_svg( $icon = null ) {
 
 	// Create SVG markup.
 	$svg  = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
-	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/social-icons.svg?ver=20221122#icon-' ) . esc_html( $icon ) . '"></use> ';
+	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/social-icons.svg?ver=20240124#icon-' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
 	return $svg;
@@ -165,6 +165,7 @@ function mercia_supported_social_icons() {
 		'wa.me'           => 'whatsapp',
 		'wordpress.org'   => 'wordpress',
 		'wordpress.com'   => 'wordpress',
+		'x.com'           => 'x-twitter',
 		'xing.com'        => 'xing',
 		'yelp.com'        => 'yelp',
 		'youtube.com'     => 'youtube',
